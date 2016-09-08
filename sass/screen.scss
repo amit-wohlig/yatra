@@ -1,0 +1,540 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "../bower_components/bootstrap/dist/css/bootstrap.css"
+/* Bootstrap Variables Goes Here */
+$brand-dark-blue: #2c3757;
+$brand-blue: #2d3655;
+$brand-dark-pink: #f2675b;
+$brand-pink: #ff6759;
+$brand-dark-cyan: #57d3c7;
+$brand-cyan: #11d3cb;
+$brand-light-cyan: #91e2d6;
+$brand-grey: #b2b2b2;
+$brand-light-grey: #a0a0a0;
+$brand-lighter-grey: #e3e3e3;
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+// body {
+//   padding-top: 70px;
+// }
+// over-ride
+a,
+button,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+label:focus,
+ol,
+p,
+select,
+span,
+textarea,
+ul {
+  outline: none !important;
+}
+img.loading {
+  text-align: center;
+  opacity: 1;
+  width: 32px !important;
+  height: auto;
+}
+img {
+  opacity: 0;
+  @include transition(all 300ms ease);
+}
+img.doneLoading {
+  opacity: 1;
+}
+nav li:hover .dropdown-menu {
+  display: block;
+}
+.btn,
+a {
+  cursor: pointer;
+  @include transition(all ease 300ms);
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+a.fb-icon:hover {
+  color: #3b5998;
+}
+a.twi-icon:hover {
+  color: #55acee;
+}
+a.google-icon:hover {
+  color: #d34836;
+}
+a.pin-icon:hover {
+  color: #cb2027;
+}
+a.linkedin-icon:hover {
+  color: #007bb5;
+}
+a.mail-icon:hover {
+  color: $brand-pink;
+}
+.pop-close-btn {
+  opacity: 1;
+  color: #fff;
+  font-size: 15px;
+  &:hover {
+    color: #fff;
+    opacity: 1;
+  }
+}
+// scroll down
+.mouse-scrolldown {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  @include transform(translateX(-50%));
+  @extend .avenir-roman;
+  @extend .text-shadow;
+  font-size: 12px;
+  cursor: pointer;
+  img {
+    width: 15px;
+    margin-bottom: 5px;
+    @include animation(bounce 2s infinite);
+  }
+  @include keyframes(bounce) {
+    0% {
+      @include transform(translate(0%, 0%));
+    }
+    50% {
+      @include transform(translate(0%, 20%));
+    }
+    100% {
+      @include transform(translate(0%, 0%));
+    }
+  };
+}
+// scroll down end
+// scroll
+.scroll-side {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+}
+// scroll end
+//bootstrap forms
+.btn,
+.form-control,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.input-lg {
+  border-radius: 0;
+  @include box-shadow(none);
+}
+.form-control:focus {
+  border-color: $brand-primary;
+  outline: 0;
+  @include box-shadow(none);
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.circle-rounded {
+  @include size(45px,48px);
+  border-radius: 18px;
+  display: inline-block;
+  line-height: 45px;
+  text-align: center;
+}
+.flexslider {
+  border: none;
+  margin: 0;
+}
+//bootstrap forms
+// fonts
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url('../fonts/AvenirLTStd-Black.otf');
+}
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url('../fonts/AvenirLTStd-Heavy.otf');
+}
+@font-face {
+  font-family: "AvenirLTStd-Light";
+  src: url('../fonts/AvenirLTStd-Light.otf');
+}
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url('../fonts/AvenirLTStd-Medium.otf');
+}
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url('../fonts/AvenirLTStd-Roman.otf');
+}
+@font-face {
+  font-family: "djb";
+  src: url('../fonts/djb.ttf');
+}
+@font-face {
+  font-family: "JennaSue";
+  src: url('../fonts/JennaSue.ttf');
+}
+// end fonts
+// classes
+.avenir-black {
+  font-family: "AvenirLTStd-Black";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.avenir-heavy {
+  font-family: "AvenirLTStd-Heavy";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.avenir-light {
+  font-family: "AvenirLTStd-Light";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.avenir-medium {
+  font-family: "AvenirLTStd-Medium";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.avenir-roman {
+  font-family: "AvenirLTStd-Roman";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.djb-font {
+  font-family: "djb";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.jenna-font {
+  font-family: "JennaSue";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+textarea {
+  resize: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.m-center {
+  margin: 0 auto;
+}
+.m-clear {
+  margin: 0;
+}
+.relate {
+  position: relative;
+}
+.get-center {
+  @include position(absolute, 50% null null 50%);
+  @include transform(translate(-50%,-50%));
+}
+.full-width {
+  width: 100%;
+}
+.row-flex {
+  @include display(flex);
+}
+.col-flex {
+  @include flex(1);
+}
+.font-lighter {
+  font-weight: 100;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 700;
+}
+.v-top {
+  vertical-align: top;
+}
+.v-mid {
+  vertical-align: middle;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.pad-zero {
+  padding: 0;
+}
+.col-pad-zero {
+  padding: 0;
+}
+.pt10 {
+  padding-top: 10px;
+}
+.pr10 {
+  padding-right: 10px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.pr20 {
+  padding-right: 20px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pl20 {
+  padding-left: 20px;
+}
+.color-white {
+  color: #fff;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz13 {
+  font-size: 13px;
+}
+// end classes
+.color-dark-blue {
+  color: $brand-dark-blue;
+}
+.color-blue {
+  color: $brand-blue;
+}
+.color-dark-pink {
+  color: $brand-dark-pink;
+}
+.color-pink {
+  color: $brand-pink;
+}
+.color-dark-cyan {
+  color: $brand-dark-cyan;
+}
+.color-cyan {
+  color: $brand-cyan;
+}
+.color-light-cyan {
+  color: $brand-light-cyan;
+}
+.color-grey {
+  color: $brand-grey;
+}
+.color-light-grey {
+  color: $brand-light-grey;
+}
+.color-lighter-grey {
+  color: $brand-lighter-grey;
+}
+.btn-more {
+  padding: 8px 34px;
+}
+// btn classes
+// end btn classes
+// bg classes
+.bg-white {
+  background-color: #fff;
+}
+.bg-dark-blue {
+  background-color: $brand-dark-blue;
+}
+.bg-blue {
+  background-color: $brand-blue;
+}
+.bg-dark-pink {
+  background-color: $brand-dark-pink;
+}
+.bg-pink {
+  background-color: $brand-pink;
+}
+.bg-dark-cyan {
+  background-color: $brand-dark-cyan;
+}
+.bg-cyan {
+  background-color: $brand-cyan;
+}
+.bg-light-cyan {
+  background-color: $brand-light-cyan;
+}
+// end bg classes
+// btn classes
+.btn {
+  border-radius: 6px;
+  @include transition(all 300ms linear);
+  &:hover {
+    @include transition(all 300ms linear);
+  }
+}
+.btn-dark-pink {
+  @include button-variant( white, $brand-dark-pink, $brand-dark-blue);
+}
+.btn-pink {
+  @include button-variant( white, $brand-dark-pink, $brand-dark-pink);
+}
+.btn-pink-outline {
+  @include button-variant( $brand-pink, transparent, $brand-pink);
+  &:hover {
+    @include button-variant( white, $brand-pink, $brand-pink);
+  }
+}
+.btn-white-outline {
+  @include button-variant( white, transparent, white);
+  &:hover {
+    border-color: #fff;
+  }
+}
+.btn-grey-pink {
+  @include button-variant( white, $brand-grey, $brand-dark-blue);
+  &:hover {
+    @include button-variant( white, $brand-dark-pink, $brand-dark-blue);
+  }
+}
+.btn-dark-blue {
+  @include button-variant( white, $brand-dark-blue, $brand-dark-blue);
+}
+.btn-blue-outline {
+  @include button-variant( $brand-blue, white, $brand-blue);
+  &:hover {
+    border-color: $brand-blue;
+    background-color: $brand-pink;
+    color: #fff;
+  }
+}
+.btn-outline-blue {
+  @include button-variant( $brand-blue, transparent, $brand-blue);
+}
+// end btn classes
+// header
+header {
+  padding: 10px 20px 0;
+  position: relative;
+  z-index: 10;
+}
+.navbar {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+.hamburger {
+  margin: 10px 0;
+  span {
+    @include size(22px,3px);
+    margin-bottom: 4px;
+    display: block;
+    background-color: $brand-pink;
+  }
+}
+.search {
+  margin: 2px 10px 2px 13px;
+  input {
+    width: 360px;
+    padding: 6px 10px 6px 25px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #17213e;
+    border-left: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    background: url('../img/search-icon.png') no-repeat 0 50%;
+    &:focus {
+      outline: none;
+      border-color: #17213e;
+    }
+  }
+}
+.user-detail {
+  .list-inline {
+    margin: 0;
+  }
+  .list-inline > li {
+    padding: 0 15px;
+    font-size: 16px;
+    &:last-child {
+      padding: 0 0 0 15px;
+    }
+  }
+  a {
+    color: #80879a;
+  }
+}
+.user-img {
+  width: 40px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+// end header
