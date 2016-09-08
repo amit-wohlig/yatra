@@ -588,9 +588,87 @@ header {
   overflow: hidden;
 }
 // end header
+// comment and share
+.share-comment-main  {
+  .task-holder {
+    .like-button-icon { font-size: 22px; }
+    li {
+      &:first-child { padding: 0 15px 0 5px; }
+      padding: 0px 15px;
+      vertical-align: top;
+    }
+  }
+  .view-comment-list {
+    margin-bottom: 20px;
+  }
+  .share-option-main {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  .like-review-main {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .like-review-holder {
+    margin-top: 7px;
+  }
+  .like-holder, .review-holder {
+    margin-right: 30px;
+    display: inline-block;
+  }
+  .commenter-imgholder {
+    width: 34px;
+    height: 37px;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    box-shadow: 0px 2px 3px #ccc;
+    overflow: hidden;
+    img { min-height: 100%; }
+  }
+  .comment-list-holder {
+    padding: 15px 0px 0px;
+  }
+  .commenter-img {
+    width: 5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .comment-container {
+    width: 95%;
+    margin-left: -4px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .write-comment-text { margin-bottom: 10px; }
+  .comment-ur-text {
+    width: 95%;
+    margin-left: -4px;
+    display: inline-block;
+    vertical-align: bottom;
+    textarea {
+      border: none;
+      border-bottom: 2px solid $brand-dark-blue;
+      padding: 0 10px;
+      color: $brand-dark-blue;
+      line-height: 100%;
+    }
+  }
+  .commenter-text {
+    color: #787878;
+    @extend .avenir-roman;
+  }
+  .like-reply-line {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .share-social-holder {
+    .list-inline > li:last-child { padding-right: 0; }
+  }
+}
+// comment and share end
 // blog
 .social-field-types {
-  padding: 0 10px; 
+  padding: 0 10px;
 }
 .user-social-item {
   padding: 12px 0 20px;
@@ -886,6 +964,12 @@ header {
 }
 .blog-social-field {
   padding: 0 50px;
+  .blog-social-item {
+    padding: 0px 0px 20px;
+    border-bottom: 2px solid #dcdcdc;
+    margin: 0px 0px 15px;
+  }
+  .blog-chat { margin-top: 4px; }
 }
 .editor-logo {
   margin-top: -30px;
@@ -942,6 +1026,13 @@ header {
   }
   .masonry-brick {
     margin-bottom: 15px;
+  }
+}
+.blog-comment {
+  .share-comment-main {
+    .commenter-img { width: 6%; }
+    .comment-container { width: 94%; }
+    .comment-ur-text { width: 94%; }
   }
 }
 // blog detail end

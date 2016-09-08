@@ -97,13 +97,13 @@
               <div class="col-md-offset-3 col-md-6">
                 <form class="text-left">
                   <div class="category-blog-select">
-                    <div class="view-blog-category"> <!--  ng-click="showCategory = !showCategory" -->
+                    <div class="view-blog-category" data-target="#viewCategory" data-toggle="collapse"> <!--  ng-click="showCategory = !showCategory" -->
                       <span class="blog-icon"><img src="img/blog-category.png" alt="Blog-Category" width="20"></span>
                       <span class="blog-name avenir-roman">Categories</span>
                       <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
                       <!-- <span class="pull-right" ng-init="showCategory = false"><i class="fa" ng-class="{'fa-chevron-up' : showCategory == true , 'fa-chevron-down' : showCategory == false}"></i></span> -->
                     </div>
-                    <div class="blog-category-list scroll-side hide" ng-show="showCategory">
+                    <div class="blog-category-list scroll-side collapse" id="viewCategory">
                       <ul class="avenir-roman">
                         <li><a href="">Beach &amp; Party</a></li>
                         <li><a href="">Adventure</a></li>
@@ -122,12 +122,12 @@
                     <button class="btn btn-dark-blue avenir-roman">Go</button>
                   </div>
                   <div class="archives-blog-select">
-                    <div class="view-blog-archives" ng-click="showArchives = !showArchives">
+                    <div class="view-blog-archives" data-target="#viewArchives" data-toggle="collapse">
                       <span class="blog-icon"><img src="img/blog-archives.png" alt="Blog-Category" height="17"></span>
                       <span class="blog-name avenir-roman">Archives</span>
-                      <span class="pull-right" ng-init="showArchives = false"><i class="fa" ng-class="{'fa-chevron-up' : showArchives == true , 'fa-chevron-down' : showArchives == false}"></i></span>
+                      <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
                     </div>
-                    <div class="blog-archives-list scroll-side hide" ng-show="showArchives">
+                    <div class="blog-archives-list scroll-side collapse" id="viewArchives">
                       <ul class="avenir-roman">
                         <li><a href="">Beach &amp; Party</a></li>
                         <li><a href="">Adventure</a></li>
@@ -205,7 +205,54 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item"> <!-- for loop -->
+                      <div class="masonry-brick col-md-6 grid-item">
+                        <div class="blog-post">
+                          <div class="relate">
+                            <div class="box-imgholder">
+                              <img src="img/blog/blog-post2.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="post-descp">
+                              <div class="post-journey-type"><span class="inline-block color-white avenir-roman">Luxury</span></div>
+                              <h3 class="post-title color-white avenir-heavy">Best cycling tours in the world</h3>
+                              <div class="post-date">
+                                <p class="color-white m-clear avenir-roman"><i class="fa fa-calendar mr5"></i><span class="mr5">14 Jan,2014</span> | <i class="fa fa-clock-o mr5 ml5"></i> <span class="mr5">1:20 pm</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-field-types travel-life-part">
+                            <div class="user-social-item clearfix">
+                              <div class="pull-left">
+                                <ul>
+                                  <li><a href=""><i class="fa fa-heart-o color-blue"></i></a></li>
+                                  <li>
+                                    <a href=""><img src="img/comments.png" alt="" height="18"></a>
+                                  </li>
+                                  <li>
+                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="pull-right">
+                                <div class="">
+                                  <span><img src="img/options.png" alt="" height="18"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="social-likes-reviews avenir-heavy">
+                              <div class="clearfix">
+                                <div class="pull-left">
+                                  <span class="color-blue mr10"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
+                                  <!-- <span class="color-blue"><img src="img/reviews.png" alt="" height="15" class="mr5 v-top">{{post.reviews}} ({{post.pointReview}}/5)</span> -->
+                                </div>
+                                <!-- <div class="pull-right">
+                                      <img src="img/travel.png" alt="">
+                                    </div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="masonry-brick col-md-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -256,6 +303,100 @@
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
+                              <img src="img/blog/blog-post.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="post-descp">
+                              <div class="post-journey-type"><span class="inline-block color-white avenir-roman">Luxury</span></div>
+                              <h3 class="post-title color-white avenir-heavy">BEST HOLIDAY DESTINATIONS FOR GIRL-GANGS</h3>
+                              <div class="post-date">
+                                <p class="color-white m-clear avenir-roman"><i class="fa fa-calendar mr5"></i><span class="mr5">14 Jan,2014</span> | <i class="fa fa-clock-o mr5 ml5"></i> <span class="mr5">1:20 pm</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-field-types travel-life-part">
+                            <div class="user-social-item clearfix">
+                              <div class="pull-left">
+                                <ul>
+                                  <li><a href=""><i class="fa fa-heart-o color-blue"></i></a></li>
+                                  <li>
+                                    <a href=""><img src="img/comments.png" alt="" height="18"></a>
+                                  </li>
+                                  <li>
+                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="pull-right">
+                                <div class="">
+                                  <span><img src="img/options.png" alt="" height="18"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="social-likes-reviews avenir-heavy">
+                              <div class="clearfix">
+                                <div class="pull-left">
+                                  <span class="color-blue mr10"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
+                                  <!-- <span class="color-blue"><img src="img/reviews.png" alt="" height="15" class="mr5 v-top">{{post.reviews}} ({{post.pointReview}}/5)</span> -->
+                                </div>
+                                <!-- <div class="pull-right">
+                                      <img src="img/travel.png" alt="">
+                                    </div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="masonry-brick col-md-6 grid-item">
+                        <div class="blog-post">
+                          <div class="relate">
+                            <div class="box-imgholder">
+                              <img src="img/blog/blog-post4.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="post-descp">
+                              <div class="post-journey-type"><span class="inline-block color-white avenir-roman">Road Trip</span></div>
+                              <h3 class="post-title color-white avenir-heavy">Ten Gorgeous European Summer Island Holidays</h3>
+                              <div class="post-date">
+                                <p class="color-white m-clear avenir-roman"><i class="fa fa-calendar mr5"></i><span class="mr5">14 Jan,2014</span> | <i class="fa fa-clock-o mr5 ml5"></i> <span class="mr5">1:20 pm</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-field-types travel-life-part">
+                            <div class="user-social-item clearfix">
+                              <div class="pull-left">
+                                <ul>
+                                  <li><a href=""><i class="fa fa-heart-o color-blue"></i></a></li>
+                                  <li>
+                                    <a href=""><img src="img/comments.png" alt="" height="18"></a>
+                                  </li>
+                                  <li>
+                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="pull-right">
+                                <div class="">
+                                  <span><img src="img/options.png" alt="" height="18"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="social-likes-reviews avenir-heavy">
+                              <div class="clearfix">
+                                <div class="pull-left">
+                                  <span class="color-blue mr10"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
+                                  <!-- <span class="color-blue"><img src="img/reviews.png" alt="" height="15" class="mr5 v-top">{{post.reviews}} ({{post.pointReview}}/5)</span> -->
+                                </div>
+                                <!-- <div class="pull-right">
+                                      <img src="img/travel.png" alt="">
+                                    </div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="masonry-brick col-md-6 grid-item">
+                        <div class="blog-post">
+                          <div class="relate">
+                            <div class="box-imgholder">
                               <img src="img/blog/blog-post3.jpg" alt="" class="img-responsive">
                             </div>
                             <div class="post-descp">
@@ -299,7 +440,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item"> <!-- for loop -->
+                      <div class="masonry-brick col-md-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -308,6 +449,53 @@
                             <div class="post-descp">
                               <div class="post-journey-type"><span class="inline-block color-white avenir-roman">Adventure</span></div>
                               <h3 class="post-title color-white avenir-heavy">Museums And Cathedrals To Cover In Eastern Europe</h3>
+                              <div class="post-date">
+                                <p class="color-white m-clear avenir-roman"><i class="fa fa-calendar mr5"></i><span class="mr5">14 Jan,2014</span> | <i class="fa fa-clock-o mr5 ml5"></i> <span class="mr5">1:20 pm</span></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-field-types travel-life-part">
+                            <div class="user-social-item clearfix">
+                              <div class="pull-left">
+                                <ul>
+                                  <li><a href=""><i class="fa fa-heart-o color-blue"></i></a></li>
+                                  <li>
+                                    <a href=""><img src="img/comments.png" alt="" height="18"></a>
+                                  </li>
+                                  <li>
+                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="pull-right">
+                                <div class="">
+                                  <span><img src="img/options.png" alt="" height="18"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="social-likes-reviews avenir-heavy">
+                              <div class="clearfix">
+                                <div class="pull-left">
+                                  <span class="color-blue mr10"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
+                                  <!-- <span class="color-blue"><img src="img/reviews.png" alt="" height="15" class="mr5 v-top">{{post.reviews}} ({{post.pointReview}}/5)</span> -->
+                                </div>
+                                <!-- <div class="pull-right">
+                                      <img src="img/travel.png" alt="">
+                                    </div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="masonry-brick col-md-6 grid-item">
+                        <div class="blog-post">
+                          <div class="relate">
+                            <div class="box-imgholder">
+                              <img src="img/blog/blog-post4.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="post-descp">
+                              <div class="post-journey-type"><span class="inline-block color-white avenir-roman">Road Trip</span></div>
+                              <h3 class="post-title color-white avenir-heavy">Ten Gorgeous European Summer Island Holidays</h3>
                               <div class="post-date">
                                 <p class="color-white m-clear avenir-roman"><i class="fa fa-calendar mr5"></i><span class="mr5">14 Jan,2014</span> | <i class="fa fa-clock-o mr5 ml5"></i> <span class="mr5">1:20 pm</span></p>
                               </div>
