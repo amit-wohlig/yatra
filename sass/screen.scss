@@ -1024,6 +1024,7 @@ header {
   .blog-post {
     overflow: visible;
   }
+  .blog-detail-pop { min-width: 390px; }
   .masonry-brick {
     margin-bottom: 15px;
   }
@@ -1033,6 +1034,104 @@ header {
     .commenter-img { width: 6%; }
     .comment-container { width: 94%; }
     .comment-ur-text { width: 94%; }
+  }
+}
+.travelled-imgholder {
+  height: 440px;
+  overflow: hidden;
+}
+.onway-imgholder {
+  height: 330px;
+  overflow: hidden;
+  img {
+    min-height: 100%;
+  }
+}
+.travel-life-part {
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      list-style-type: none;
+    }
+  }
+}
+.travel-journey-heading {
+  padding: 10px;
+  color: $brand-grey;
+}
+.country-visited {
+  @include position(absolute, -10px 10px null null);
+  img {
+    margin-left: -10px;
+  }
+  span {
+    margin-left: -18px;
+    display: inline-block;
+    font-size: 19px;
+    color: #fcfcfc;
+    text-shadow: 1px 1px 1px #000;
+    vertical-align: middle;
+  }
+}
+.journey-tag-holder {
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  h3,
+  h4 {
+    padding: 12px 0;
+  }
+  .journey-travelling-type {
+    margin-bottom: -20px;
+  }
+}
+.journey-type {
+  vertical-align: top;
+  li {
+    padding: 0 5px;
+  }
+}
+.journey-cost {
+  display: inline-block;
+  vertical-align: top;
+  span {
+    margin: 0 20px;
+    font-size: 15px;
+  }
+}
+.days-spent {
+  @include size(45px,48px);
+  border-radius: 18px;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  background-color: $brand-dark-blue;
+  p {
+    padding-top: 8px;
+    font-size: 10px;
+    text-align: center;
+    span {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+.journey-collection {
+  li {
+    padding: 0 10px;
+    border-right: 1px solid #fff;
+    line-height: 12px;
+    &:first-child {
+      padding: 0 10px 0 0;
+    }
   }
 }
 // blog detail end

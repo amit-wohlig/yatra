@@ -7009,6 +7009,8 @@ header {
   margin-top: 40px; }
   .blog-itineraries-main .blog-post {
     overflow: visible; }
+  .blog-itineraries-main .blog-detail-pop {
+    min-width: 390px; }
   .blog-itineraries-main .masonry-brick {
     margin-bottom: 15px; }
 
@@ -7018,5 +7020,90 @@ header {
   width: 94%; }
 .blog-comment .share-comment-main .comment-ur-text {
   width: 94%; }
+
+.travelled-imgholder {
+  height: 440px;
+  overflow: hidden; }
+
+.onway-imgholder {
+  height: 330px;
+  overflow: hidden; }
+  .onway-imgholder img {
+    min-height: 100%; }
+
+.travel-life-part ul {
+  padding: 0;
+  margin: 0; }
+  .travel-life-part ul li {
+    display: inline-block;
+    list-style-type: none; }
+
+.travel-journey-heading {
+  padding: 10px;
+  color: #b2b2b2; }
+
+.country-visited {
+  position: absolute;
+  top: -10px;
+  right: 10px; }
+  .country-visited img {
+    margin-left: -10px; }
+  .country-visited span {
+    margin-left: -18px;
+    display: inline-block;
+    font-size: 19px;
+    color: #fcfcfc;
+    text-shadow: 1px 1px 1px #000;
+    vertical-align: middle; }
+
+.journey-tag-holder {
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff; }
+  .journey-tag-holder a {
+    color: #fff; }
+  .journey-tag-holder h3,
+  .journey-tag-holder h4 {
+    padding: 12px 0; }
+  .journey-tag-holder .journey-travelling-type {
+    margin-bottom: -20px; }
+
+.journey-type {
+  vertical-align: top; }
+  .journey-type li {
+    padding: 0 5px; }
+
+.journey-cost {
+  display: inline-block;
+  vertical-align: top; }
+  .journey-cost span {
+    margin: 0 20px;
+    font-size: 15px; }
+
+.days-spent {
+  width: 45px;
+  height: 48px;
+  border-radius: 18px;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  background-color: #2c3757; }
+  .days-spent p {
+    padding-top: 8px;
+    font-size: 10px;
+    text-align: center; }
+    .days-spent p span {
+      font-size: 18px;
+      line-height: 18px; }
+
+.journey-collection li {
+  padding: 0 10px;
+  border-right: 1px solid #fff;
+  line-height: 12px; }
+  .journey-collection li:first-child {
+    padding: 0 10px 0 0; }
 
 /*# sourceMappingURL=screen.css.map */
