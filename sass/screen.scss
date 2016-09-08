@@ -3,8 +3,12 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
-@import "../bower_components/bootstrap/dist/css/bootstrap.css"
+// @import "compass/reset";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/bootstrap/dist/css/bootstrap.css";
 /* Bootstrap Variables Goes Here */
 $brand-dark-blue: #2c3757;
 $brand-blue: #2d3655;
@@ -56,7 +60,7 @@ img.loading {
   height: auto;
 }
 img {
-  opacity: 0;
+  opacity: 1;
   @include transition(all 300ms ease);
 }
 img.doneLoading {
@@ -108,7 +112,6 @@ a.mail-icon:hover {
   left: 50%;
   @include transform(translateX(-50%));
   @extend .avenir-roman;
-  @extend .text-shadow;
   font-size: 12px;
   cursor: pointer;
   img {
@@ -476,6 +479,53 @@ textarea {
   @include button-variant( $brand-blue, transparent, $brand-blue);
 }
 // end btn classes
+
+// classes
+.custom-checkbox {
+  [type="checkbox"]:checked,
+  [type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -999px;
+  }
+  [type="checkbox"]:checked + label,
+  [type="checkbox"]:not(:checked) + label {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+  }
+  /* checkbox aspect */
+  [type="checkbox"]:checked + label:before,
+  [type="checkbox"]:not(:checked) + label:before {
+    content: '';
+    @include square(20px);
+    border: 1px solid $brand-cyan;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: transparent;
+    @include transition(all 300ms linear);
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:checked + label:after,
+  [type="checkbox"]:not(:checked) + label:after {
+    content: '\f00c';
+    font: normal normal normal 14px/1 FontAwesome;
+    @include square(20px);
+    color: #b7b7b7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 20px;
+    text-align: center;
+    @include transition(all 300ms linear);
+  }
+  [type="checkbox"]:checked + label:after {
+    color: $brand-pink;
+    @include transition(all 300ms linear);
+  }
+}
+// classes end
+
 // header
 header {
   padding: 10px 20px 0;
@@ -538,3 +588,360 @@ header {
   overflow: hidden;
 }
 // end header
+// blog
+.social-field-types {
+  padding: 0 10px; 
+}
+.user-social-item {
+  padding: 12px 0 20px;
+  border-bottom: 1px solid $brand-grey;
+  li {
+    display: inline-block;
+    padding: 0 10px;
+    &:first-child {
+      padding: 0 10px 0 0;
+      i {
+        font-size: 18px;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+.social-likes-reviews {
+  padding: 15px 0;
+  font-size: 12px;
+}
+.blog-banner-header {
+  z-index: 1;
+}
+.heading-blog {
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #6b6b6b;
+}
+.archives-blog-select,
+.category-blog-select {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-family: "avenir-roman";
+}
+.view-blog-category {
+  width: 290px;
+  min-height: 40px;
+  padding: 10px 20px;
+  display: inline-block;
+  background-color: rgba(252,245,230,0.9);
+  .blog-icon {
+    padding-right: 10px;
+    border-right: 1px solid #424242;
+    margin-right: 10px;
+    line-height: 13px;
+  }
+}
+.blog-category-list {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: rgba(252,245,230,0.9);
+  ul {
+    height: 320px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  li {
+    padding: 10px 25px;
+    border-bottom: 1px solid #424242;
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      color: #424242;
+      display: block;
+    }
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #424242;
+  }
+}
+.blog-archives-list {
+  @extend .blog-category-list;
+}
+.go-button {
+  display: inline-block;
+  button {
+    min-height: 40px;
+    margin-left: -4px;
+    border-radius: 0;
+  }
+}
+.view-blog-archives {
+  width: 210px;
+  @extend .view-blog-category;
+}
+.blog-page-content {
+  padding-top: 30px;
+}
+.box-imgholder {
+  width: 395px;
+  overflow: hidden;
+}
+.blog-post {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.post-descp {
+  width: 100%;
+  padding: 10px;
+  @include position(absolute,null null 0 0);
+  background-color: rgba(0,0,0,0.6);
+  .post-title {
+    margin: 8px 0;
+    font-size: 17px;
+  }
+  .post-journey-type {
+    span {
+      padding: 3px 10px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      margin-left: -10px;
+      background-color: $brand-dark-blue;
+    }
+  }
+  .post-date {
+    font-size: 11px;
+  }
+}
+.popular-blog-section {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ebebeb;
+  h4 {
+    margin: 10px 0 20px;
+  }
+}
+.aside-heading {
+  margin: 0 0 20px;
+}
+.popular-blog {
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.popular-post-desc {
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  h4 {
+    height: 34px;
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    overflow: hidden;
+  }
+}
+.popular-post-type {
+  position: absolute;
+  top: 20px;
+  span {
+    padding: 3px 15px;
+  }
+}
+.post-left span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.post-right {
+  right: 0;
+  span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}
+.categories,
+.facebook,
+.instagram,
+.pinterest,
+.social-media,
+.twitter {
+  padding: 25px 0;
+  border-bottom: 2px solid #ebebeb;
+}
+.advertise-section {
+  padding: 25px 0;
+}
+.social-media {
+  text-align: center;
+  li {
+    margin: 15px;
+    display: inline-block;
+    font-size: 17px;
+    a {
+      color: #424242;
+    }
+  }
+}
+.blog-filter-checkbox {
+  margin: 12px 0;
+  label {
+    color: $brand-dark-blue;
+    font-size: 15px;
+  }
+  [type="checkbox"]:checked + label:before,
+  [type="checkbox"]:not(:checked) + label:before {
+    border: 1px solid $brand-dark-blue;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  [type="checkbox"]:checked + label:after,
+  [type="checkbox"]:not(:checked) + label:after {
+    top: 2px;
+  }
+  [type="checkbox"]:checked + label:after {
+    color: $brand-dark-blue;
+  }
+}
+.categories .more {
+  color: $brand-dark-blue;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+// blog end
+// blog detail
+.blog-main-detail {
+  padding: 30px 0;
+}
+.blog-detail-heading {
+  .post-date {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+}
+.blog-journey-type {
+  padding: 0 25px 5px 0;
+  border-bottom: 1px solid $brand-pink;
+  color: $brand-pink;
+  font-size: 15px;
+}
+.journey-social {
+  margin: 20px 0;
+}
+.blog-detail-descp {
+  margin-bottom: 30px;
+}
+.blog-journey-detail {
+  padding: 30px 50px;
+  p {
+    color: #424242;
+    font-size: 17px;
+    text-align: justify;
+  }
+}
+.social-share li {
+  vertical-align: top;
+  i {
+    color: #999;
+    @include transition(all 300ms linear);
+    &:hover {
+      color: $brand-pink;
+      @include transition(all 300ms linear);
+    }
+  }
+}
+.social-share {
+  .travel-icon {
+    .icon-pink {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    &:hover {
+      .icon-pink {
+        opacity: 1;
+      }
+      .icon-grey {
+        opacity: 0;
+      }
+    }
+  }
+}
+.blog-chat li {
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: top;
+  &:first-child i {
+    font-size: 21px;
+  }
+  &:last-child span {
+    margin-top: 2px;
+    display: inline-block;
+  }
+}
+.blog-social-field {
+  padding: 0 50px;
+}
+.editor-logo {
+  margin-top: -30px;
+  margin-right: 15px;
+  display: inline-block;
+}
+.editor-subdetail {
+  width: 70%;
+  font-size: 12px;
+}
+.recent-blog {
+  padding: 30px 0;
+  border-top: 2px solid #dcdcdc;
+  border-bottom: 2px solid #dcdcdc;
+  margin: 30px 0;
+  .recent-blog-imgholder {
+    width: 200px;
+    height: 130px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  h4 {
+    font-size: 14px;
+  }
+}
+.previous-blog {
+  .recent-blog-detail {
+    margin: 40px 0 0 15px;
+  }
+}
+.next-blog {
+  .recent-blog-detail {
+    margin: 40px 15px 0 0;
+  }
+}
+.blog-view {
+  margin-bottom: 10px;
+  span {
+    font-size: 18px;
+  }
+  .icon {
+    font-size: 19px;
+  }
+}
+.you-may-like {
+  h3 {
+    margin: 0 0 25px;
+  }
+}
+.blog-itineraries-main {
+  margin-top: 40px;
+  .blog-post {
+    overflow: visible;
+  }
+  .masonry-brick {
+    margin-bottom: 15px;
+  }
+}
+// blog detail end

@@ -1,0 +1,21 @@
+{
+  "name": "travelibro",
+  "description": "travelibro",
+  "authors": [
+    "info@travelibro.com"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bourbon": "~4.2.5",
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7",
+    "masonry": "^4.1.1"
+  }
+}
