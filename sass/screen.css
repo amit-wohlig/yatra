@@ -5880,6 +5880,12 @@ a.linkedin-icon:hover {
 a.mail-icon:hover {
   color: #ff6759; }
 
+a.youtube-icon:hover {
+  color: #bb0000; }
+
+a.insta-icon:hover {
+  color: #517fa4; }
+
 .pop-close-btn {
   opacity: 1;
   color: #fff;
@@ -6549,7 +6555,7 @@ textarea {
   .custom-checkbox [type="checkbox"]:checked,
   .custom-checkbox [type="checkbox"]:not(:checked) {
     position: absolute;
-    left: -999px; }
+    left: -99999px; }
   .custom-checkbox [type="checkbox"]:checked + label,
   .custom-checkbox [type="checkbox"]:not(:checked) + label {
     width: 100%;
@@ -6723,7 +6729,10 @@ header {
   font-size: 12px; }
 
 .blog-banner-header {
-  z-index: 1; }
+  height: 200px;
+  z-index: 1;
+  background: url("../img/blog-banner.jpg") no-repeat;
+  background-size: cover; }
 
 .heading-blog {
   margin-bottom: 20px;
@@ -6742,7 +6751,8 @@ header {
   min-height: 40px;
   padding: 10px 20px;
   display: inline-block;
-  background-color: rgba(252, 245, 230, 0.9); }
+  background-color: rgba(252, 245, 230, 0.9);
+  text-align: left; }
   .view-blog-category .blog-icon, .view-blog-archives .blog-icon {
     padding-right: 10px;
     border-right: 1px solid #424242;
@@ -6826,9 +6836,16 @@ header {
   margin-bottom: 20px;
   overflow: hidden; }
 
+.popular-imgholder {
+  height: 182px; }
+  .popular-imgholder img {
+    width: 100%; }
+
 .popular-post-desc {
+  width: 100%;
   padding: 10px 15px;
   position: absolute;
+  left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7); }
   .popular-post-desc h4 {
@@ -6927,13 +6944,12 @@ header {
 
 .social-share li {
   vertical-align: top; }
-  .social-share li i {
+  .social-share li a {
     color: #999;
     -webkit-transition: all 300ms linear;
     -o-transition: all 300ms linear;
     transition: all 300ms linear; }
-    .social-share li i:hover {
-      color: #ff6759;
+    .social-share li a:hover {
       -webkit-transition: all 300ms linear;
       -o-transition: all 300ms linear;
       transition: all 300ms linear; }
@@ -7105,5 +7121,168 @@ header {
   line-height: 12px; }
   .journey-collection li:first-child {
     padding: 0 10px 0 0; }
+
+@media screen and (max-width: 1200px) {
+  .search {
+    display: none; }
+
+  .blog-masonry .grid {
+    margin: 0 auto; }
+
+  .blog-itineraries-main .blog-detail-pop {
+    min-width: auto;
+    width: auto; }
+
+  .onway-imgholder {
+    height: auto; } }
+@media screen and (max-width: 991px) {
+  header {
+    padding: 10px 0 0; }
+    header .logo {
+      margin-top: 4px; }
+
+  .user-detail .list-inline li {
+    padding: 0px 9px;
+    font-size: 15px; }
+    .user-detail .list-inline li:last-child {
+      padding: 0px 0px 0px 9px; }
+
+  .user-img {
+    width: 33px;
+    height: 35px;
+    border-radius: 12px; }
+
+  .popular-blog {
+    width: 349px;
+    margin: 0 auto 25px; }
+
+  .popular-imgholder {
+    height: 240px; }
+
+  .plugin-fb, .plugin-twitter {
+    text-align: center; }
+
+  .blog-journey-detail {
+    padding: 25px 30px; }
+
+  .you-may-like .grid {
+    margin: 0 auto; } }
+@media screen and (max-width: 767px) {
+  .user-detail {
+    margin-top: 10px; }
+    .user-detail .list-inline li {
+      padding: 0px 10px; }
+      .user-detail .list-inline li:first-child {
+        display: none; }
+      .user-detail .list-inline li:last-child {
+        padding: 0px 0px 0px 10px; }
+
+  .heading-blog {
+    font-size: 24px; }
+
+  .category-blog-select {
+    z-index: 2; }
+
+  .archives-blog-select {
+    margin-top: 10px;
+    z-index: 1; }
+
+  .post-descp .post-title {
+    font-size: 16px; }
+
+  .blog-post {
+    margin: 10px 0px 20px; }
+
+  .view-blog-archives {
+    width: 335px; }
+
+  .blog-detail-heading h3 {
+    font-size: 22px; }
+
+  .blog-journey-detail {
+    padding: 20px 0; }
+    .blog-journey-detail p {
+      font-size: 16px; }
+
+  .blog-social-field {
+    padding: 0; }
+
+  .you-may-like h3 {
+    font-size: 22px; }
+
+  .blog-popular-itineraries h3 {
+    font-size: 22px; }
+
+  .blog-itineraries-main {
+    margin: 0 auto; }
+    .blog-itineraries-main .blog-detail-pop {
+      min-width: auto;
+      width: 395px;
+      margin: 40px auto 0; }
+
+  .advertise-section img {
+    margin: 0 auto; } }
+@media screen and (max-width: 480px) {
+  .hamburger {
+    margin: 13px 0; }
+    .hamburger span {
+      height: 2px; }
+
+  .logo {
+    margin-left: -25px; }
+    .logo img {
+      width: 92px; }
+
+  .user-header-detail {
+    padding-left: 0; }
+
+  .user-detail {
+    margin-top: 10px; }
+    .user-detail .list-inline li {
+      padding: 0px 5px; }
+      .user-detail .list-inline li:last-child {
+        padding: 0 0 0 5px; }
+
+  .view-blog-category, .view-blog-archives {
+    width: 220px; }
+
+  .view-blog-archives {
+    width: 265px; }
+
+  .box-imgholder {
+    width: 100%; }
+
+  .post-descp .post-title {
+    font-size: 15px; }
+
+  .popular-blog {
+    width: 100%; }
+
+  .popular-imgholder {
+    height: 200px; }
+
+  .box-imgholder {
+    width: 100%; }
+
+  .blog-masonry .grid {
+    width: 100% !important; }
+
+  .masonry-brick.col-sm-6 {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .blog-detail-heading h3 {
+    font-size: 20px; }
+
+  .blog-journey-detail p {
+    font-size: 15px; }
+
+  .you-may-like .grid {
+    width: 100% !important; }
+
+  .blog-itineraries-main {
+    width: 100% !important; }
+    .blog-itineraries-main .blog-detail-pop {
+      width: 100%; } }
 
 /*# sourceMappingURL=screen.css.map */

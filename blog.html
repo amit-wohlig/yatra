@@ -7,7 +7,6 @@
   <title>Travelibro - Blog</title>
   <link href="css/main.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" />
-  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
   <!--[if IE]>
@@ -16,6 +15,8 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
   <script src="js/myscript.js"></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
             <span class="icon-bar"></span>
           </button> -->
         <div class="row">
-          <div class="col-md-5 col-sm-1">
+          <div class="col-md-5 col-sm-5 col-xs-4">
             <div class="header-left">
               <div class="hamburger pointer inline-block">
                 <span class="icon-bar"></span>
@@ -44,10 +45,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 col-sm-6">
+          <div class="col-md-2 col-sm-2 col-xs-4">
             <h1 class="text-center logo m-clear"><a href="" ui-sref="home"><img src="img/travel-logo.png" alt="" class="img-responsive m-center" width="110"></a></h1>
           </div>
-          <div class="col-md-5 col-sm-5">
+          <div class="col-md-5 col-sm-5 col-xs-4 user-header-detail">
             <div class="user-detail text-right">
               <ul class="list-inline">
                 <li>
@@ -88,20 +89,17 @@
 <main>
   <div class="blog-main">
     <div class="blog-banner-header relate">
-      <img src="img/blog-banner.jpg" alt="Blog" class="img-responsive full-width">
-      <div class="blog-header get-center">
+      <!-- <img src="img/blog-banner.jpg" alt="Blog" class="img-responsive full-width"> -->
+      <div class="blog-header get-center full-width">
         <div class="container">
           <div class="text-center">
             <h2 class="heading-blog avenir-heavy m-clear">Blog</h2>
-            <div class="row">
-              <div class="col-md-offset-3 col-md-6">
-                <form class="text-left">
+              <form class="text-center">
                   <div class="category-blog-select">
                     <div class="view-blog-category" data-target="#viewCategory" data-toggle="collapse"> <!--  ng-click="showCategory = !showCategory" -->
                       <span class="blog-icon"><img src="img/blog-category.png" alt="Blog-Category" width="20"></span>
                       <span class="blog-name avenir-roman">Categories</span>
                       <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
-                      <!-- <span class="pull-right" ng-init="showCategory = false"><i class="fa" ng-class="{'fa-chevron-up' : showCategory == true , 'fa-chevron-down' : showCategory == false}"></i></span> -->
                     </div>
                     <div class="blog-category-list scroll-side collapse" id="viewCategory">
                       <ul class="avenir-roman">
@@ -143,8 +141,6 @@
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -158,7 +154,7 @@
                 <div class="blog-masonry">
                   <div class="grid">
                     <div class="row">
-                      <div class="masonry-brick col-md-6 grid-item"> <!-- for loop -->
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item"> <!-- for loop -->
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -194,7 +190,7 @@
                             <div class="social-likes-reviews avenir-heavy">
                               <div class="clearfix">
                                 <div class="pull-left">
-                                  <span class="color-blue mr10"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
+                                  <span class="color-blue mr10 avenir-roman"><i class="fa fa-heart color-blue mr5"></i><b class="mr5">15660</b>Likes</span>
                                   <!-- <span class="color-blue"><img src="img/reviews.png" alt="" height="15" class="mr5 v-top">{{post.reviews}} ({{post.pointReview}}/5)</span> -->
                                 </div>
                                 <!-- <div class="pull-right">
@@ -205,7 +201,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -252,7 +248,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -299,7 +295,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item"> <!-- for loop -->
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item"> <!-- for loop -->
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -346,7 +342,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -393,7 +389,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -440,7 +436,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -487,7 +483,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="masonry-brick col-md-6 grid-item">
+                      <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                         <div class="blog-post">
                           <div class="relate">
                             <div class="box-imgholder">
@@ -632,7 +628,7 @@
                   <div class="pinterest">
                     <h4 class="color-light-grey text-center avenir-roman aside-heading">Pinterest</h4>
                     <div class="plugin-pinterest">
-                      <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="220" data-pin-scale-width="115" href="https://www.pinterest.com/travelibro/"></a>
+                      <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="220" data-pin-scale-width="130" href="https://www.pinterest.com/travelibro/"></a>
                     </div>
                   </div>
                   <div class="facebook">
@@ -650,7 +646,7 @@
                   <div class="instagram">
                     <h4 class="color-light-grey text-center avenir-roman aside-heading">Instagram</h4>
                     <div class="instagram-plugin">
-                      <iframe src="//lightwidget.com/widgets/3c0d96710f7c568f80e0e0a6ffeec960.html" id="lightwidget_3c0d96710f" name="lightwidget_3c0d96710f"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                      <iframe src="//lightwidget.com/widgets/8c4198555d555907a70ac0f6bcb4c5f8.html" id="lightwidget_8c4198555d" name="lightwidget_8c4198555d"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                     </div>
                   </div>
                 </div>
@@ -676,7 +672,6 @@
       </div>
     </div>
   </div>
-
 </main>
 </body>
 </html>

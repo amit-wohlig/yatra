@@ -1,0 +1,180 @@
+// Responsive
+// from desktop 1200px to 991px
+@media screen and (max-width: 1200px) {
+  // header
+  .search {
+    display: none;
+  }
+  // header end
+  // blog page
+  .blog-masonry {
+    .grid {
+      margin: 0 auto;
+    }
+  }
+  .blog-itineraries-main {
+    .blog-detail-pop {
+      min-width: auto;
+      width: auto;
+    }
+  }
+  .onway-imgholder { height: auto; }
+  // blog page end
+}
+// from desktop 1200px to 991px end
+// from 991px to 767px
+@media screen and (max-width: $screen-sm-max) {
+  // header
+  header {
+    padding: 10px 0 0;
+    .logo { margin-top: 4px; }
+  }
+  .user-detail {
+    .list-inline {
+      li {
+        padding: 0px 9px;
+        font-size: 15px;
+        &:last-child { padding: 0px 0px 0px 9px; }
+      }
+    }
+  }
+  .user-img {
+    width: 33px;
+    height: 35px;
+    border-radius: 12px;
+  }
+  // header end
+  // blog page
+  .popular-blog  {
+    width: 349px;
+    margin: 0 auto 25px;
+  }
+  .popular-imgholder { height: 240px; }
+  .plugin-fb, .plugin-twitter { text-align: center; }
+  // blog page end
+  // blog detail page
+  .blog-journey-detail {
+    padding: 25px 30px;
+  }
+  .you-may-like {
+    .grid { margin: 0 auto; }
+  }
+  // blog detail page end
+}
+// from 991px to 767px end
+// from 766px to 480px
+@media screen and (max-width: $screen-xs-max) {
+  // header
+  .user-detail {
+    margin-top: 10px;
+    .list-inline {
+      li {
+        &:first-child { display: none; }
+        padding: 0px 10px;
+        &:last-child { padding: 0px 0px 0px 10px; }
+      }
+    }
+  }
+  // header end
+  // blog page
+  .heading-blog { font-size: 24px; }
+  .category-blog-select { z-index: 2; }
+  .archives-blog-select {
+    margin-top: 10px;
+    z-index: 1;
+  }
+  .post-descp {
+    .post-title {
+      font-size: 16px;
+    }
+  }
+  .blog-post { margin: 10px 0px 20px; }
+  .view-blog-archives { width: 335px; }
+  // blog detail
+  .blog-detail-heading {
+    h3 { font-size: 22px; }
+  }
+  .blog-journey-detail {
+    padding: 20px 0;
+    p { font-size: 16px; }
+  }
+  .blog-social-field { padding: 0; }
+  .you-may-like {
+    h3 { font-size: 22px; }
+  }
+  .blog-popular-itineraries h3 { font-size: 22px; }
+  .blog-itineraries-main {
+    margin: 0 auto;
+    .blog-detail-pop {
+      min-width: auto;
+      width: 395px;
+      margin: 40px auto 0;
+    }
+  }
+  .advertise-section img { margin: 0 auto; }
+  // blog detail end
+  // blog page end
+}
+// from 766px to 480px end
+// from 480px to 370px
+@media screen and (max-width: 480px) {
+  // header
+  .hamburger {
+    margin: 13px 0;
+    span { height: 2px; }
+  }
+  .logo {
+    margin-left: -25px;
+    img { width: 92px; }
+  }
+  .user-header-detail { padding-left: 0; } // it is col-xs-4 of header which is on right
+  .user-detail {
+    margin-top: 10px;
+    .list-inline {
+      li {
+        padding: 0px 5px;
+        &:last-child { padding: 0 0 0 5px; }
+      }
+    }
+  }
+  // header end
+  // blog page
+  .view-blog-category {
+    width: 220px;
+  }
+  .view-blog-archives { width: 265px; }
+  // .box-imgholder { width: 300px; }
+  .box-imgholder { width: 100%; }
+  .post-descp {
+    .post-title {
+      font-size: 15px;
+    }
+  }
+  // .popular-blog { width: 300px; }
+  .popular-blog { width: 100%; }
+  .popular-imgholder { height: 200px; }
+  .box-imgholder { width: 100%; }
+  .blog-masonry .grid { width: 100% !important; }
+  .masonry-brick.col-sm-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // blog page end
+  // blog detail page
+  .blog-detail-heading h3 { font-size: 20px; }
+  .blog-journey-detail p { font-size: 15px; }
+  .you-may-like {
+    .grid {
+      width: 100% !important;
+    }
+  }
+  .blog-itineraries-main {
+    width: 100% !important;
+    .blog-detail-pop {
+      width: 100%;
+    }
+  }
+  // blog detail page end
+}
+// from 480px to 320px end
+// Responsive end

@@ -7,7 +7,6 @@
   <title>Travelibro - Blog-Detail</title>
   <link href="css/main.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" />
-  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
   <!--[if IE]>
@@ -16,6 +15,8 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
   <script src="js/myscript.js"></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
             <span class="icon-bar"></span>
           </button> -->
         <div class="row">
-          <div class="col-md-5 col-sm-1">
+          <div class="col-md-5 col-sm-5 col-xs-4">
             <div class="header-left">
               <div class="hamburger pointer inline-block">
                 <span class="icon-bar"></span>
@@ -44,10 +45,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 col-sm-6">
+          <div class="col-md-2 col-sm-2 col-xs-4">
             <h1 class="text-center logo m-clear"><a href="" ui-sref="home"><img src="img/travel-logo.png" alt="" class="img-responsive m-center" width="110"></a></h1>
           </div>
-          <div class="col-md-5 col-sm-5">
+          <div class="col-md-5 col-sm-5 col-xs-4 user-header-detail">
             <div class="user-detail text-right">
               <ul class="list-inline">
                 <li>
@@ -104,12 +105,12 @@
                   </div>
                   <div class="pull-right">
                     <ul class="list-inline social-share">
-                      <li>
+                      <!-- <li>
                         <a href="" class="inline-block travel-icon relate">
                           <img src="img/blog/travelibro-icon-grey.png" alt="" class="icon-grey">
                           <img src="img/blog/travelibro-icon.png" alt="" class="icon-pink">
                         </a>
-                      </li>
+                      </li> -->
                       <li><a href="" class="inline-block fb-icon "><i class="fa fa-facebook-square fa-2x"></i></a></li>
                       <li><a href="" class="inline-block twi-icon "><i class="fa fa-twitter-square fa-2x"></i></a></li>
                       <li><a href="" class="inline-block google-icon "><i class="fa fa-google-plus-square fa-2x"></i></a></li>
@@ -175,23 +176,23 @@
                 <div class="pull-right">
                   <div class="inline-block">
                     <ul class="list-inline social-share">
-                      <li>
+                      <!-- <li>
                         <a href="" class="inline-block travel-icon relate">
                           <img src="img/blog/travelibro-icon-grey.png" alt="" class="icon-grey">
                           <img src="img/blog/travelibro-icon.png" alt="" class="icon-pink">
                         </a>
-                      </li>
-                      <li><a href="" class="inline-block"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                      <li><a href="" class="inline-block"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-                      <li><a href="" class="inline-block"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
-                      <li><a href="" class="inline-block"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
-                      <li><a href="" class="inline-block"><i class="fa fa-instagram fa-2x"></i></a></li>
-                      <li><a href="" class="inline-block"><i class="fa fa-envelope-square fa-2x"></i></a></li>
+                      </li> -->
+                      <li><a href="" class="inline-block fb-icon"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                      <li><a href="" class="inline-block twi-icon"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                      <li><a href="" class="inline-block google-icon"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                      <li><a href="" class="inline-block pin-icon"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+                      <li><a href="" class="inline-block insta-icon"><i class="fa fa-instagram fa-2x"></i></a></li>
+                      <li><a href="" class="inline-block mail-icon"><i class="fa fa-envelope-square fa-2x"></i></a></li>
                     </ul>
                   </div>
-                  <div class="inline-block ml10 v-top">
+                  <!-- <div class="inline-block ml10 v-top">
                     <span><img src="img/options.png" alt="" height="18" class="mt5"></span>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- chat part -->
@@ -207,11 +208,11 @@
                       </div>
                       <div class="comment-container">
                         <div class="commenter-text">
-                          <p><span class="commenter-name avenir-heavy color-blue mr5">Andrea Christina</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          <p class="avenir-roman"><span class="commenter-name avenir-heavy color-blue mr5">Andrea Christina</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                           <div class="like-reply-line">
                             <span class="color-blue avenir-roman mr5 pointer">Like</span>
                             <span class="color-blue avenir-roman mr5 pointer">Reply</span>
-                            <span class="time-stamp ml5"><i class="fa fa-calendar color-grey mr5"></i><span>14 Jan, 2016</span> | <i class="fa fa-clock-o mr5 color-grey"></i><span>01:20 pm</span></span>
+                            <span class="time-stamp ml5 avenir-roman"><i class="fa fa-calendar color-grey mr5"></i><span>14 Jan, 2016</span> | <i class="fa fa-clock-o mr5 color-grey"></i><span>01:20 pm</span></span>
                           </div>
                         </div>
                       </div>
@@ -291,7 +292,7 @@
               <h3 class="color-light-grey avenir-roman">You May Also Like</h3>
               <div class="grid">
                 <div class="row">
-                  <div class=" masonry-brick col-md-6 grid-item"><!--ng-repeat="post in blogPost"--->
+                  <div class=" masonry-brick col-md-6 col-sm-6 grid-item"><!--ng-repeat="post in blogPost"--->
                     <div class="blog-post">
                       <div class="relate">
                         <div class="box-imgholder">
@@ -338,7 +339,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class=" masonry-brick col-md-6 grid-item">
+                  <div class=" masonry-brick col-md-6 col-sm-6 grid-item">
                     <div class="blog-post">
                       <div class="relate">
                         <div class="box-imgholder">
@@ -385,7 +386,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class=" masonry-brick col-md-6 grid-item">
+                  <div class=" masonry-brick col-md-6 col-sm-6 grid-item">
                     <div class="blog-post">
                       <div class="relate">
                         <div class="box-imgholder">
@@ -432,7 +433,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class=" masonry-brick col-md-6 grid-item">
+                  <div class=" masonry-brick col-md-6 col-sm-6 grid-item">
                     <div class="blog-post">
                       <div class="relate">
                         <div class="box-imgholder">
@@ -489,7 +490,7 @@
                 <h3 class="color-grey avenir-roman">Popular Itineraries</h3>
                 <div class="blog-itineraries-main grid">
                   <div class="row">
-                    <div class="masonry-brick col-md-6 grid-item "> <!---ng-repeat="life in travelLife"-->
+                    <div class="masonry-brick col-md-6 col-sm-6 grid-item "> <!---ng-repeat="life in travelLife"-->
                       <div class="travel-life-part blog-post avenir-roman blog-detail-pop">
                         <div class="travel-journey-heading">
                           <div class="editor-logo">
@@ -575,7 +576,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="masonry-brick col-md-6 grid-item">
+                    <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                       <div class="travel-life-part blog-post blog-detail-pop avenir-roman">
                         <div class="travel-journey-heading">
                           <div class="editor-logo">
@@ -661,7 +662,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="masonry-brick col-md-6 grid-item">
+                    <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                       <div class="travel-life-part blog-post blog-detail-pop avenir-roman">
                         <div class="travel-journey-heading">
                           <div class="editor-logo">
@@ -747,7 +748,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="masonry-brick col-md-6 grid-item">
+                    <div class="masonry-brick col-md-6 col-sm-6 grid-item">
                       <div class="travel-life-part blog-post blog-detail-pop avenir-roman">
                         <div class="travel-journey-heading">
                           <div class="editor-logo">
@@ -933,7 +934,7 @@
               <div class="pinterest">
                 <h4 class="color-light-grey text-center avenir-roman aside-heading">Pinterest</h4>
                 <div class="plugin-pinterest">
-                  <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="220" data-pin-scale-width="115" href="https://www.pinterest.com/travelibro/"></a>
+                  <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="220" data-pin-scale-width="130" href="https://www.pinterest.com/travelibro/"></a>
                 </div>
               </div>
               <div class="facebook">
@@ -951,7 +952,7 @@
               <div class="instagram">
                 <h4 class="color-light-grey text-center avenir-roman aside-heading">Instagram</h4>
                 <div class="instagram-plugin">
-                  <iframe src="//lightwidget.com/widgets/3c0d96710f7c568f80e0e0a6ffeec960.html" id="lightwidget_3c0d96710f" name="lightwidget_3c0d96710f"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                  <iframe src="//lightwidget.com/widgets/8c4198555d555907a70ac0f6bcb4c5f8.html" id="lightwidget_8c4198555d" name="lightwidget_8c4198555d"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                 </div>
               </div>
             </div>

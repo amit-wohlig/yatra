@@ -96,6 +96,12 @@ a.linkedin-icon:hover {
 a.mail-icon:hover {
   color: $brand-pink;
 }
+a.youtube-icon:hover {
+  color: #bb0000;
+}
+a.insta-icon:hover {
+  color: #517fa4;
+}
 .pop-close-btn {
   opacity: 1;
   color: #fff;
@@ -485,7 +491,7 @@ textarea {
   [type="checkbox"]:checked,
   [type="checkbox"]:not(:checked) {
     position: absolute;
-    left: -999px;
+    left: -99999px;
   }
   [type="checkbox"]:checked + label,
   [type="checkbox"]:not(:checked) + label {
@@ -690,7 +696,10 @@ header {
   font-size: 12px;
 }
 .blog-banner-header {
+  height: 200px;
   z-index: 1;
+  background: url('../img/blog-banner.jpg') no-repeat;
+  background-size: cover;
 }
 .heading-blog {
   margin-bottom: 20px;
@@ -710,6 +719,7 @@ header {
   padding: 10px 20px;
   display: inline-block;
   background-color: rgba(252,245,230,0.9);
+  text-align: left;
   .blog-icon {
     padding-right: 10px;
     border-right: 1px solid #424242;
@@ -808,9 +818,15 @@ header {
   margin-bottom: 20px;
   overflow: hidden;
 }
+.popular-imgholder {
+  height: 182px;
+  img { width: 100%; }
+}
 .popular-post-desc {
+  width: 100%;
   padding: 10px 15px;
   position: absolute;
+  left: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.7);
   h4 {
@@ -923,13 +939,10 @@ header {
 }
 .social-share li {
   vertical-align: top;
-  i {
+  a {
     color: #999;
     @include transition(all 300ms linear);
-    &:hover {
-      color: $brand-pink;
-      @include transition(all 300ms linear);
-    }
+    &:hover { @include transition(all 300ms linear); }
   }
 }
 .social-share {
@@ -1135,3 +1148,4 @@ header {
   }
 }
 // blog detail end
+@import "mobile.scss"
