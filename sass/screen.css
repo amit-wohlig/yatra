@@ -6779,6 +6779,9 @@ header {
       display: block; }
   .blog-category-list ::-webkit-scrollbar-thumb, .blog-archives-list ::-webkit-scrollbar-thumb {
     background-color: #424242; }
+  .blog-category-list.collapsing, .collapsing.blog-archives-list {
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
 
 .go-button {
   display: inline-block; }
@@ -7194,7 +7197,12 @@ header {
     margin: 10px 0px 20px; }
 
   .view-blog-archives {
-    width: 335px; }
+    width: 290px;
+    margin-left: -45px; }
+
+  .archives-blog-select .blog-archives-list {
+    width: 290px;
+    margin-left: -45px; }
 
   .blog-detail-heading h3 {
     font-size: 22px; }
@@ -7221,7 +7229,14 @@ header {
       margin: 40px auto 0; }
 
   .advertise-section img {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .blog-comment .share-comment-main .commenter-img {
+    width: 10%; }
+  .blog-comment .share-comment-main .comment-container {
+    width: 90%; }
+  .blog-comment .share-comment-main .comment-ur-text {
+    width: 90%; } }
 @media screen and (max-width: 480px) {
   .hamburger {
     margin: 13px 0; }
@@ -7244,10 +7259,14 @@ header {
         padding: 0 0 0 5px; }
 
   .view-blog-category, .view-blog-archives {
-    width: 220px; }
+    width: 225px; }
 
   .view-blog-archives {
-    width: 265px; }
+    width: 225px; }
+
+  .archives-blog-select .blog-archives-list {
+    width: 225px;
+    margin-left: -45px; }
 
   .box-imgholder {
     width: 100%; }
@@ -7283,6 +7302,30 @@ header {
   .blog-itineraries-main {
     width: 100% !important; }
     .blog-itineraries-main .blog-detail-pop {
-      width: 100%; } }
+      width: 100%; }
+
+  .journey-social .social-share i {
+    font-size: 23px; }
+
+  .blog-social-item .pull-right {
+    float: none !important;
+    clear: left; }
+  .blog-social-item .social-share {
+    margin-top: 10px;
+    margin-left: 0; }
+    .blog-social-item .social-share i {
+      font-size: 25px; }
+
+  .blog-comment .share-comment-main .commenter-img {
+    width: 15%; }
+  .blog-comment .share-comment-main .comment-container {
+    width: 85%; }
+  .blog-comment .share-comment-main .comment-ur-text {
+    width: 85%; }
+  .blog-comment .share-comment-main .like-reply-line {
+    font-size: 12px; }
+
+  .recent-blog .recent-blog-imgholder {
+    height: auto; } }
 
 /*# sourceMappingURL=screen.css.map */

@@ -752,6 +752,9 @@ header {
   ::-webkit-scrollbar-thumb {
     background-color: #424242;
   }
+  &.collapsing {
+    @include transition-duration(0.2s);
+  }
 }
 .blog-archives-list {
   @extend .blog-category-list;
