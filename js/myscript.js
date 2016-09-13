@@ -33,3 +33,34 @@ setTimeout(function(){
   }(document, "script", "twitter-wjs");
 },100);
 // twitter widget end
+
+// add class on popup
+// $(document).ready(function(){
+//   $(".view-popup").click(function(){
+//     console.log("amit");
+//     $(".blog-main").addClass("blur-bg");
+//   });
+// });
+
+
+// add class on popup end
+
+// scroll down
+$(document).ready(function(){
+  $(".scrollDown").click(function() {
+         $('html,body').animate({
+          //  scrollTop:$(this).parent().next().offset().top
+           scrollTop: $(".second").offset().top
+         }, 'slow');
+
+  });
+});
+
+// scroll down end
+
+$(document).ready(function(){
+  $(".person-stay").toggle();
+  $(".bookHotel").click(function(){
+    $(".person-stay").toggle();
+  });
+});

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Travelibro - Blog</title>
+  <link href="css/main.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link href="sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/myscript.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+</head>
+<body>
+  <main>
+    <div class="hotel-booking">
+      <div class="hotel-banner-holder relate">
+        <!-- side menu for vacation -->
+        <div class="side-menu">
+          <ul>
+            <li><a href="" title="Flights">Flights</a></li>
+            <li><a href="" title="Hotels" class="active">Hotels</a></li>
+            <li><a href="" title="Cars">Cars</a></li>
+            <li><a href="" title="Homestay">Homestay</a></li>
+            <li><a href="" title="Parcking Space">Parcking Space</a></li>
+            <li><a href="vacation.html" title="Vacation Rentals">Vacation Rentals</a></li>
+            <li><a href="" title="Tours">Tours</a></li>
+          </ul>
+        </div>
+        <!-- side menu for vacation end-->
+        <div class="hotel-overlay"></div>
+        <div class="hotel-booking-sec get-center">
+          <div class="blur-booking-bg"></div>
+          <div class="hotel-booking-form">
+            <h3 class="booking-title shadow-text color-white avenir-heavy">Hotels</h3>
+            <p class="avenir-heavy shadow-text color-white text-center booking-tag">Search And Compare The Best <span class="block">Holiday Homes Worldwide</span></p>
+            <form>
+              <div class="row-flex">
+                <div class="col-flex">
+                  <div class="form-group relate">
+                    <input type="text" class="form-control" placeholder="Where Are You Heading?">
+                    <div class="dropdown-icon">
+                      <i class="fa fa-pencil"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-flex">
+                <div class="col-flex">
+                  <div class="form-group relate">
+                    <input type="text" class="form-control" placeholder="Check In">
+                    <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="form-group relate">
+                    <input type="text" class="form-control" placeholder="Check Out">
+                    <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-flex">
+                <div class="col-flex col-flex-3">
+                  <div class="form-group relate">
+                    <input type="text" class="form-control bookHotel" placeholder="0 Rooms, 0 Adults, 0 Children">
+                    <div class="dropdown-icon bookHotel"><i class="fa fa-chevron-down"></i></div>
+                    <div class="person-stay">
+                      <div class="close-person-stay bookHotel"><i class="fa fa-times "></i></div>
+                      <div class="row-flex">
+                        <div class="col-flex">
+                          <div class="form-group">
+                            <label for="rooms">Rooms</label>
+                            <div class="person-count">
+                              <span><i class="fa fa-minus-circle minus"></i></span>
+                              <input type="text" id="rooms" placeholder="00">
+                              <span><i class="fa fa-plus-circle plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-flex">
+                          <div class="form-group">
+                              <label for="adult">Adults</label>
+                              <div class="person-count">
+                                <span><i class="fa fa-minus-circle minus"></i></span>
+                                <input type="text" id="adult" placeholder="00">
+                                <span><i class="fa fa-plus-circle plus"></i></span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row-flex">
+                        <div class="col-flex">
+                          <div class="form-group">
+                            <label for="children">Children</label>
+                            <div class="person-count">
+                              <span><i class="fa fa-minus-circle minus"></i></span>
+                              <input type="text" id="children" placeholder="00">
+                              <span><i class="fa fa-plus-circle plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-flex">
+                          <div class="form-group">
+                            <button class="btn btn-dark-blue apply">Apply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-flex">
+                  <div class="form-group relate">
+                    <button class="btn btn-pink full-width"><i class="fa fa-search mr5"></i>Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- mouse scroll -->
+        <div class="mouse-scrolldown color-white text-center scrollDown">
+          <img src="img/mouse-scroll.png" alt="Travelibro">
+          <p>Scroll Down</p>
+        </div>
+        <!-- mouse scroll end-->
+      </div>
+      <!-- hotel content -->
+      <div class="hotel-content-main second">
+        <div class="container-fluid">
+          <div class="destination-heading">
+            <h3 class="text-center color-pink avenir-roman dest-head">Popular Destinations</h3>
+            <h3 class="popular-dest-title avenir-roman">Europe</h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="popular-destination-holder">
+                <div class="destin-detail clearfix">
+                  <div class="pull-left">
+                    <h4 class="dest-country-name avenir-heavy">Europe</h4>
+                  </div>
+                  <div class="pull-right">
+                    <h5 class="dest-city-name avenir-heavy">UK</h5>
+                    <div class="flag-dest">
+                      <img src="img/flag.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <img src="img/info.jpg" alt="" class="img-responsive">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="popular-destination-holder">
+                <div class="destin-detail clearfix">
+                  <div class="pull-left">
+                    <h4 class="dest-country-name avenir-heavy">Europe</h4>
+                  </div>
+                  <div class="pull-right">
+                    <h5 class="dest-city-name avenir-heavy">UK</h5>
+                    <div class="flag-dest">
+                      <img src="img/flag.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <img src="img/info.jpg" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="popular-destination-holder">
+                <div class="destin-detail clearfix">
+                  <div class="pull-left">
+                    <h4 class="dest-country-name avenir-heavy">Europe</h4>
+                  </div>
+                  <div class="pull-right">
+                    <h5 class="dest-city-name avenir-heavy">UK</h5>
+                    <div class="flag-dest">
+                      <img src="img/flag.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <img src="img/info.jpg" alt="" class="img-responsive">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="popular-destination-holder">
+                <div class="destin-detail clearfix">
+                  <div class="pull-left">
+                    <h4 class="dest-country-name avenir-heavy">Europe</h4>
+                  </div>
+                  <div class="pull-right">
+                    <h5 class="dest-city-name avenir-heavy">UK</h5>
+                    <div class="flag-dest">
+                      <img src="img/flag.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <img src="img/info.jpg" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="popular-destination-holder popular-destination-large">
+                <div class="destin-detail clearfix">
+                  <div class="pull-left">
+                    <h4 class="dest-country-name avenir-heavy">Europe</h4>
+                  </div>
+                  <div class="pull-right">
+                    <h5 class="dest-city-name avenir-heavy">UK</h5>
+                    <div class="flag-dest">
+                      <img src="img/flag.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <img src="img/info.jpg" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hotel content end-->
+    </div>
+  </main>
+</body>
+</html>

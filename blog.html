@@ -13,11 +13,11 @@
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
   <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/myscript.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
   <script src="//lightwidget.com/widgets/lightwidget.js"></script>
   <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-  <script src="js/myscript.js"></script>
 </head>
 <body>
   <header class="bg-dark-blue">
@@ -46,7 +46,10 @@
             </div>
           </div>
           <div class="col-md-2 col-sm-2 col-xs-4">
-            <h1 class="text-center logo m-clear"><a href="" ui-sref="home"><img src="img/travel-logo.png" alt="" class="img-responsive m-center" width="110"></a></h1>
+            <h1 class="text-center logo m-clear"><a href="">
+              <img src="img/travel-logo.png" alt="" class="img-responsive m-center hidden-sm hidden-xs" width="110">
+              <img src="img/mobile-logo.png" alt="" class="img-responsive m-center hidden-lg hidden-md ">
+            </a></h1>
           </div>
           <div class="col-md-5 col-sm-5 col-xs-4 user-header-detail">
             <div class="user-detail text-right">
@@ -176,8 +179,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal" class="view-popup">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -223,8 +226,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -270,8 +273,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -317,8 +320,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -364,8 +367,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -411,8 +414,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -458,8 +461,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -505,8 +508,8 @@
                                   <li>
                                     <a href=""><img src="img/comments.png" alt="" height="18"></a>
                                   </li>
-                                  <li>
-                                    <a href=""><img src="img/share.png" alt="" height="18"></a>
+                                  <li data-toggle="modal" data-target="#shareModal">
+                                    <a><img src="img/share.png" alt="" height="18"></a>
                                   </li>
                                 </ul>
                               </div>
@@ -672,6 +675,31 @@
       </div>
     </div>
   </div>
+  <!-- modal -->
+  <div class="modal fade share-modal" id="shareModal" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-title text-center relate">
+          <div class="close-modal">
+            <span data-dismiss="modal"><img src="img/cross.png" alt="" class="img-responsive" width="25"></span>
+          </div>
+          <h3 class="avenir-roman">Let Get Social</h3>
+          <p class="avenir-roman m-clear">Share This Blog</p>
+        </div>
+        <div class="modal-main-content text-center">
+          <ul class="list-inline m-clear">
+            <li><a href="" class="share-facebook" title="Facebook" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+            <li><a href="" class="share-twitter" title="Twitter" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+            <li><a href="" class="share-google" title="Google Plus" target="_blank"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
+            <li><a href="" class="share-pinterest" title="Pinterest" target="_blank"><i class="fa fa-pinterest-square fa-3x"></i></a></li>
+            <li><a href="" class="share-linkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+            <li><a href="" class="share-mail" title="E-mail" target="_blank"><i class="fa fa-envelope-square fa-3x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal end-->
 </main>
 </body>
 </html>
