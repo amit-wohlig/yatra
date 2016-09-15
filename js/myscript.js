@@ -55,7 +55,6 @@ $(document).ready(function(){
 
   });
 });
-
 // scroll down end
 
 $(document).ready(function(){
@@ -64,3 +63,30 @@ $(document).ready(function(){
     $(".person-stay").toggle();
   });
 });
+
+// auto height
+
+$(document).ready(function(){
+  getheight = $(window).innerHeight();
+  $(".windowHeight").css('height',getheight);
+});
+
+// tabs
+$(document).ready(function(){
+  $(function(){
+    console.log("tabs");
+    $(".detail-tab").tabs();
+  })
+});
+
+// flip card
+$(document).ready(function(){
+  $(".view-card-detail").click(function(){
+    if($(".hotel-flipper-holder").hasClass("flip-card")) {
+      $(".hotel-flipper-holder").removeClass("flip-card");
+    }else {
+      $(".hotel-flipper-holder").addClass("flip-card");
+    }
+    // $(".hotel-flipper-holder").removeClass("flip-card");
+  })
+})

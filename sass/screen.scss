@@ -69,6 +69,9 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
+.text-shadow {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
 .btn,
 a {
   cursor: pointer;
@@ -157,6 +160,7 @@ a.insta-icon:hover {
   left: 50%;
   @include transform(translateX(-50%));
   @extend .avenir-roman;
+  @extend .text-shadow;
   font-size: 12px;
   cursor: pointer;
   img {
@@ -522,6 +526,9 @@ textarea {
 }
 .btn-outline-blue {
   @include button-variant( $brand-blue, transparent, $brand-blue);
+}
+.btn-cyan {
+  @include button-variant( white, $brand-cyan, $brand-cyan  );
 }
 // end btn classes
 
@@ -1262,11 +1269,6 @@ header {
     margin: 5px 0px 15px;
     font-size: 17px;
   }
-  .dropdown-icon {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-  }
   input.form-control {
     height: 40px;
     border-radius: 6px;
@@ -1280,6 +1282,11 @@ header {
     margin-right: 15px;
     color: #999ca2;
   }
+}
+.dropdown-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
 }
 .travellers-count {
   padding: 7px 12px;
@@ -1466,6 +1473,281 @@ header {
 }
 // popular destination end
 // hotels end
+// hotel inside
+
+.search-detail-holder {
+  margin-bottom: 10px;
+  .search-city-holder {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .date-holder {
+    width: 30%;
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top;
+  }
+  .stay-search-holder {
+    width: 35%;
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top;
+  }
+  input {
+    height: 40px;
+    border-radius: 6px;
+    border-color: transparent;
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+.checkin-checkout {
+  padding: 0 5px;
+  .check-in, .check-out {
+    width: 50%;
+    display: inline-block;
+  }
+  .check-in {
+    padding-right: 2px;
+  }
+  .check-out {
+    padding-left: 2px;
+    margin-left: -4px;
+  }
+}
+.stay-holder {
+  width: 80%;
+  padding-right: 5px;
+  display: inline-block;
+}
+.search-holder {
+  width: 20%;
+  margin-left: -4px;
+  display: inline-block;
+  button { height: 40px; }
+}
+// filter bar
+.filter-bar {
+  padding: 10px 15px;
+  @extend .avenir-medium;
+}
+.sec-hotel-result {
+  width: 18%;
+  display: inline-block;
+  vertical-align: top;
+  .hotel-result {
+    margin-top: 7px;
+    color: #8a8a8a;
+  }
+}
+.sort-by {
+  width: 37%;
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: top;
+  .sort-by-category {
+    margin-top: 7px;
+  }
+  .popular, .guest-rating, .price {
+    color: #424242;
+  }
+  .sort-tag {
+    color: #8a8a8a;
+  }
+}
+.score-popular {
+  .pop-score {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+.guest-rating {
+  .guest-score {
+    display: block;
+    font-size: 16px;
+  }
+  .review {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+  }
+}
+.per-night {
+  .inr { font-size: 11px; }
+  .price-count { font-size: 16px; }
+}
+.hotel-search-filter {
+  width: 45%;
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: top;
+  .search-hotel {
+    input {
+      padding: 6px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      @include placeholder {
+        color: #bcbec0;
+      };
+    }
+  }
+}
+// filter bar
+.hotel-details {
+  .list-inline {
+    margin: 0;
+    li {
+      padding: 0;
+      a {
+        padding: 10px 35px;
+        color: #fff;
+        font-size: 15px;
+        display: block;
+      }
+      &:last-child a {
+        padding: 10px 15px;
+      }
+    }
+    .ui-tabs-active {
+      background-color: $brand-pink;
+    }
+  }
+  .tab-content {
+    max-height: 250px;
+    background-color: #fff;
+    padding: 15px;
+    .read-more {
+      padding: 3px;
+      border-bottom: 1px solid $brand-pink;
+      display: inline-block;
+    }
+    .about-view {
+      p { font-size: 13px; }
+    }
+  }
+}
+// hotel sec
+.hotel-card-list {
+  margin-top: 5px;
+}
+.hotel-card-holder {
+  margin-bottom: 10px;
+  position: relative;
+  @include perspective(1000px);
+  .hotel-flipper-holder {
+    position: relative;
+    @include transform-style(preserve-3d);
+    @include transition(all 300ms linear);
+  }
+  .hotel-front-view {
+    position: relative;
+    @include transform(rotateX(0deg));
+    @include backface-visibility(hidden);
+    z-index: 2;
+  }
+  .hotel-back-view {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include transform(rotateX(180deg));
+    @include backface-visibility(hidden);
+  }
+  .flip-card {
+    @include transform(rotateX(180deg));
+    @include transition(all 300ms linear);
+  }
+}
+.hotel-card-holder:nth-child(odd) {
+  .score-round-holder {
+    border-color: $brand-pink;
+  }
+  .btn-deal {
+    @extend .btn-pink;
+  }
+}
+.hotel-card-holder:nth-child(even) {
+  .score-round-holder {
+    border-color: $brand-cyan;
+  }
+  .btn-deal {
+    @extend .btn-cyan;
+  }
+}
+.hotel-list-container {
+  padding-top: 10px;
+  background: url('../img/bookings/hotels.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+// slider
+.slider-hotel {
+  height: 290px;
+  position: relative;
+  .carousel { height: 100%; }
+  .carousel-control.left,.carousel-control.right {
+    background: none;
+    opacity: 1;
+    span {
+      @include position(absolute, 50% null null null);
+      @include transform(translateY(-50%));
+    }
+  }
+}
+// slider end
+.hotel-information {
+  padding: 25px 25px 15px 15px;
+  @extend .avenir-medium;
+  color: #fff;
+}
+.blur-overlay-bg {
+  @include position(absolute, 0);
+  background-color: rgba(0,0,0,0.3);
+}
+.hotel-list-heading {
+  .hotel-name {
+    margin: 0;
+    font-size: 18px;
+    @extend .avenir-medium;
+  }
+  .rate-by-star {
+    padding: 7px 0;
+  }
+}
+.hotel-chart-main {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  text-align: center;
+  .chart-type-title {
+    font-size: 13px;
+  }
+}
+.score-round-holder {
+  @include square(80px);
+  padding: 20px 0;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+  margin: 10px auto 0;
+  background-color: #fff;
+  color: #424242;
+  text-align: center;
+  @extend .avenir-medium;
+}
+
+.see-detail {
+  .view-detail {
+    margin-top: 5px;
+    display: inline-block;
+  }
+}
+// hotel inside end
 
 
 @import "mobile.scss"
