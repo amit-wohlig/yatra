@@ -3,6 +3,10 @@ $(document).ready(function(){
     itemSelector: '.grid-item',
     isFitWidth: true
   });
+
+
+  //For the height of hotels
+  $(".hotel-card-list").height($(window).height() - 180);
 });
 // facebook widget
 setTimeout(function(){
@@ -67,7 +71,7 @@ $(document).ready(function(){
 // auto height
 
 $(document).ready(function(){
-  getheight = $(window).innerHeight();
+  getheight = $(window).innerHeight() - 60;
   $(".windowHeight").css('height',getheight);
 });
 
@@ -81,6 +85,7 @@ $(document).ready(function(){
 
 // flip card
 $(document).ready(function(){
+  // flip card
   $(".view-card-detail").click(function(){
     if($(".hotel-flipper-holder").hasClass("flip-card")) {
       $(".hotel-flipper-holder").removeClass("flip-card");
@@ -89,4 +94,27 @@ $(document).ready(function(){
     }
     // $(".hotel-flipper-holder").removeClass("flip-card");
   })
+  // flip card end
+  // show filter
+
+  // $(".filter-main-sec").hide();
+  // $(".showfilter").click(function(){
+  //   $(".filter-main-sec").show("slow");
+  // });
+  // $(".closefilter").click(function(){
+  //   console.log("hide");
+  //   $(".filter-main-sec").hide("slow");
+  // })
+
+  $(".getfilter").click(function(){
+    console.log("has class");
+    if($(".filter-main-sec").hasClass("view-more-filter")){
+      $(".filter-main-sec").removeClass("view-more-filter");
+      console.log("remove");
+    }else {
+      console.log("add");
+      $(".filter-main-sec").addClass("view-more-filter");
+    }
+  })
+  // show filter end
 })

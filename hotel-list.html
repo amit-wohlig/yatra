@@ -81,7 +81,7 @@
   </header>
   <main class="">
     <!-- windowHeight -->
-    <div class="hotel-list-container">
+    <div class="hotel-list-container windowHeight">
       <div class="container-fluid">
         <div class="search-bar-field">
           <form action="">
@@ -120,7 +120,7 @@
                     </div>
               </div>
             </div>
-            <div class="filter-bar bg-white">
+            <div class="filter-bar relate bg-white">
               <div class="sec-hotel-result">
                 <div class="hotel-result">
                   <span>Hotels Found : 7</span>
@@ -139,17 +139,17 @@
                     </div>
                     <div class="col-md-3">
                       <div class="popular">
-                        <span>Popularity <i class="fa fa-chevron-down"></i></span>
+                        <span>Popularity <i class="fa fa-chevron-down ml5"></i></span>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="guest-rating">
-                        <span>Guest Rating <i class="fa fa-chevron-down"></i></span>
+                        <span>Guest Rating <i class="fa fa-chevron-down ml5"></i></span>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="price">
-                        <span>Price <i class="fa fa-chevron-down"></i></span>
+                        <span>Price <i class="fa fa-chevron-down ml5"></i></span>
                       </div>
                     </div>
                   </div>
@@ -164,684 +164,1059 @@
                     </div>
                   </div>
                   <div class="col-md-2">
-                    <button class="btn btn-pink"><i class="fa fa-filter mr5"></i>Filter</button>
+                    <a class="btn btn-pink getfilter"><i class="fa fa-filter mr5"></i>Filter</a>
                   </div>
                 </div>
               </div>
+              <!-- filter bar main -->
+              <div class="filter-main-sec">
+                <div class="customize-by-filter">
+                  <div class="clearfix">
+                    <div class="pull-right">
+                      <span class="clear-all">Clear All</span>
+                    </div>
+                  </div>
+                  <div class="filter-first-bar">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="price-slider">
+                          <span>Price</span>
+                          <div class="range-slider"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="start-rating-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate" data-toggle="collapse" data-target="#starRating">
+                              <span>Star Rating</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                            <div class="rating-list collapse" id="starRating">
+                              <ul>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="five-star">
+                                        <label for="five-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="four-star">
+                                        <label for="four-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>10</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="three-star">
+                                        <label for="three-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>250</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="two-star">
+                                        <label for="two-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="one-star">
+                                        <label for="one-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="unknow">
+                                        <label for="unknow">
+                                          <span class="color-blue">Unknow</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-right">
+                                      <span class="clear-star">Clear</span>
+                                      <button class="btn btn-pink">Apply</button>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="city-area-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>City Area</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="hotel-facility-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Hotel Facitilies</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-second-bar">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="currency-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Currency</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="room-facility-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Room Facitilies</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="guest-rating-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Guest Rating</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="hotel-chain-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Hotel Chain</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- result bar bottom -->
+                <div class="result-bar-filter">
+                  <a class="btn btn-pink avenir-roman getfilter"><i class="fa fa-times mr5"> </i>Close</a>
+                  <div class="list-search-view">
+                    <span class="filter-search-result">5 Star<i class="fa fa-times ml5"></i></span>
+                  </div>
+                </div>
+                <!-- result bar bottom end-->
+              </div>
+              <!-- filter bar main end -->
             </div>
             <div class="hotel-view-section">
               <div class="row-flex">
                 <div class="col-flex">
-                  <div class="hotel-card-list">
-                    <div class="hotel-card-holder relate">
-                      <div class="blur-overlay-bg"></div>
-                      <!-- flipper holder -->
-                      <div class="hotel-flipper-holder">
-                        <!-- hotel front view -->
-                        <div class="hotel-front-view">
-                          <div class="row m-clear">
-                            <div class="col-md-5 col-pad-zero">
-                              <div class="slider-hotel">
-                                <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
-                                  <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                  <div class="scroll-hotel-sec">
+                    <div class="hotel-card-list">
+                      <div class="hotel-card-holder relate">
+                        <div class="blur-overlay-bg"></div>
+                        <!-- flipper holder -->
+                        <div class="hotel-flipper-holder">
+                          <!-- hotel front view -->
+                          <div class="hotel-front-view">
+                            <div class="row m-clear">
+                              <div class="col-md-5 col-pad-zero">
+                                <div class="slider-hotel">
+                                  <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
+                                    <div class="carousel-inner" role="listbox">
+                                      <div class="item active">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="item ">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
                                     </div>
-                                    <div class="item ">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                                    <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
+                                    <span class="fa fa-chevron-left"></span>
+                                  </a>
+                                  <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                  </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-pad-zero">
+                                <div class="hotel-information">
+                                  <!-- hotel heading -->
+                                  <div class="hotel-list-heading">
+                                    <h4 class="hotel-name">
+                                      Trident Nariman Point
+                                    </h4>
+                                    <div class="rate-by-star">
+                                      <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
+                                      </ul>
                                     </div>
                                   </div>
-                                  <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
-                                  <span class="fa fa-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
-                                  <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                                  <!-- hotel heading -->
+                                  <!-- hotel chart -->
+                                    <div class="hotel-chart-main">
+                                      <div class="row m-clear">
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="score-popular">
+                                            <span class="chart-type-title">Popularity Score</span>
+                                            <div class="score-round-holder">
+                                              <span class="pop-score">18,907</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="guest-rating">
+                                            <span class="chart-type-title">Guest Rating</span>
+                                            <div class="score-round-holder">
+                                              <span class="guest-score">9.2</span>
+                                              <span class="review">1533 Review</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="per-night">
+                                            <span class="chart-type-title">Price Per Night</span>
+                                            <div class="score-round-holder">
+                                              <span class="block inr">INR</span>
+                                              <span class="price-count">39,887</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- hotel chart end-->
+                                  <!-- hotel see detail and button -->
+                                  <div class="see-detail">
+                                    <div class="clearfix">
+                                      <div class="pull-left">
+                                        <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                      </div>
+                                      <div class="pull-right">
+                                        <button class="btn btn-deal">View Deal</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-7 col-pad-zero">
-                              <div class="hotel-information">
-                                <!-- hotel heading -->
-                                <div class="hotel-list-heading">
-                                  <h4 class="hotel-name">
-                                    Trident Nariman Point
-                                  </h4>
-                                  <div class="rate-by-star">
-                                    <ul class="list-inline">
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <!-- hotel heading -->
-                                <!-- hotel chart -->
-                                  <div class="hotel-chart-main">
-                                    <div class="row m-clear">
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="score-popular">
-                                          <span class="chart-type-title">Popularity Score</span>
-                                          <div class="score-round-holder">
-                                            <span class="pop-score">18,907</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="guest-rating">
-                                          <span class="chart-type-title">Guest Rating</span>
-                                          <div class="score-round-holder">
-                                            <span class="guest-score">9.2</span>
-                                            <span class="review">1533 Review</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="per-night">
-                                          <span class="chart-type-title">Price Per Night</span>
-                                          <div class="score-round-holder">
-                                            <span class="block inr">INR</span>
-                                            <span class="price-count">39,887</span>
-                                          </div>
-                                        </div>
+                          </div>
+                          <!-- hotel see detail and button end-->
+                          <!-- hotel front view -->
+                          <!-- hotel back view -->
+                          <div class="hotel-back-view">
+                            <div class="hotel-details relate">
+                              <div class="detail-tab">
+                                <ul class="list-inline">
+                                  <li><a href="#tab1" title="About">About</a></li>
+                                  <li><a href="#tab2" title="Photos">Photos</a></li>
+                                  <li><a href="#tab3" title="Deals">Deals</a></li>
+                                  <li><a href="#tab4" title="Amenities">Amenities</a></li>
+                                  <li><a href="#tab5" title="Reviews">Reviews</a></li>
+                                  <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                <div class="scroll-tab-content">
+                                  <div class="tab-content">
+                                    <div class="about-view text-justify" id="tab1">
+                                      <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
+                                      <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
+                                      <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+                                      <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+                                    <span class="read-more color-pink pointer">Read More</span>
+                                    </div>
+                                    <div class="photo-view" id="tab2">
+                                      <p>Photo</p>
+                                    </div>
+                                    <div class="deals" id="tab3">
+                                      <div class="deal-list">
+                                        <table class="table avenir-roman">
+                                          <thead>
+                                            <tr>
+                                              <th class="color-pink">Booking Sites</th>
+                                              <th class="color-pink">Room</th>
+                                              <th class="color-pink">Room per night</th>
+                                              <th class="color-pink">Total for 5 nights</th>
+                                              <th class="color-pink"></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <div class="deals-logo-holder">
+                                                  <img src="img/bookings/agoda.jpg" alt="" class="img-responsive">
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-room-holder">
+                                                  <span class="block font-bold">Best Available Rate</span>
+                                                  <span class="room-service"><i>Breakfast included</i></span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-nightroom-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-total-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="text-center">
+                                                  <button class="btn btn-pink">View Deal</button>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <div class="deals-logo-holder">
+                                                  <img src="img/bookings/agoda.jpg" alt="" class="img-responsive">
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-room-holder">
+                                                  <span class="block font-bold">Best Available Rate</span>
+                                                  <span class="room-service"><i>Breakfast included</i></span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-nightroom-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-total-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="text-center">
+                                                  <button class="btn btn-pink">View Deal</button>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <div class="deals-logo-holder">
+                                                  <img src="img/bookings/agoda.jpg" alt="" class="img-responsive">
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-room-holder">
+                                                  <span class="block font-bold">Best Available Rate</span>
+                                                  <span class="room-service"><i>Breakfast included</i></span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-nightroom-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-total-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="text-center">
+                                                  <button class="btn btn-pink">View Deal</button>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <div class="deals-logo-holder">
+                                                  <img src="img/bookings/agoda.jpg" alt="" class="img-responsive">
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-room-holder">
+                                                  <span class="block font-bold">Best Available Rate</span>
+                                                  <span class="room-service"><i>Breakfast included</i></span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-nightroom-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="deals-total-holder text-center">
+                                                  <span class="font-bold">1,004 GBP</span>
+                                                </div>
+                                              </td>
+                                              <td>
+                                                <div class="text-center">
+                                                  <button class="btn btn-pink">View Deal</button>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
                                       </div>
                                     </div>
-                                  </div>
-                                <!-- hotel chart end-->
-                                <!-- hotel see detail and button -->
-                                <div class="see-detail">
-                                  <div class="clearfix">
-                                    <div class="pull-left">
-                                      <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                    <div class="amenities" id="tab4">
+                                      <p>Amenities</p>
                                     </div>
-                                    <div class="pull-right">
-                                      <button class="btn btn-deal">View Deal</button>
+                                    <div class="reviews" id="tab5">
+                                      <p>Reviews</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!-- hotel back view end-->
                         </div>
-                        <!-- hotel see detail and button end-->
-                        <!-- hotel front view -->
-                        <!-- hotel back view -->
-                        <div class="hotel-back-view">
-                          <div class="hotel-details relate">
-                            <div class="detail-tab">
-                              <ul class="list-inline">
-                                <li><a href="#tab1" title="About">About</a></li>
-                                <li><a href="#tab2" title="Photos">Photos</a></li>
-                                <li><a href="#tab3" title="Deals">Deals</a></li>
-                                <li><a href="#tab4" title="Amenities">Amenities</a></li>
-                                <li><a href="#tab5" title="Reviews">Reviews</a></li>
-                                <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
-                              </ul>
-                              <div class="tab-content">
-                                <div class="about-view text-justify" id="tab1">
-                                  <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
-                                  <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
-                                  <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-                                  <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-                                <span class="read-more color-pink pointer">Read More</span>
-                                </div>
-                                <div class="photo-view" id="tab2">
-                                  <p>Photo</p>
-                                </div>
-                                <div class="deals" id="tab3">
-                                  <p>Deals</p>
-                                </div>
-                                <div class="amenities" id="tab4">
-                                  <p>Amenities</p>
-                                </div>
-                                <div class="reviews" id="tab5">
-                                  <p>Reviews</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- hotel back view end-->
+                        <!-- flipper holder end -->
                       </div>
-                      <!-- flipper holder end -->
-                    </div>
-                    <div class="hotel-card-holder relate">
-                      <div class="blur-overlay-bg"></div>
-                      <!-- flipper holder -->
-                      <div class="hotel-flipper-holder">
-                        <!-- hotel front view -->
-                        <div class="hotel-front-view">
-                          <div class="row m-clear">
-                            <div class="col-md-5 col-pad-zero">
-                              <div class="slider-hotel">
-                                <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
-                                  <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                      <div class="hotel-card-holder relate">
+                        <div class="blur-overlay-bg"></div>
+                        <!-- flipper holder -->
+                        <div class="hotel-flipper-holder">
+                          <!-- hotel front view -->
+                          <div class="hotel-front-view">
+                            <div class="row m-clear">
+                              <div class="col-md-5 col-pad-zero">
+                                <div class="slider-hotel">
+                                  <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
+                                    <div class="carousel-inner" role="listbox">
+                                      <div class="item active">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="item ">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
                                     </div>
-                                    <div class="item ">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                                    <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
+                                    <span class="fa fa-chevron-left"></span>
+                                  </a>
+                                  <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                  </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-pad-zero">
+                                <div class="hotel-information">
+                                  <!-- hotel heading -->
+                                  <div class="hotel-list-heading">
+                                    <h4 class="hotel-name">
+                                      Trident Nariman Point
+                                    </h4>
+                                    <div class="rate-by-star">
+                                      <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
+                                      </ul>
                                     </div>
                                   </div>
-                                  <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
-                                  <span class="fa fa-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
-                                  <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                                  <!-- hotel heading -->
+                                  <!-- hotel chart -->
+                                    <div class="hotel-chart-main">
+                                      <div class="row m-clear">
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="score-popular">
+                                            <span class="chart-type-title">Popularity Score</span>
+                                            <div class="score-round-holder">
+                                              <span class="pop-score">18,907</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="guest-rating">
+                                            <span class="chart-type-title">Guest Rating</span>
+                                            <div class="score-round-holder">
+                                              <span class="guest-score">9.2</span>
+                                              <span class="review">1533 Review</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="per-night">
+                                            <span class="chart-type-title">Price Per Night</span>
+                                            <div class="score-round-holder">
+                                              <span class="block inr">INR</span>
+                                              <span class="price-count">39,887</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- hotel chart end-->
+                                  <!-- hotel see detail and button -->
+                                  <div class="see-detail">
+                                    <div class="clearfix">
+                                      <div class="pull-left">
+                                        <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                      </div>
+                                      <div class="pull-right">
+                                        <button class="btn btn-deal">View Deal</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-7 col-pad-zero">
-                              <div class="hotel-information">
-                                <!-- hotel heading -->
-                                <div class="hotel-list-heading">
-                                  <h4 class="hotel-name">
-                                    Trident Nariman Point
-                                  </h4>
-                                  <div class="rate-by-star">
-                                    <ul class="list-inline">
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <!-- hotel heading -->
-                                <!-- hotel chart -->
-                                  <div class="hotel-chart-main">
-                                    <div class="row m-clear">
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="score-popular">
-                                          <span class="chart-type-title">Popularity Score</span>
-                                          <div class="score-round-holder">
-                                            <span class="pop-score">18,907</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="guest-rating">
-                                          <span class="chart-type-title">Guest Rating</span>
-                                          <div class="score-round-holder">
-                                            <span class="guest-score">9.2</span>
-                                            <span class="review">1533 Review</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="per-night">
-                                          <span class="chart-type-title">Price Per Night</span>
-                                          <div class="score-round-holder">
-                                            <span class="block inr">INR</span>
-                                            <span class="price-count">39,887</span>
-                                          </div>
-                                        </div>
-                                      </div>
+                          </div>
+                          <!-- hotel see detail and button end-->
+                          <!-- hotel front view -->
+                          <!-- hotel back view -->
+                          <div class="hotel-back-view">
+                            <div class="hotel-details relate">
+                              <div class="detail-tab">
+                                <ul class="list-inline">
+                                  <li><a href="#tab11" title="About">About</a></li>
+                                  <li><a href="#tab21" title="Photos">Photos</a></li>
+                                  <li><a href="#tab31" title="Deals">Deals</a></li>
+                                  <li><a href="#tab41" title="Amenities">Amenities</a></li>
+                                  <li><a href="#tab51" title="Reviews">Reviews</a></li>
+                                  <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                <div class="scroll-tab-content">
+                                  <div class="tab-content">
+                                    <div class="about-view text-justify" id="tab11">
+                                      <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
+                                      <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
+                                      <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+                                      <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+                                    <span class="read-more color-pink pointer">Read More</span>
                                     </div>
-                                  </div>
-                                <!-- hotel chart end-->
-                                <!-- hotel see detail and button -->
-                                <div class="see-detail">
-                                  <div class="clearfix">
-                                    <div class="pull-left">
-                                      <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                    <div class="photo-view" id="tab21">
+                                      <p>Photo</p>
                                     </div>
-                                    <div class="pull-right">
-                                      <button class="btn btn-deal">View Deal</button>
+                                    <div class="deals" id="tab31">
+                                      <p>Deals</p>
+                                    </div>
+                                    <div class="amenities" id="tab41">
+                                      <p>Amenities</p>
+                                    </div>
+                                    <div class="reviews" id="tab51">
+                                      <p>Reviews</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!-- hotel back view end-->
                         </div>
-                        <!-- hotel see detail and button end-->
-                        <!-- hotel front view -->
-                        <!-- hotel back view -->
-                        <div class="hotel-back-view">
-                          <div class="hotel-details relate">
-                            <div class="detail-tab">
-                              <ul class="list-inline">
-                                <li><a href="#tab11" title="About">About</a></li>
-                                <li><a href="#tab21" title="Photos">Photos</a></li>
-                                <li><a href="#tab31" title="Deals">Deals</a></li>
-                                <li><a href="#tab41" title="Amenities">Amenities</a></li>
-                                <li><a href="#tab51" title="Reviews">Reviews</a></li>
-                                <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
-                              </ul>
-                              <div class="tab-content">
-                                <div class="about-view text-justify" id="tab11">
-                                  <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
-                                  <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
-                                  <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-                                  <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-                                <span class="read-more color-pink pointer">Read More</span>
-                                </div>
-                                <div class="photo-view" id="tab21">
-                                  <p>Photo</p>
-                                </div>
-                                <div class="deals" id="tab31">
-                                  <p>Deals</p>
-                                </div>
-                                <div class="amenities" id="tab41">
-                                  <p>Amenities</p>
-                                </div>
-                                <div class="reviews" id="tab51">
-                                  <p>Reviews</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- hotel back view end-->
+                        <!-- flipper holder end -->
                       </div>
-                      <!-- flipper holder end -->
-                    </div>
-                    <div class="hotel-card-holder relate">
-                      <div class="blur-overlay-bg"></div>
-                      <!-- flipper holder -->
-                      <div class="hotel-flipper-holder">
-                        <!-- hotel front view -->
-                        <div class="hotel-front-view">
-                          <div class="row m-clear">
-                            <div class="col-md-5 col-pad-zero">
-                              <div class="slider-hotel">
-                                <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
-                                  <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                      <div class="hotel-card-holder relate">
+                        <div class="blur-overlay-bg"></div>
+                        <!-- flipper holder -->
+                        <div class="hotel-flipper-holder">
+                          <!-- hotel front view -->
+                          <div class="hotel-front-view">
+                            <div class="row m-clear">
+                              <div class="col-md-5 col-pad-zero">
+                                <div class="slider-hotel">
+                                  <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
+                                    <div class="carousel-inner" role="listbox">
+                                      <div class="item active">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="item ">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
                                     </div>
-                                    <div class="item ">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                                    <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
+                                    <span class="fa fa-chevron-left"></span>
+                                  </a>
+                                  <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                  </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-pad-zero">
+                                <div class="hotel-information">
+                                  <!-- hotel heading -->
+                                  <div class="hotel-list-heading">
+                                    <h4 class="hotel-name">
+                                      Trident Nariman Point
+                                    </h4>
+                                    <div class="rate-by-star">
+                                      <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
+                                      </ul>
                                     </div>
                                   </div>
-                                  <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
-                                  <span class="fa fa-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
-                                  <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                                  <!-- hotel heading -->
+                                  <!-- hotel chart -->
+                                    <div class="hotel-chart-main">
+                                      <div class="row m-clear">
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="score-popular">
+                                            <span class="chart-type-title">Popularity Score</span>
+                                            <div class="score-round-holder">
+                                              <span class="pop-score">18,907</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="guest-rating">
+                                            <span class="chart-type-title">Guest Rating</span>
+                                            <div class="score-round-holder">
+                                              <span class="guest-score">9.2</span>
+                                              <span class="review">1533 Review</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="per-night">
+                                            <span class="chart-type-title">Price Per Night</span>
+                                            <div class="score-round-holder">
+                                              <span class="block inr">INR</span>
+                                              <span class="price-count">39,887</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- hotel chart end-->
+                                  <!-- hotel see detail and button -->
+                                  <div class="see-detail">
+                                    <div class="clearfix">
+                                      <div class="pull-left">
+                                        <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                      </div>
+                                      <div class="pull-right">
+                                        <button class="btn btn-deal">View Deal</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-7 col-pad-zero">
-                              <div class="hotel-information">
-                                <!-- hotel heading -->
-                                <div class="hotel-list-heading">
-                                  <h4 class="hotel-name">
-                                    Trident Nariman Point
-                                  </h4>
-                                  <div class="rate-by-star">
-                                    <ul class="list-inline">
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <!-- hotel heading -->
-                                <!-- hotel chart -->
-                                  <div class="hotel-chart-main">
-                                    <div class="row m-clear">
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="score-popular">
-                                          <span class="chart-type-title">Popularity Score</span>
-                                          <div class="score-round-holder">
-                                            <span class="pop-score">18,907</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="guest-rating">
-                                          <span class="chart-type-title">Guest Rating</span>
-                                          <div class="score-round-holder">
-                                            <span class="guest-score">9.2</span>
-                                            <span class="review">1533 Review</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="per-night">
-                                          <span class="chart-type-title">Price Per Night</span>
-                                          <div class="score-round-holder">
-                                            <span class="block inr">INR</span>
-                                            <span class="price-count">39,887</span>
-                                          </div>
-                                        </div>
-                                      </div>
+                          </div>
+                          <!-- hotel see detail and button end-->
+                          <!-- hotel front view -->
+                          <!-- hotel back view -->
+                          <div class="hotel-back-view">
+                            <div class="hotel-details relate">
+                              <div class="detail-tab">
+                                <ul class="list-inline">
+                                  <li><a href="#tab12" title="About">About</a></li>
+                                  <li><a href="#tab22" title="Photos">Photos</a></li>
+                                  <li><a href="#tab32" title="Deals">Deals</a></li>
+                                  <li><a href="#tab42" title="Amenities">Amenities</a></li>
+                                  <li><a href="#tab52" title="Reviews">Reviews</a></li>
+                                  <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                <div class="scroll-tab-content">
+                                  <div class="tab-content">
+                                    <div class="about-view text-justify" id="tab1">
+                                      <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
+                                      <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
+                                      <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+                                      <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+                                    <span class="read-more color-pink pointer">Read More</span>
                                     </div>
-                                  </div>
-                                <!-- hotel chart end-->
-                                <!-- hotel see detail and button -->
-                                <div class="see-detail">
-                                  <div class="clearfix">
-                                    <div class="pull-left">
-                                      <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                    <div class="photo-view" id="tab22">
+                                      <p>Photo</p>
                                     </div>
-                                    <div class="pull-right">
-                                      <button class="btn btn-deal">View Deal</button>
+                                    <div class="deals" id="tab32">
+                                      <p>Deals</p>
+                                    </div>
+                                    <div class="amenities" id="tab42">
+                                      <p>Amenities</p>
+                                    </div>
+                                    <div class="reviews" id="tab52">
+                                      <p>Reviews</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!-- hotel back view end-->
                         </div>
-                        <!-- hotel see detail and button end-->
-                        <!-- hotel front view -->
-                        <!-- hotel back view -->
-                        <div class="hotel-back-view">
-                          <div class="hotel-details relate">
-                            <div class="detail-tab">
-                              <ul class="list-inline">
-                                <li><a href="#tab12" title="About">About</a></li>
-                                <li><a href="#tab22" title="Photos">Photos</a></li>
-                                <li><a href="#tab32" title="Deals">Deals</a></li>
-                                <li><a href="#tab42" title="Amenities">Amenities</a></li>
-                                <li><a href="#tab52" title="Reviews">Reviews</a></li>
-                                <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
-                              </ul>
-                              <div class="tab-content">
-                                <div class="about-view text-justify" id="tab1">
-                                  <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
-                                  <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
-                                  <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-                                  <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-                                <span class="read-more color-pink pointer">Read More</span>
-                                </div>
-                                <div class="photo-view" id="tab22">
-                                  <p>Photo</p>
-                                </div>
-                                <div class="deals" id="tab32">
-                                  <p>Deals</p>
-                                </div>
-                                <div class="amenities" id="tab42">
-                                  <p>Amenities</p>
-                                </div>
-                                <div class="reviews" id="tab52">
-                                  <p>Reviews</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- hotel back view end-->
+                        <!-- flipper holder end -->
                       </div>
-                      <!-- flipper holder end -->
-                    </div>
-                    <div class="hotel-card-holder relate">
-                      <div class="blur-overlay-bg"></div>
-                      <!-- flipper holder -->
-                      <div class="hotel-flipper-holder">
-                        <!-- hotel front view -->
-                        <div class="hotel-front-view">
-                          <div class="row m-clear">
-                            <div class="col-md-5 col-pad-zero">
-                              <div class="slider-hotel">
-                                <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
-                                  <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                      <div class="hotel-card-holder relate">
+                        <div class="blur-overlay-bg"></div>
+                        <!-- flipper holder -->
+                        <div class="hotel-flipper-holder">
+                          <!-- hotel front view -->
+                          <div class="hotel-front-view">
+                            <div class="row m-clear">
+                              <div class="col-md-5 col-pad-zero">
+                                <div class="slider-hotel">
+                                  <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
+                                    <div class="carousel-inner" role="listbox">
+                                      <div class="item active">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="item ">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
                                     </div>
-                                    <div class="item ">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                                    <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
+                                    <span class="fa fa-chevron-left"></span>
+                                  </a>
+                                  <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                  </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-pad-zero">
+                                <div class="hotel-information">
+                                  <!-- hotel heading -->
+                                  <div class="hotel-list-heading">
+                                    <h4 class="hotel-name">
+                                      Trident Nariman Point
+                                    </h4>
+                                    <div class="rate-by-star">
+                                      <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
+                                      </ul>
                                     </div>
                                   </div>
-                                  <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
-                                  <span class="fa fa-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
-                                  <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                                  <!-- hotel heading -->
+                                  <!-- hotel chart -->
+                                    <div class="hotel-chart-main">
+                                      <div class="row m-clear">
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="score-popular">
+                                            <span class="chart-type-title">Popularity Score</span>
+                                            <div class="score-round-holder">
+                                              <span class="pop-score">18,907</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="guest-rating">
+                                            <span class="chart-type-title">Guest Rating</span>
+                                            <div class="score-round-holder">
+                                              <span class="guest-score">9.2</span>
+                                              <span class="review">1533 Review</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="per-night">
+                                            <span class="chart-type-title">Price Per Night</span>
+                                            <div class="score-round-holder">
+                                              <span class="block inr">INR</span>
+                                              <span class="price-count">39,887</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- hotel chart end-->
+                                  <!-- hotel see detail and button -->
+                                  <div class="see-detail">
+                                    <div class="clearfix">
+                                      <div class="pull-left">
+                                        <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                      </div>
+                                      <div class="pull-right">
+                                        <button class="btn btn-deal">View Deal</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-7 col-pad-zero">
-                              <div class="hotel-information">
-                                <!-- hotel heading -->
-                                <div class="hotel-list-heading">
-                                  <h4 class="hotel-name">
-                                    Trident Nariman Point
-                                  </h4>
-                                  <div class="rate-by-star">
-                                    <ul class="list-inline">
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <!-- hotel heading -->
-                                <!-- hotel chart -->
-                                  <div class="hotel-chart-main">
-                                    <div class="row m-clear">
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="score-popular">
-                                          <span class="chart-type-title">Popularity Score</span>
-                                          <div class="score-round-holder">
-                                            <span class="pop-score">18,907</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="guest-rating">
-                                          <span class="chart-type-title">Guest Rating</span>
-                                          <div class="score-round-holder">
-                                            <span class="guest-score">9.2</span>
-                                            <span class="review">1533 Review</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="per-night">
-                                          <span class="chart-type-title">Price Per Night</span>
-                                          <div class="score-round-holder">
-                                            <span class="block inr">INR</span>
-                                            <span class="price-count">39,887</span>
-                                          </div>
-                                        </div>
-                                      </div>
+                          </div>
+                          <!-- hotel see detail and button end-->
+                          <!-- hotel front view -->
+                          <!-- hotel back view -->
+                          <div class="hotel-back-view">
+                            <div class="hotel-details relate">
+                              <div class="detail-tab">
+                                <ul class="list-inline">
+                                  <li><a href="#tab13" title="About">About</a></li>
+                                  <li><a href="#tab23" title="Photos">Photos</a></li>
+                                  <li><a href="#tab33" title="Deals">Deals</a></li>
+                                  <li><a href="#tab43" title="Amenities">Amenities</a></li>
+                                  <li><a href="#tab53" title="Reviews">Reviews</a></li>
+                                  <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                <div class="scroll-tab-content">
+                                  <div class="tab-content">
+                                    <div class="about-view text-justify" id="tab13">
+                                      <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
+                                      <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
+                                      <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+                                      <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+                                    <span class="read-more color-pink pointer">Read More</span>
                                     </div>
-                                  </div>
-                                <!-- hotel chart end-->
-                                <!-- hotel see detail and button -->
-                                <div class="see-detail">
-                                  <div class="clearfix">
-                                    <div class="pull-left">
-                                      <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                    <div class="photo-view" id="tab23">
+                                      <p>Photo</p>
                                     </div>
-                                    <div class="pull-right">
-                                      <button class="btn btn-deal">View Deal</button>
+                                    <div class="deals" id="tab33">
+                                      <p>Deals</p>
+                                    </div>
+                                    <div class="amenities" id="tab43">
+                                      <p>Amenities</p>
+                                    </div>
+                                    <div class="reviews" id="tab53">
+                                      <p>Reviews</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!-- hotel back view end-->
                         </div>
-                        <!-- hotel see detail and button end-->
-                        <!-- hotel front view -->
-                        <!-- hotel back view -->
-                        <div class="hotel-back-view">
-                          <div class="hotel-details relate">
-                            <div class="detail-tab">
-                              <ul class="list-inline">
-                                <li><a href="#tab13" title="About">About</a></li>
-                                <li><a href="#tab23" title="Photos">Photos</a></li>
-                                <li><a href="#tab33" title="Deals">Deals</a></li>
-                                <li><a href="#tab43" title="Amenities">Amenities</a></li>
-                                <li><a href="#tab53" title="Reviews">Reviews</a></li>
-                                <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
-                              </ul>
-                              <div class="tab-content">
-                                <div class="about-view text-justify" id="tab13">
-                                  <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
-                                  <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
-                                  <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-                                  <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-                                <span class="read-more color-pink pointer">Read More</span>
-                                </div>
-                                <div class="photo-view" id="tab23">
-                                  <p>Photo</p>
-                                </div>
-                                <div class="deals" id="tab33">
-                                  <p>Deals</p>
-                                </div>
-                                <div class="amenities" id="tab43">
-                                  <p>Amenities</p>
-                                </div>
-                                <div class="reviews" id="tab53">
-                                  <p>Reviews</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- hotel back view end-->
+                        <!-- flipper holder end -->
                       </div>
-                      <!-- flipper holder end -->
-                    </div>
-                    <div class="hotel-card-holder relate">
-                      <div class="blur-overlay-bg"></div>
-                      <!-- flipper holder -->
-                      <div class="hotel-flipper-holder">
-                        <!-- hotel front view -->
-                        <div class="hotel-front-view">
-                          <div class="row m-clear">
-                            <div class="col-md-5 col-pad-zero">
-                              <div class="slider-hotel">
-                                <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
-                                  <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                      <div class="hotel-card-holder relate">
+                        <div class="blur-overlay-bg"></div>
+                        <!-- flipper holder -->
+                        <div class="hotel-flipper-holder">
+                          <!-- hotel front view -->
+                          <div class="hotel-front-view">
+                            <div class="row m-clear">
+                              <div class="col-md-5 col-pad-zero">
+                                <div class="slider-hotel">
+                                  <div class="carousel slide" data-ride="carousel" id="hotel-slider1">
+                                    <div class="carousel-inner" role="listbox">
+                                      <div class="item active">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="item ">
+                                        <img src="img/bookings/slider1.jpg" alt="" class="img-responsive">
+                                      </div>
                                     </div>
-                                    <div class="item ">
-                                      <img src="img/bookings/slider1.jpg" alt="" class="img-resposnive">
+                                    <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
+                                    <span class="fa fa-chevron-left"></span>
+                                  </a>
+                                  <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                  </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-pad-zero">
+                                <div class="hotel-information">
+                                  <!-- hotel heading -->
+                                  <div class="hotel-list-heading">
+                                    <h4 class="hotel-name">
+                                      Trident Nariman Point
+                                    </h4>
+                                    <div class="rate-by-star">
+                                      <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star color-white"></i></a></li>
+                                        <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
+                                      </ul>
                                     </div>
                                   </div>
-                                  <a class="left carousel-control" href="#hotel-slider1" role="button" data-slide="prev">
-                                  <span class="fa fa-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#hotel-slider1" role="button" data-slide="next">
-                                  <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
+                                  <!-- hotel heading -->
+                                  <!-- hotel chart -->
+                                    <div class="hotel-chart-main">
+                                      <div class="row m-clear">
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="score-popular">
+                                            <span class="chart-type-title">Popularity Score</span>
+                                            <div class="score-round-holder">
+                                              <span class="pop-score">18,907</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="guest-rating">
+                                            <span class="chart-type-title">Guest Rating</span>
+                                            <div class="score-round-holder">
+                                              <span class="guest-score">9.2</span>
+                                              <span class="review">1533 Review</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4 col-pad-zero">
+                                          <div class="per-night">
+                                            <span class="chart-type-title">Price Per Night</span>
+                                            <div class="score-round-holder">
+                                              <span class="block inr">INR</span>
+                                              <span class="price-count">39,887</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- hotel chart end-->
+                                  <!-- hotel see detail and button -->
+                                  <div class="see-detail">
+                                    <div class="clearfix">
+                                      <div class="pull-left">
+                                        <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                      </div>
+                                      <div class="pull-right">
+                                        <button class="btn btn-deal">View Deal</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-md-7 col-pad-zero">
-                              <div class="hotel-information">
-                                <!-- hotel heading -->
-                                <div class="hotel-list-heading">
-                                  <h4 class="hotel-name">
-                                    Trident Nariman Point
-                                  </h4>
-                                  <div class="rate-by-star">
-                                    <ul class="list-inline">
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star color-white"></i></a></li>
-                                      <li><a href=""><i class="fa fa-star-o color-white"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <!-- hotel heading -->
-                                <!-- hotel chart -->
-                                  <div class="hotel-chart-main">
-                                    <div class="row m-clear">
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="score-popular">
-                                          <span class="chart-type-title">Popularity Score</span>
-                                          <div class="score-round-holder">
-                                            <span class="pop-score">18,907</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="guest-rating">
-                                          <span class="chart-type-title">Guest Rating</span>
-                                          <div class="score-round-holder">
-                                            <span class="guest-score">9.2</span>
-                                            <span class="review">1533 Review</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4 col-pad-zero">
-                                        <div class="per-night">
-                                          <span class="chart-type-title">Price Per Night</span>
-                                          <div class="score-round-holder">
-                                            <span class="block inr">INR</span>
-                                            <span class="price-count">39,887</span>
-                                          </div>
-                                        </div>
-                                      </div>
+                          </div>
+                          <!-- hotel see detail and button end-->
+                          <!-- hotel front view -->
+                          <!-- hotel back view -->
+                          <div class="hotel-back-view">
+                            <div class="hotel-details relate">
+                              <div class="detail-tab">
+                                <ul class="list-inline">
+                                  <li><a href="#tab14" title="About">About</a></li>
+                                  <li><a href="#tab24" title="Photos">Photos</a></li>
+                                  <li><a href="#tab34" title="Deals">Deals</a></li>
+                                  <li><a href="#tab44" title="Amenities">Amenities</a></li>
+                                  <li><a href="#tab54" title="Reviews">Reviews</a></li>
+                                  <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                <div class="scroll-tab-content">
+                                  <div class="tab-content">
+                                    <div class="about-view text-justify" id="tab14">
+                                      <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
+                                      <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
+                                      <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
+                                      <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
+                                    <span class="read-more color-pink pointer">Read More</span>
                                     </div>
-                                  </div>
-                                <!-- hotel chart end-->
-                                <!-- hotel see detail and button -->
-                                <div class="see-detail">
-                                  <div class="clearfix">
-                                    <div class="pull-left">
-                                      <span class="view-detail view-card-detail">See All Details <i class="fa fa-chevron-down"></i></span>
+                                    <div class="photo-view" id="tab24">
+                                      <p>Photo</p>
                                     </div>
-                                    <div class="pull-right">
-                                      <button class="btn btn-deal">View Deal</button>
+                                    <div class="deals" id="tab34">
+                                      <p>Deals</p>
+                                    </div>
+                                    <div class="amenities" id="tab44">
+                                      <p>Amenities</p>
+                                    </div>
+                                    <div class="reviews" id="tab54">
+                                      <p>Reviews</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!-- hotel back view end-->
                         </div>
-                        <!-- hotel see detail and button end-->
-                        <!-- hotel front view -->
-                        <!-- hotel back view -->
-                        <div class="hotel-back-view">
-                          <div class="hotel-details relate">
-                            <div class="detail-tab">
-                              <ul class="list-inline">
-                                <li><a href="#tab14" title="About">About</a></li>
-                                <li><a href="#tab24" title="Photos">Photos</a></li>
-                                <li><a href="#tab34" title="Deals">Deals</a></li>
-                                <li><a href="#tab44" title="Amenities">Amenities</a></li>
-                                <li><a href="#tab54" title="Reviews">Reviews</a></li>
-                                <li><a class="view-card-detail pointer"><i class="fa fa-times"></i></a></li>
-                              </ul>
-                              <div class="tab-content">
-                                <div class="about-view text-justify" id="tab14">
-                                  <p>Featuring an outdoor pool and a swimming pool, Trident Nariman Point is located in Mumbai and offers lively accommodation. It provides 5-star accommodation and views of the sea.</p>
-                                  <p>There are a variety of facilities on offer to guests of The Trident Nariman Point, including an express check-in and check-out feature, an executive floor and 24-hour room service. It offers babysitting services, a currency exchange and a reception that operates 24 hours a day.</p>
-                                  <p>Rooms at Trident Nariman Point are spacious and feature a mini bar and movies-on-demand. Each provide bottled water, a seating area and a private bathroom with a shower.</p>
-                                  <p>A satisfying breakfast is prepared every morning at Trident Hotel Nariman Point, and there are numerous cafés and eateries close by.</p>
-                                <span class="read-more color-pink pointer">Read More</span>
-                                </div>
-                                <div class="photo-view" id="tab24">
-                                  <p>Photo</p>
-                                </div>
-                                <div class="deals" id="tab34">
-                                  <p>Deals</p>
-                                </div>
-                                <div class="amenities" id="tab44">
-                                  <p>Amenities</p>
-                                </div>
-                                <div class="reviews" id="tab54">
-                                  <p>Reviews</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- hotel back view end-->
+                        <!-- flipper holder end -->
                       </div>
-                      <!-- flipper holder end -->
                     </div>
                   </div>
                 </div>
