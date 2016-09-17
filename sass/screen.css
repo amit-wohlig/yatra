@@ -6059,7 +6059,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-medium, .side-menu a, .person-stay label, .filter-bar, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder {
+.avenir-medium, .side-menu a, .person-stay label, .filter-bar, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a {
   font-family: "AvenirLTStd-Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -7739,6 +7739,15 @@ header {
 .deal-list .room-service {
   font-size: 12px; }
 
+.amenities-holder li {
+  margin-bottom: 3px; }
+.amenities-holder .amenity-type {
+  font-size: 15px;
+  color: #424242; }
+.amenities-holder .available, .amenities-holder .available-not {
+  min-width: 15px;
+  display: inline-block; }
+
 .scroll-hotel-sec ::-webkit-scrollbar {
   width: 0px; }
 .scroll-hotel-sec ::-webkit-scrollbar-track {
@@ -7758,6 +7767,8 @@ header {
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px; }
+  .hotel-card-holder:last-child {
+    margin: 0; }
   .hotel-card-holder .hotel-flipper-holder {
     position: relative;
     -webkit-transform-style: preserve-3d;
@@ -7840,13 +7851,31 @@ header {
   padding: 25px 25px 15px 15px;
   color: #fff; }
 
-.blur-overlay-bg {
+.blurry-overlay-whole {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-image: url("../img/bookings/hotels.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background-position: 0;
+  overflow: hidden; }
+
+.blur-overlay-bg-div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .hotel-list-heading .hotel-name {
   margin: 0;
@@ -7878,6 +7907,45 @@ header {
 .see-detail .view-detail {
   margin-top: 5px;
   display: inline-block; }
+
+.list-pagination {
+  padding: 10px 0 6px;
+  position: relative;
+  background-color: #fff;
+  text-align: center; }
+  .list-pagination .pagination {
+    margin: 0; }
+    .list-pagination .pagination li {
+      margin-left: -4px;
+      display: inline-block; }
+      .list-pagination .pagination li:first-child {
+        margin-right: 10px; }
+        .list-pagination .pagination li:first-child a {
+          padding: 0;
+          border-right: none;
+          font-size: 25px; }
+      .list-pagination .pagination li:nth-last-of-type(2) a {
+        border-right: none; }
+      .list-pagination .pagination li:last-child {
+        margin-left: 10px; }
+        .list-pagination .pagination li:last-child a {
+          padding: 0;
+          border-right: none;
+          font-size: 25px; }
+      .list-pagination .pagination li a {
+        border: none;
+        border-right: 1px solid #424242;
+        border-radius: 0;
+        margin: 0;
+        font-size: 15px;
+        color: #424242;
+        line-height: 100%; }
+        .list-pagination .pagination li a:hover {
+          background-color: transparent;
+          color: #ff6759; }
+    .list-pagination .pagination .active a {
+      background-color: transparent;
+      color: #ff6759; }
 
 @media screen and (max-width: 1200px) {
   .search {
