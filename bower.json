@@ -16,6 +16,7 @@
     "bourbon": "~4.2.5",
     "font-awesome": "^4.6.3",
     "bootstrap": "^3.3.7",
-    "masonry": "^4.1.1"
+    "masonry": "^4.1.1",
+    "flexslider": "https://github.com/woothemes/FlexSlider.git#^2.6.3"
   }
 }

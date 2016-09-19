@@ -92,29 +92,50 @@ $(document).ready(function(){
     }else {
       $(".hotel-flipper-holder").addClass("flip-card");
     }
-    // $(".hotel-flipper-holder").removeClass("flip-card");
-  })
-  // flip card end
-  // show filter
+  });
 
-  // $(".filter-main-sec").hide();
-  // $(".showfilter").click(function(){
-  //   $(".filter-main-sec").show("slow");
-  // });
-  // $(".closefilter").click(function(){
-  //   console.log("hide");
-  //   $(".filter-main-sec").hide("slow");
-  // })
-
+// show filter
   $(".getfilter").click(function(){
-    console.log("has class");
-    if($(".filter-main-sec").hasClass("view-more-filter")){
-      $(".filter-main-sec").removeClass("view-more-filter");
-      console.log("remove");
-    }else {
-      console.log("add");
-      $(".filter-main-sec").addClass("view-more-filter");
-    }
+    $(".filter-main-sec").slideToggle("fast");
   })
-  // show filter end
-})
+// show filter end
+// show slider photo
+  $("#flexslider").flexslider({
+    animation: "slide",
+    itemWidth: "210",
+    itemMargin: "5"       
+  })
+// show slider photo end
+// range slider
+$("#rangeSlider").slider({
+    range: true,
+    min: 0,
+    max: 1000,
+    values: [100, 900],
+    animate: 'slow',
+    create: function() {
+    $('#min').appendTo($('#rangeSlider span').get(0));
+    $('#max').appendTo($('#rangeSlider span').get(1));
+},
+    slide: function(event, ui) {
+      $(ui.handle).find("#min").html('INR ' + ui.value);
+      $(ui.handle).find("#max").html('INR ' + ui.value);
+    }
+});
+
+// only initially needed
+$('#min').html('INR ' + $('#rangeSlider').slider('values', 0)).position({
+    my: 'center top',
+    at: 'center bottom',
+    of: $('#rangeSlider span:eq(0)'),
+    offset: "0, 0"
+});
+
+$('#max').html('INR ' + $('#rangeSlider').slider('values', 1)).position({
+    my: 'center top',
+    at: 'center bottom',
+    of: $('#rangeSlider span:eq(1)'),
+    offset: "0, 0"
+});
+// range slider end
+});
