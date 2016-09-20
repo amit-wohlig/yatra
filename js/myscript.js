@@ -96,15 +96,15 @@ $(document).ready(function(){
 
 // show filter
   $(".getfilter").click(function(){
-    $(".filter-main-sec").slideToggle("fast");
-  })
+    $(".filter-main-sec").slideToggle(500);
+  });
 // show filter end
 // show slider photo
   $("#flexslider").flexslider({
     animation: "slide",
     itemWidth: "210",
-    itemMargin: "5"       
-  })
+    itemMargin: "5"
+  });
 // show slider photo end
 // range slider
 $("#rangeSlider").slider({

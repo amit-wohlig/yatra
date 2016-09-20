@@ -1659,7 +1659,7 @@ header {
   top: 0;
   left: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 3;
   @include transition(all 300ms linear);
   &.view-more-filter {
     height: auto;
@@ -1755,7 +1755,7 @@ header {
   }
 }
 // filter bar main end
-// filter bar
+// filter bar end
 .hotel-details {
   // ui css external overide
   .detail-tab.ui-widget.ui-widget-content {
@@ -1836,6 +1836,34 @@ header {
     }
   }
 }
+// for hotel detail page
+.hotel-details.hotel-detail-tab {
+  .ui-tabs .ui-tabs-nav li {
+    border-top: 1px solid #b8b8b8;
+    border-bottom: 1px solid #b8b8b8;
+    border-left: 1px solid #b8b8b8;
+    background-color: #ebebeb;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    color: #424242;
+    @extend .avenir-medium;
+  }
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: $brand-pink;
+    .ui-tabs-anchor {
+      color: #fff;
+    }
+  }
+}
+.return-to-list {
+  padding: 15px;
+  text-align: center;
+  a {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+// for hotel detail page end
 // list of tab content
 .scroll-tab-content {
   max-height: 250px;
@@ -1869,6 +1897,62 @@ header {
     display: inline-block;
   }
 }
+.photo-view {
+  .photo-slide-imgholder {
+    position: relative;
+    // img {
+    //   @include position(absolute, 50% null null 50%);
+    //   @include transform(translate(-50%,-50%))
+    // }
+  }
+}
+.review-score-holder {
+  @include square(170px);
+  padding: 45px 0;
+  border: 3px solid $brand-pink;
+  border-radius: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  .review-rate {
+    font-size: 40px;
+    line-height: 100%;
+  }
+  p {
+    font-style: italic;
+    line-height: 100%;
+  }
+}
+.review-holder {
+  .no-left-pad { padding-left: 0; }
+}
+.review-progress {
+  margin: 20px 0;
+  &.review-last { margin: 0; }
+  .progress {
+    width: 100%;
+    height: 4px;
+    margin: 0;
+    background-color: #8a8a8a;
+  }
+  .progress-bar {
+    background-color: $brand-pink;
+  }
+  .progess-last {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .review-name {
+    font-size: 12px;
+    @extend .avenir-roman;
+    color: #424242;
+  }
+  .review-value {
+    font-size: 12px;
+    @extend .avenir-roman;
+    color: $brand-pink;
+  }
+}
 // hotel sec
 .scroll-hotel-sec {
   ::-webkit-scrollbar {
@@ -1885,6 +1969,8 @@ header {
   margin-top: 5px;
   overflow-y: auto;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 .hotel-card-holder {
   max-height: 290px;
@@ -1911,6 +1997,7 @@ header {
     left: 0;
     @include transform(rotateX(180deg));
     @include backface-visibility(hidden);
+    .hotel-details { border-bottom: 1px solid #fff; }  // delete if not needed this border
   }
   .flip-card {
     @include transform(rotateX(180deg));
@@ -1979,6 +2066,7 @@ header {
   @include filter(blur(5px));
   background-position: 0;
   overflow: hidden;
+  z-index: 0;
 }
 .blur-overlay-bg-div {
   @include square(100%);
@@ -2026,7 +2114,6 @@ header {
 // pagination
 .list-pagination {
   padding: 10px 0 6px;
-  position: relative;
   background-color: #fff;
   text-align: center;
   .pagination {
