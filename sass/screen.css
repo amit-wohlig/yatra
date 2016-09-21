@@ -8103,7 +8103,38 @@ header {
     width: auto; }
 
   .onway-imgholder {
-    height: auto; } }
+    height: auto; }
+
+  .search-detail-holder .search-city-holder {
+    width: 28%; }
+  .search-detail-holder .date-holder {
+    width: 29%; }
+  .search-detail-holder .stay-search-holder {
+    width: 43%; }
+
+  .stay-holder {
+    width: 75%; }
+
+  .search-holder {
+    width: 25%; }
+
+  .sec-hotel-result {
+    width: 15%; }
+
+  .sort-by {
+    width: 51%; }
+
+  .hotel-search-filter {
+    width: 34%; }
+
+  .col-hotel-info.col-flex-1-5 {
+    -webkit-box-flex: 1.5;
+    -moz-box-flex: 1.5;
+    box-flex: 1.5;
+    -webkit-flex: 1.5;
+    -moz-flex: 1.5;
+    -ms-flex: 1.5;
+    flex: 1.5; } }
 @media screen and (max-width: 991px) {
   header {
     padding: 10px 0 0; }
@@ -8154,6 +8185,80 @@ header {
 
   .previous-blog, .next-blog {
     margin: 30px 0;
+    text-align: left; }
+
+  .hotel-view-section .row-flex {
+    display: block; }
+  .hotel-view-section .col-flex {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto; }
+
+  .search-filter-main {
+    position: relative;
+    background-color: #2d3655; }
+
+  .sort-category {
+    padding: 15px;
+    background-color: #fff; }
+
+  .hotel-result {
+    text-align: right; }
+
+  .search-hotel-bar {
+    width: 75%;
+    display: inline-block; }
+    .search-hotel-bar .search-hotel {
+      padding: 10px 0 10px 15px; }
+      .search-hotel-bar .search-hotel input {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background-color: transparent;
+        color: #fff; }
+        .search-hotel-bar .search-hotel input::-webkit-input-placeholder {
+          color: #fff; }
+        .search-hotel-bar .search-hotel input::-moz-placeholder {
+          color: #fff; }
+        .search-hotel-bar .search-hotel input:-moz-placeholder {
+          color: #fff; }
+        .search-hotel-bar .search-hotel input:-ms-input-placeholder {
+          color: #fff; }
+
+  .list-filter-search {
+    width: 25%;
+    margin-left: -4px;
+    display: inline-block; }
+    .list-filter-search .list-inline {
+      margin: 0;
+      text-align: right; }
+      .list-filter-search .list-inline > li {
+        min-width: 47px;
+        padding: 18px 15px;
+        border-left: 1px solid #fff;
+        margin-left: -4px;
+        cursor: pointer;
+        text-align: center; }
+      .list-filter-search .list-inline .list-icon {
+        font-size: 18px; }
+
+  .filter-main-sec {
+    top: 55px; }
+
+  .clear-all {
+    margin-bottom: 20px; }
+
+  .dropdown-holder {
+    margin-bottom: 20px;
+    text-align: left; }
+
+  .filter-first-bar, .filter-second-bar {
+    margin: 0; }
+
+  .result-bar-filter {
     text-align: left; } }
 @media screen and (max-width: 767px) {
   .user-detail {

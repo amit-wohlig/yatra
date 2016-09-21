@@ -20,6 +20,22 @@
   }
   .onway-imgholder { height: auto; }
   // blog page end
+  // booking
+  .search-detail-holder {
+    .search-city-holder { width: 28%; }
+    .date-holder { width: 29%; }
+    .stay-search-holder { width: 43%; }
+  }
+  .stay-holder { width: 75%; }
+  .search-holder { width: 25%; }
+  // filter
+  .sec-hotel-result { width: 15%; }
+  .sort-by { width: 51%; }
+  .hotel-search-filter { width: 34%; }
+  // hotel  section
+  .col-hotel-info.col-flex-1-5 { @include flex(1.5); }
+  // hotel  section end
+  // booking end
 }
 // from desktop 1200px to 991px end
 // from 991px to 767px
@@ -82,6 +98,67 @@
     text-align: left;
   }
   // blog detail page end
+  // booking
+  .hotel-view-section {
+    .row-flex { display: block; }
+    .col-flex { @include flex(auto); }
+  }
+  .search-filter-main {
+    position: relative;
+    background-color: $brand-blue;
+  }
+  .sort-category {
+    padding: 15px;
+    background-color: #fff;
+  }
+  .hotel-result { text-align: right; }
+  .search-hotel-bar {
+    width: 75%;
+    display: inline-block;
+    .search-hotel {
+      padding: 10px 0 10px 15px;
+      input {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        @include placeholder {
+          color: #fff;
+        };
+      }
+    }
+  }
+  .list-filter-search {
+    width: 25%;
+    margin-left: -4px;
+    display: inline-block;
+    .list-inline {
+      margin: 0;
+      text-align: right;
+      > li {
+        min-width: 47px;
+        padding: 18px 15px;
+        border-left: 1px solid #fff;
+        margin-left: -4px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .list-icon {
+        font-size: 18px;
+      }
+    }
+  }
+  .filter-main-sec {
+    top: 55px;
+  }
+  .clear-all { margin-bottom: 20px; }
+  .dropdown-holder {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .filter-first-bar, .filter-second-bar { margin: 0; }
+  .result-bar-filter { text-align: left; }
+  // booking end
 }
 // from 991px to 767px end
 // from 766px to 480px

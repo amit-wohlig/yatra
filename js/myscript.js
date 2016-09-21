@@ -137,5 +137,36 @@ $('#max').html('INR ' + $('#rangeSlider').slider('values', 1)).position({
     of: $('#rangeSlider span:eq(1)'),
     offset: "0, 0"
 });
+// mobile slider
+$("#rangeSliderMob").slider({
+    range: true,
+    min: 0,
+    max: 1000,
+    values: [100, 900],
+    animate: 'slow',
+    create: function() {
+    $('#min').appendTo($('#rangeSliderMob span').get(0));
+    $('#max').appendTo($('#rangeSliderMob span').get(1));
+},
+    slide: function(event, ui) {
+      $(ui.handle).find("#min").html('INR ' + ui.value);
+      $(ui.handle).find("#max").html('INR ' + ui.value);
+    }
+});
+// mobile slider end
+// only initially needed
+$('#min').html('INR ' + $('#rangeSliderMob').slider('values', 0)).position({
+    my: 'center top',
+    at: 'center bottom',
+    of: $('#rangeSliderMob span:eq(0)'),
+    offset: "0, 0"
+});
+
+$('#max').html('INR ' + $('#rangeSliderMob').slider('values', 1)).position({
+    my: 'center top',
+    at: 'center bottom',
+    of: $('#rangeSliderMob span:eq(1)'),
+    offset: "0, 0"
+});
 // range slider end
 });
