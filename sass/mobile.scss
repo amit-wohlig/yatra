@@ -140,16 +140,61 @@
         padding: 18px 15px;
         border-left: 1px solid #fff;
         margin-left: -4px;
+        position: relative;
         cursor: pointer;
         text-align: center;
+        &:after {
+          content: '';
+          border-top: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-bottom: 12px solid #fff;
+          border-left: 12px solid transparent;
+          display: block;
+          opacity: 0;
+          @include position(absolute, null null -1px 50%);
+          @include transform(translateX(-50%));
+        }
       }
       .list-icon {
         font-size: 18px;
       }
     }
   }
+  // filter bar for mobile
+  // search mobie
+  .search-mobile {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    display: none;
+  }
+  .search-detail-holder {
+    padding: 20px 15px 0;
+    margin-bottom: 0;
+    .search-city-holder { width: 100%; }
+    .stay-holder {
+      width: 100%;
+      padding-right: 0;
+    }
+    .input-holder  {
+      border: 1px solid #ebebeb;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+  }
+  #search-click.view-caret {
+    &:after { opacity: 1; }
+  }
+  #filter-click.view-caret {
+    &:after { opacity: 1; }
+  }
+  // search mobie end
   .filter-main-sec {
-    top: 55px;
+    top: 60px;
+    z-index: 2;
   }
   .clear-all { margin-bottom: 20px; }
   .dropdown-holder {
@@ -158,6 +203,11 @@
   }
   .filter-first-bar, .filter-second-bar { margin: 0; }
   .result-bar-filter { text-align: left; }
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #min {
+    top: 18px !important;
+    left: 0 !important;
+  }
+  // filter bar for mobile end
   // booking end
 }
 // from 991px to 767px end
@@ -232,6 +282,58 @@
   }
   // blog detail end
   // blog page end
+  // booking
+  .hotel-list-container {
+    // height: 100% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // overflow: visible;
+    // .row { margin: 0; }
+    .container-fluid { padding: 0; }
+  }
+  .search-mobile { top: 44px; }
+  .filter-main-sec { top: 44px; }
+  .price-slider { min-height: 70px; }
+  .search-hotel-bar {
+    width: 70%;
+    .search-hotel { padding: 5px 10px 5px 15px; }
+  }
+  .list-filter-search {
+    width: 30%;
+    .list-inline > li { padding: 10px 15px; }
+  }
+  .sort-category {
+    padding: 0;
+    color: #8a8a8a;
+    .sort-list {
+      padding: 10px 15px;
+    }
+  }
+  .hotel-result {
+    border-top: 1px solid #8a8a8a;
+    padding: 10px 15px;
+    text-align: left;
+  }
+  .hotel-card-holder {
+    max-height: initial;
+  }
+  .slider-hotel .carousel-inner > .item img {
+    width: 100%;
+    height: auto;
+  }
+  .list-filter-search {
+     .list-inline > li:after {
+       border-top: 9px solid transparent;
+       border-right: 9px solid transparent;
+       border-bottom: 9px solid #fff;
+       border-left: 9px solid transparent;
+       bottom: -1px;
+     }
+  }
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #max {
+    left: -45px !important;
+  }
+  // booking end
 }
 // from 766px to 480px end
 // from 480px to 370px
@@ -349,6 +451,33 @@
     h3 { font-size: 20px; }
   }
   // blog detail page end
+  // booking
+  .search-hotel-bar {
+    width: 65%;
+  }
+  .list-filter-search {
+    width: 35%;
+    .list-inline {
+      > li {
+        min-width: 34px;
+        padding: 12px 10px;
+      }
+      .list-icon { font-size: 14px; }
+    }
+  }
+  .sort-category .sort-list { padding: 10px 5px; }
+  .hotel-result { padding: 10px 5px; }
+  .sort-list i { margin: 0; }
+  .slider-hotel {
+    height: 200px;
+  }
+  .hotel-information { padding: 20px 10px 15px; }
+  .hotel-chart-main {
+    .chart-type-title {
+      span { display: block; }
+    }
+  }
+  // booking end
 }
 // from 480px to 320px end
 // Responsive end

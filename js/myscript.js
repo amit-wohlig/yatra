@@ -169,4 +169,18 @@ $('#max').html('INR ' + $('#rangeSliderMob').slider('values', 1)).position({
     offset: "0, 0"
 });
 // range slider end
+// search view, filter and map view
+$("#search-click").click(function(){
+  $(".search-mobile").slideToggle();
+  $(".filter-main-sec").hide();
+  $("#search-click").toggleClass("view-caret");
+  $("#filter-click").removeClass("view-caret");
+});
+$("#filter-click").click(function(){
+  $(".filter-main-sec").slideToggle();
+  $(".search-mobile").hide();
+  $("#filter-click").toggleClass("view-caret");
+  $("#search-click").removeClass("view-caret");
+});
+// search view, filter and map view
 });
