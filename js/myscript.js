@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
   //For the height of hotels
-  $(".hotel-card-list").height($(window).height() - 180);
+  $(".hotel-card-list").height($(window).height() - 170);
 });
 // facebook widget
 setTimeout(function(){
@@ -114,24 +114,24 @@ $("#rangeSlider").slider({
     values: [100, 900],
     animate: 'slow',
     create: function() {
-    $('#min').appendTo($('#rangeSlider span').get(0));
-    $('#max').appendTo($('#rangeSlider span').get(1));
+    $('#minSlide').appendTo($('#rangeSlider span').get(0));
+    $('#maxSlide').appendTo($('#rangeSlider span').get(1));
 },
     slide: function(event, ui) {
-      $(ui.handle).find("#min").html('INR ' + ui.value);
-      $(ui.handle).find("#max").html('INR ' + ui.value);
+      $(ui.handle).find("#minSlide").html('INR ' + ui.value);
+      $(ui.handle).find("#maxSlide").html('INR ' + ui.value);
     }
 });
 
 // only initially needed
-$('#min').html('INR ' + $('#rangeSlider').slider('values', 0)).position({
+$('#minSlide').html('INR ' + $('#rangeSlider').slider('values', 0)).position({
     my: 'center top',
     at: 'center bottom',
     of: $('#rangeSlider span:eq(0)'),
     offset: "0, 0"
 });
 
-$('#max').html('INR ' + $('#rangeSlider').slider('values', 1)).position({
+$('#maxSlide').html('INR ' + $('#rangeSlider').slider('values', 1)).position({
     my: 'center top',
     at: 'center bottom',
     of: $('#rangeSlider span:eq(1)'),
@@ -145,42 +145,88 @@ $("#rangeSliderMob").slider({
     values: [100, 900],
     animate: 'slow',
     create: function() {
-    $('#min').appendTo($('#rangeSliderMob span').get(0));
-    $('#max').appendTo($('#rangeSliderMob span').get(1));
+    $('#minMob').appendTo($('#rangeSliderMob span').get(0));
+    $('#maxMob').appendTo($('#rangeSliderMob span').get(1));
 },
     slide: function(event, ui) {
-      $(ui.handle).find("#min").html('INR ' + ui.value);
-      $(ui.handle).find("#max").html('INR ' + ui.value);
+      $(ui.handle).find("#minMob").html('INR ' + ui.value);
+      $(ui.handle).find("#maxMob").html('INR ' + ui.value);
     }
 });
 // mobile slider end
 // only initially needed
-$('#min').html('INR ' + $('#rangeSliderMob').slider('values', 0)).position({
+$('#minMob').html('INR ' + $('#rangeSliderMob').slider('values', 0)).position({
     my: 'center top',
     at: 'center bottom',
     of: $('#rangeSliderMob span:eq(0)'),
     offset: "0, 0"
 });
 
-$('#max').html('INR ' + $('#rangeSliderMob').slider('values', 1)).position({
+$('#maxMob').html('INR ' + $('#rangeSliderMob').slider('values', 1)).position({
     my: 'center top',
     at: 'center bottom',
     of: $('#rangeSliderMob span:eq(1)'),
     offset: "0, 0"
 });
 // range slider end
+
+// google map api
+function initMap() {
+  console.log("mapBooking-check");
+  var myLatLng = {lat: 18.9704296, lng: 72.8145482};
+
+  var map = new google.maps.Map(document.getElementById('mapBooking'), {
+    zoom: 12,
+    center: myLatLng,
+    disableDefaultUI: true
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
+setTimeout(function(){
+  initMap();
+},100);
+
+// google map api end\
 // search view, filter and map view
 $("#search-click").click(function(){
   $(".search-mobile").slideToggle();
-  $(".filter-main-sec").hide();
   $("#search-click").toggleClass("view-caret");
+  // hide div
+  $(".filter-main-sec").hide();
+  $("#mapBooking").hide();
+  // removing class
   $("#filter-click").removeClass("view-caret");
+  $("#map-click").removeClass("view-caret");
 });
+
 $("#filter-click").click(function(){
   $(".filter-main-sec").slideToggle();
-  $(".search-mobile").hide();
   $("#filter-click").toggleClass("view-caret");
+  // hide div
+  $(".search-mobile").hide();
+  $("#mapBooking").hide();
+  // removing class
   $("#search-click").removeClass("view-caret");
+  $("#map-click").removeClass("view-caret");
+});
+
+$("#map-click").click(function(){
+  $("#mapBooking").slideToggle();
+  $("#map-click").toggleClass("view-caret");
+  // hide div
+  $(".search-mobile").hide();
+  $(".filter-main-sec").hide();
+  // removing class
+  $("#search-click").removeClass("view-caret");
+  $("#filter-click").removeClass("view-caret");
+  setTimeout(function(){
+    initMap();
+  },100);
 });
 // search view, filter and map view
 });

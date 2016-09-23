@@ -22,6 +22,11 @@
   <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
   <script src="//lightwidget.com/widgets/lightwidget.js"></script>
   <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+  <!-- google map api -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmKYAl3wbF1yKScxJ-OgiFMeM9oPnDizs&callback=initMap">
+    </script>
+  <!-- google map api end -->
 </head>
 <body>
   <header class="bg-dark-blue">
@@ -186,8 +191,8 @@
                           <span class="price-label">Price</span>
                           <div class="range-slider" id="rangeSlider">
                           </div>
-                            <div id="min"></div>
-                            <div id="max"></div>
+                            <div id="minSlide"></div>
+                            <div id="maxSlide"></div>
                         </div>
                       </div>
                       <div class="col-md-3">
@@ -429,7 +434,7 @@
                       <li id="filter-click" class="">
                         <span class="list-icon filter-by-field"><i class="fa fa-filter color-white"></i></span>
                       </li>
-                      <li class="map-click">
+                      <li id="map-click" class="">
                         <span class="list-icon map-field"><i class="fa fa-map-marker color-white"></i></span>
                       </li>
                     </ul>
@@ -1923,7 +1928,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-flex"></div>
+                <div class="col-flex">
+                  <div id="mapBooking"></div>
+                </div>
               </div>
             </div>
           </form>

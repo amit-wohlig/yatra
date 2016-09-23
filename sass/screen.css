@@ -5928,7 +5928,7 @@ a.insta-icon:hover {
     opacity: 1; }
 
 .shadow-text {
-  text-shadow: 2px 2px 5px #000; }
+  text-shadow: 2px 4px 5px #000; }
 
 .mouse-scrolldown {
   position: absolute;
@@ -6059,7 +6059,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-medium, .side-menu a, .person-stay label, .filter-bar, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a {
+.avenir-medium, .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .side-menu a, .person-stay label, .filter-bar, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a {
   font-family: "AvenirLTStd-Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -7259,6 +7259,7 @@ header {
   position: relative; }
   .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
     margin: 10px 0;
+    font-family: "AvenirLTStd-Heavy";
     font-size: 48px;
     font-weight: 700;
     text-align: center; }
@@ -7267,9 +7268,18 @@ header {
     font-size: 17px; }
   .vacation-booking-form input.form-control, .hotel-booking-form input.form-control {
     height: 40px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    color: #8a8a8a; }
     .vacation-booking-form input.form-control:focus, .hotel-booking-form input.form-control:focus {
       border-color: transparent; }
+    .vacation-booking-form input.form-control::-webkit-input-placeholder, .hotel-booking-form input.form-control::-webkit-input-placeholder {
+      color: #8a8a8a; }
+    .vacation-booking-form input.form-control::-moz-placeholder, .hotel-booking-form input.form-control::-moz-placeholder {
+      color: #8a8a8a; }
+    .vacation-booking-form input.form-control:-moz-placeholder, .hotel-booking-form input.form-control:-moz-placeholder {
+      color: #8a8a8a; }
+    .vacation-booking-form input.form-control:-ms-input-placeholder, .hotel-booking-form input.form-control:-ms-input-placeholder {
+      color: #8a8a8a; }
   .vacation-booking-form button, .hotel-booking-form button {
     height: 40px; }
   .vacation-booking-form .col-flex, .hotel-booking-form .col-flex {
@@ -7277,6 +7287,8 @@ header {
   .vacation-booking-form .travel-text, .hotel-booking-form .travel-text {
     margin-right: 15px;
     color: #999ca2; }
+  .vacation-booking-form .dropdown-icon i, .hotel-booking-form .dropdown-icon i {
+    color: #424242; }
 
 .dropdown-icon {
   position: absolute;
@@ -7326,7 +7338,7 @@ header {
     color: #efefef;
     font-size: 15px;
     letter-spacing: 1px;
-    text-shadow: 1px 3px 5px #4c4c4c;
+    text-shadow: 1px 4px 4px #000;
     -webkit-transition: all 300ms linear;
     -o-transition: all 300ms linear;
     transition: all 300ms linear; }
@@ -7370,7 +7382,7 @@ header {
     height: auto;
     padding: 6px 40px; }
   .person-stay label {
-    color: #b1b1b1; }
+    color: #8a8a8a; }
 
 .close-person-stay {
   position: absolute;
@@ -7462,7 +7474,7 @@ header {
   max-height: 800px; }
 
 .search-detail-holder {
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
   .search-detail-holder .search-city-holder {
     width: 35%;
     display: inline-block;
@@ -7897,6 +7909,7 @@ header {
 
 .hotel-card-list {
   margin-top: 5px;
+  margin-right: 5px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
@@ -7965,7 +7978,7 @@ header {
   border-color: #11d3cb; }
 
 .hotel-list-container {
-  padding-top: 10px;
+  padding-top: 5px;
   background: url("../img/bookings/hotels.jpg") no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -8091,6 +8104,9 @@ header {
       background-color: transparent;
       color: #ff6759; }
 
+#mapBooking {
+  height: 100%; }
+
 @media screen and (max-width: 1200px) {
   .search {
     display: none; }
@@ -8200,6 +8216,7 @@ header {
 
   .search-filter-main {
     position: relative;
+    z-index: 4;
     background-color: #2d3655; }
 
   .sort-category {
@@ -8290,6 +8307,9 @@ header {
   #filter-click.view-caret:after {
     opacity: 1; }
 
+  #map-click.view-caret:after {
+    opacity: 1; }
+
   .filter-main-sec {
     top: 60px;
     z-index: 2; }
@@ -8309,7 +8329,23 @@ header {
 
   .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #min {
     top: 18px !important;
-    left: 0 !important; } }
+    left: 0 !important; }
+
+  #mapBooking {
+    width: 100%;
+    position: absolute !important;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: block; }
+    #mapBooking img {
+      opacity: 1; }
+
+  .search-bar-field {
+    position: relative;
+    z-index: 4; } }
 @media screen and (max-width: 767px) {
   .user-detail {
     margin-top: 10px; }
@@ -8391,6 +8427,9 @@ header {
     top: 44px; }
 
   .filter-main-sec {
+    top: 44px; }
+
+  #mapBooking {
     top: 44px; }
 
   .price-slider {

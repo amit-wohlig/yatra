@@ -151,7 +151,7 @@ a.insta-icon:hover {
   }
 }
 .shadow-text {
-  text-shadow: 2px 2px 5px #000;
+  text-shadow: 2px 4px 5px #000;
 }
 // scroll down
 .mouse-scrolldown {
@@ -1261,6 +1261,7 @@ header {
   position: relative;
   .booking-title {
     margin: 10px 0;
+    font-family: "AvenirLTStd-Heavy";
     font-size: 48px;
     font-weight: 700;
     text-align: center;
@@ -1272,9 +1273,12 @@ header {
   input.form-control {
     height: 40px;
     border-radius: 6px;
+    color: #8a8a8a;
+    @extend .avenir-medium;
     &:focus {
       border-color: transparent;
     }
+    @include placeholder { color: #8a8a8a; };
   }
   button { height: 40px; }
   .col-flex { padding: 0px 5px; }
@@ -1282,6 +1286,7 @@ header {
     margin-right: 15px;
     color: #999ca2;
   }
+  .dropdown-icon i  { color: #424242; }
 }
 .dropdown-icon {
   position: absolute;
@@ -1326,7 +1331,7 @@ header {
     color: #efefef;
     font-size: 15px;
     letter-spacing: 1px;
-    text-shadow: 1px 3px 5px #4c4c4c;
+    text-shadow: 1px 4px 4px #000;
     @include transition(all 300ms linear);
     @extend .avenir-medium;
     &:hover {
@@ -1377,7 +1382,7 @@ header {
   }
   label {
     @extend .avenir-medium;
-    color: #b1b1b1;
+    color: #8a8a8a;
   }
 }
 .close-person-stay {
@@ -1476,7 +1481,7 @@ header {
 // hotel inside
 
 .search-detail-holder {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   .search-city-holder {
     width: 35%;
     display: inline-block;
@@ -1967,6 +1972,7 @@ header {
 }
 .hotel-card-list {
   margin-top: 5px;
+  margin-right: 5px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
@@ -2021,7 +2027,7 @@ header {
   }
 }
 .hotel-list-container {
-  padding-top: 10px;
+  padding-top: 5px;
   background: url('../img/bookings/hotels.jpg') no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -2162,6 +2168,9 @@ header {
   }
 }
 // pagination end
+#mapBooking {
+  height: 100%;
+}
 // hotel inside end
 
 

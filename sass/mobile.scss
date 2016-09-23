@@ -105,6 +105,7 @@
   }
   .search-filter-main {
     position: relative;
+    z-index: 4;
     background-color: $brand-blue;
   }
   .sort-category {
@@ -191,6 +192,9 @@
   #filter-click.view-caret {
     &:after { opacity: 1; }
   }
+  #map-click.view-caret {
+    &:after { opacity: 1; }
+  }
   // search mobie end
   .filter-main-sec {
     top: 60px;
@@ -207,6 +211,24 @@
     top: 18px !important;
     left: 0 !important;
   }
+  #mapBooking {
+    width: 100%;
+    position: absolute !important;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    // display: none;
+    display: block;
+    img { opacity: 1; }
+  }
+  // position given only for map (delete if needed)
+  .search-bar-field {
+    position: relative;
+    z-index: 4;
+  }
+  // position given only for map end
   // filter bar for mobile end
   // booking end
 }
@@ -293,6 +315,7 @@
   }
   .search-mobile { top: 44px; }
   .filter-main-sec { top: 44px; }
+  #mapBooking { top: 44px; }
   .price-slider { min-height: 70px; }
   .search-hotel-bar {
     width: 70%;
