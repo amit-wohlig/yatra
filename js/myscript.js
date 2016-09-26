@@ -62,8 +62,8 @@ $(document).ready(function(){
 // scroll down end
 
 $(document).ready(function(){
-  $(".person-stay").toggle();
   $(".bookHotel").click(function(){
+    console.log("toggle");
     $(".person-stay").toggle();
   });
 });
@@ -81,7 +81,26 @@ $(document).ready(function(){
     console.log("tabs");
     $(".detail-tab").tabs();
   })
+  // accordion
+  $("#accordion-hotel").accordion({
+    collapsible: true,
+    heightStyle: "content"
+  });
 });
+// accordion
+// $(document).ready(function(){
+//   var windowWidth = $(window).width();
+//   if(windowWidth < 767){
+//       console.log(windowWidth);
+//       console.log("hide");
+//       $(".detail-tab").accordion();
+//   }else {
+//     $(".detail-tab").tabs();
+//     console.log(windowWidth);
+//     console.log("show");
+//   }
+// });
+
 
 // flip card
 $(document).ready(function(){
@@ -100,11 +119,17 @@ $(document).ready(function(){
   });
 // show filter end
 // show slider photo
-  $("#flexslider").flexslider({
-    animation: "slide",
-    itemWidth: "210",
-    itemMargin: "5"
-  });
+// setTimeout(function(){
+// },100);
+$(".bxslider").bxSlider({
+  slideWidth: 300,
+  minSlides: 2,
+  maxSlides: 3,
+  responsive: true,
+  pager: false,
+  slideMargin: 10,
+});
+
 // show slider photo end
 // range slider
 $("#rangeSlider").slider({
@@ -153,6 +178,7 @@ $("#rangeSliderMob").slider({
       $(ui.handle).find("#maxMob").html('INR ' + ui.value);
     }
 });
+$("#rangeSliderMob").draggable();
 // mobile slider end
 // only initially needed
 $('#minMob').html('INR ' + $('#rangeSliderMob').slider('values', 0)).position({
