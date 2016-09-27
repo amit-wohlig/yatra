@@ -107,13 +107,13 @@
                 <div class="checkin-checkout">
                   <div class="check-in">
                     <div class="input-holder relate">
-                      <input type="text" class="form-control" placeholder="Check In">
+                      <input type="text" class="form-control datePicker" placeholder="Check In">
                       <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
                     </div>
                   </div>
                   <div class="check-out">
                     <div class="input-holder relate">
-                      <input type="text" class="form-control" placeholder="Check Out">
+                      <input type="text" class="form-control datePicker" placeholder="Check Out">
                       <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
                     </div>
                   </div>
@@ -173,7 +173,7 @@
                     </div>
               </div>
             </div>
-            <div class="filter-bar bg-white visible-lg visible-md hidden-sm ">
+            <div class="filter-bar relate bg-white visible-lg visible-md hidden-sm ">
               <div class="sec-hotel-result">
                 <div class="hotel-result">
                   <span>Hotels Found : 7</span>
@@ -527,10 +527,52 @@
                             </div>
                           </div>
                           <div class="col-sm-6">
-                            <div class="stay-holder">
+                            <div class="stay-holder relate">
                               <div class="input-holder relate">
-                                <input type="text" class="form-control" placeholder="1 Room, 1 Adult, 1 Child">
+                                <input type="text" class="form-control bookHotel" placeholder="1 Room, 1 Adult, 1 Child">
                                 <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                              </div>
+                              <div class="person-stay">
+                                <div class="close-person-stay bookHotel"><i class="fa fa-times "></i></div>
+                                <div class="row-flex">
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <label for="rooms">Rooms</label>
+                                      <div class="person-count">
+                                        <span><i class="fa fa-minus-circle minus"></i></span>
+                                        <input type="text" id="rooms" placeholder="00">
+                                        <span><i class="fa fa-plus-circle plus"></i></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                        <label for="adult">Adults</label>
+                                        <div class="person-count">
+                                          <span><i class="fa fa-minus-circle minus"></i></span>
+                                          <input type="text" id="adult" placeholder="00">
+                                          <span><i class="fa fa-plus-circle plus"></i></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row-flex">
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <label for="children">Children</label>
+                                      <div class="person-count">
+                                        <span><i class="fa fa-minus-circle minus"></i></span>
+                                        <input type="text" id="children" placeholder="00">
+                                        <span><i class="fa fa-plus-circle plus"></i></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <button class="btn btn-dark-blue apply avenir-medium">Apply</button>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>

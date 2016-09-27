@@ -116,6 +116,9 @@
     padding: 15px;
     background-color: #fff;
   }
+  .stay-holder {
+    .col-flex { text-align: center; }
+  }
   .hotel-result { text-align: right; }
   .search-hotel-bar {
     width: 75%;
@@ -374,6 +377,11 @@
   }
   // booking landing page
   .side-menu { display: none; }
+  .vacation-booking-sec { width: 450px; }
+  .vacation-booking-form {
+    .booking-title { font-size: 45px; }
+  }
+  .traveller-flex { @include flex(1.5); }
   .hotel-booking-sec {
     width: 450px;
   }
@@ -407,6 +415,26 @@
   .popular-destination-holder {
     border-radius: 0;
     margin: 0 0 10px;
+  }
+  .slider-holder-photo {
+    .bx-viewport {
+      min-height: 200px;
+    }
+    .bxslider {
+      li {
+        width: 300px !important;
+      }
+    }
+  }
+  .stay-holder {
+    .person-stay {
+      .apply {
+        margin-top: 5px;
+      }
+      label {
+        min-width: 60px;
+      }
+    }
   }
   // booking end
 }
@@ -553,14 +581,25 @@
     }
   }
   // booking landing page start
-  .hotel-booking-form {
+  .search-btn-holder { text-align: center; }
+  .vacation-booking-sec {
+    width: 300px;
+    button {
+      width: auto;
+      padding: 8px 34px;
+    }
+  }
+  .vacation-booking-form {
     padding: 10px 10px 20px;
     .booking-title {
       font-size: 40px;
     }
     .booking-tag { font-size: 16px; }
+    .row-flex { display: block; }
+    .col-flex { @include flex(auto); }
+    .traveller-flex { @include flex(auto); }
+    .travel-text  { margin-right: 40px; }
   }
-  .search-btn-holder { text-align: center; }
   .hotel-booking-sec {
     width: 300px;
     .row-flex { display: block; }
@@ -576,6 +615,15 @@
       margin-top: 0;
     }
   }
+  .stay-holder {
+    .person-stay {
+      .col-flex {
+        text-align: center;
+      }
+      label { display: block; }
+      .apply { margin-top: 22px; }
+    }
+  }
   // booking landing page end
   .destination-heading {
     padding: 20px 0px 10px;
@@ -589,8 +637,16 @@
     .destin-detail { padding: 10px 5px; }
   }
   .slider-holder-photo {
-    border: 1px solid #000;
-  } 
+    .bx-viewport {
+      min-height: 150px;
+    }
+    .bxslider {
+      li {
+        width: 200px !important;
+      }
+    }
+  }
+  .photo-slide-imgholder { height: 150px; }
   // booking end
 }
 // from 480px to 320px end

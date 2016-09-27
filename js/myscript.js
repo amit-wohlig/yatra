@@ -86,19 +86,14 @@ $(document).ready(function(){
     collapsible: true,
     heightStyle: "content"
   });
+  // accordion end
+  // date picker
+  $(".datePicker").datepicker({
+    numberOfMonths: 2
+  })
+  // date picker end
 });
-// accordion
-// $(document).ready(function(){
-//   var windowWidth = $(window).width();
-//   if(windowWidth < 767){
-//       console.log(windowWidth);
-//       console.log("hide");
-//       $(".detail-tab").accordion();
-//   }else {
-//     $(".detail-tab").tabs();
-//     console.log(windowWidth);
-//     console.log("show");
-//   }
+
 // });
 
 

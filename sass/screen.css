@@ -7378,7 +7378,7 @@ header {
   left: 0;
   background-color: #fff;
   display: none;
-  z-index: 2; }
+  z-index: 4; }
   .person-stay .col-flex {
     text-align: right; }
   .person-stay .apply {
@@ -7495,6 +7495,10 @@ header {
     display: inline-block;
     margin-left: -4px;
     vertical-align: top; }
+    .search-detail-holder .stay-search-holder .person-stay {
+      padding: 25px 18px 10px; }
+      .search-detail-holder .stay-search-holder .person-stay .col-flex {
+        text-align: center; }
   .search-detail-holder input {
     height: 40px;
     border-radius: 6px;
@@ -7841,7 +7845,7 @@ header {
     color: #fff;
     text-align: right; }
   .accordion-hotel-detail .ui-accordion-header {
-    padding: 15px 10px;
+    padding: 12px 15px;
     border: none;
     border-bottom: 1px solid #888d97;
     border-radius: 0;
@@ -7850,7 +7854,7 @@ header {
     color: #fff;
     font-size: 16px; }
   .accordion-hotel-detail .ui-accordion-content {
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 0; }
   .accordion-hotel-detail .ui-accordion-header-active {
     background-color: #ff6759; }
@@ -8325,6 +8329,9 @@ header {
     padding: 15px;
     background-color: #fff; }
 
+  .stay-holder .col-flex {
+    text-align: center; }
+
   .hotel-result {
     text-align: right; }
 
@@ -8593,6 +8600,21 @@ header {
   .side-menu {
     display: none; }
 
+  .vacation-booking-sec {
+    width: 450px; }
+
+  .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
+    font-size: 45px; }
+
+  .traveller-flex {
+    -webkit-box-flex: 1.5;
+    -moz-box-flex: 1.5;
+    box-flex: 1.5;
+    -webkit-flex: 1.5;
+    -moz-flex: 1.5;
+    -ms-flex: 1.5;
+    flex: 1.5; }
+
   .hotel-booking-sec {
     width: 450px; }
 
@@ -8626,7 +8648,17 @@ header {
 
   .popular-destination-holder {
     border-radius: 0;
-    margin: 0 0 10px; } }
+    margin: 0 0 10px; }
+
+  .slider-holder-photo .bx-viewport {
+    min-height: 200px; }
+  .slider-holder-photo .bxslider li {
+    width: 300px !important; }
+
+  .stay-holder .person-stay .apply {
+    margin-top: 5px; }
+  .stay-holder .person-stay label {
+    min-width: 60px; } }
 @media screen and (max-width: 480px) {
   .hamburger {
     margin: 13px 0; }
@@ -8759,15 +8791,41 @@ header {
   .hotel-chart-main .chart-type-title span {
     display: block; }
 
-  .hotel-booking-form {
-    padding: 10px 10px 20px; }
-    .hotel-booking-form .booking-title {
-      font-size: 40px; }
-    .hotel-booking-form .booking-tag {
-      font-size: 16px; }
-
   .search-btn-holder {
     text-align: center; }
+
+  .vacation-booking-sec {
+    width: 300px; }
+    .vacation-booking-sec button {
+      width: auto;
+      padding: 8px 34px; }
+
+  .vacation-booking-form, .hotel-booking-form {
+    padding: 10px 10px 20px; }
+    .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
+      font-size: 40px; }
+    .vacation-booking-form .booking-tag, .hotel-booking-form .booking-tag {
+      font-size: 16px; }
+    .vacation-booking-form .row-flex, .hotel-booking-form .row-flex {
+      display: block; }
+    .vacation-booking-form .col-flex, .hotel-booking-form .col-flex {
+      -webkit-box-flex: auto;
+      -moz-box-flex: auto;
+      box-flex: auto;
+      -webkit-flex: auto;
+      -moz-flex: auto;
+      -ms-flex: auto;
+      flex: auto; }
+    .vacation-booking-form .traveller-flex, .hotel-booking-form .traveller-flex {
+      -webkit-box-flex: auto;
+      -moz-box-flex: auto;
+      box-flex: auto;
+      -webkit-flex: auto;
+      -moz-flex: auto;
+      -ms-flex: auto;
+      flex: auto; }
+    .vacation-booking-form .travel-text, .hotel-booking-form .travel-text {
+      margin-right: 40px; }
 
   .hotel-booking-sec {
     width: 300px; }
@@ -8784,6 +8842,13 @@ header {
   .person-stay .apply {
     margin-top: 0; }
 
+  .stay-holder .person-stay .col-flex {
+    text-align: center; }
+  .stay-holder .person-stay label {
+    display: block; }
+  .stay-holder .person-stay .apply {
+    margin-top: 22px; }
+
   .destination-heading {
     padding: 20px 0px 10px; }
     .destination-heading .dest-head {
@@ -8795,7 +8860,12 @@ header {
   .popular-destination-holder .destin-detail {
     padding: 10px 5px; }
 
-  .slider-holder-photo {
-    border: 1px solid #000; } }
+  .slider-holder-photo .bx-viewport {
+    min-height: 150px; }
+  .slider-holder-photo .bxslider li {
+    width: 200px !important; }
+
+  .photo-slide-imgholder {
+    height: 150px; } }
 
 /*# sourceMappingURL=screen.css.map */

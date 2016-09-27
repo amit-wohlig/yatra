@@ -1377,7 +1377,7 @@ header {
   left: 0;
   background-color: #fff;
   display: none;
-  z-index: 2;
+  z-index: 4;
   .col-flex { text-align: right; }
   .apply {
     height: auto;
@@ -1506,6 +1506,10 @@ header {
     display: inline-block;
     margin-left: -4px;
     vertical-align: top;
+    .person-stay {
+      padding: 25px 18px 10px;
+      .col-flex {  text-align: center; }
+    }
   }
   input {
     height: 40px;
@@ -1874,7 +1878,7 @@ header {
     @extend .avenir-medium;
   }
   .ui-accordion-header {
-    padding: 15px 10px;
+    padding: 12px 15px;
     border: none;
     border-bottom: 1px solid #888d97;
     border-radius: 0;
@@ -1884,7 +1888,7 @@ header {
     font-size: 16px;
   }
   .ui-accordion-content {
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 0;
   }
   .ui-accordion-header-active { background-color: $brand-pink; }
