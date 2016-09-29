@@ -1199,6 +1199,10 @@ header {
 // blog detail end
 // modal
 .share-modal {
+  .modal-dialog {
+    @extend .get-center;
+    @include transform(translate(-50%,-50%) !important);
+  }
   .modal-content {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;

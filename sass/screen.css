@@ -6100,7 +6100,7 @@ textarea {
 .relate {
   position: relative; }
 
-.get-center {
+.get-center, .share-modal .modal-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7190,6 +7190,12 @@ header {
   .journey-collection li:first-child {
     padding: 0 10px 0 0; }
 
+.share-modal .modal-dialog {
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important; }
 .share-modal .modal-content {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -8501,6 +8507,13 @@ header {
     width: 290px;
     margin-left: -45px; }
 
+  .share-modal .modal-content {
+    width: 450px; }
+  .share-modal .modal-dialog {
+    margin: 0; }
+  .share-modal .modal-main-content .list-inline li {
+    padding: 0px 15px; }
+
   .blog-detail-heading h3 {
     font-size: 22px; }
 
@@ -8761,6 +8774,24 @@ header {
 
   .editor-subdetail h3 {
     font-size: 20px; }
+
+  .share-modal .modal-content {
+    width: 300px; }
+  .share-modal .modal-title {
+    padding: 15px 0 10px; }
+    .share-modal .modal-title h3 {
+      font-size: 23px; }
+    .share-modal .modal-title p {
+      margin-top: 10px;
+      font-size: 15px; }
+  .share-modal .close-modal img {
+    width: 18px; }
+  .share-modal .modal-main-content {
+    padding: 10px 0; }
+    .share-modal .modal-main-content .list-inline li {
+      padding: 0px 5px; }
+    .share-modal .modal-main-content .list-inline li i {
+      font-size: 24px; }
 
   .search-hotel-bar {
     width: 65%; }

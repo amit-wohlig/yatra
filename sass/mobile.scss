@@ -287,6 +287,15 @@
       margin-left: -45px;
     }
   }
+  // blog modal
+  .share-modal {
+    .modal-content {
+      width: 450px;
+    }
+    .modal-dialog { margin: 0; }
+    .modal-main-content .list-inline li { padding: 0px 15px; }
+  }
+  // blog modal end
   // blog detail
   .blog-detail-heading {
     h3 { font-size: 22px; }
@@ -553,6 +562,27 @@
   .editor-subdetail {
     h3 { font-size: 20px; }
   }
+  // blog social modal
+  .share-modal {
+    .modal-content {
+      width: 300px;
+    }
+    .modal-title {
+      padding: 15px 0 10px;
+      h3 { font-size: 23px; }
+      p {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+    }
+    .close-modal img { width: 18px; }
+    .modal-main-content {
+      padding: 10px 0;
+      .list-inline li { padding: 0px 5px; }
+      .list-inline li i { font-size: 24px; }
+    }
+  }
+  // blog social modal end
   // blog detail page end
   // booking
   .search-hotel-bar {
