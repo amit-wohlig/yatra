@@ -958,6 +958,14 @@ header {
   padding: 25px 0;
   border-bottom: 2px solid #ebebeb;
 }
+.plugin-pinterest > span  span:nth-child(2n) {
+  padding: 0 5px 0 10px;
+  margin-right: 5px;
+  span:nth-child(2n) {
+    padding: 0;
+    margin-right: 0;
+  }
+}
 .advertise-section {
   padding: 25px 0;
 }
