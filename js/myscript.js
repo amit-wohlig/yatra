@@ -250,4 +250,6 @@ $("#map-click").click(function(){
   },100);
 });
 // search view, filter and map view
+// like view
+// like view end
 });
