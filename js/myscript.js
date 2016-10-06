@@ -201,11 +201,27 @@ function initMap() {
     center: myLatLng,
     disableDefaultUI: true
   });
-
+  var imageMarker = "img/marker.png";
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Hello World!'
+    icon: imageMarker
+  });
+  var smallMarker = "img/small-marker.png";
+  var markersmall = new google.maps.Marker({
+    position: {lat: 18.9623513, lng: 72.8183134},
+    map: map,
+    icon: smallMarker
+  });
+  var markersmall1 = new google.maps.Marker({
+    position: {lat: 18.9255728, lng: 72.8242221},
+    map: map,
+    icon: smallMarker
+  });
+  var markersmall2 = new google.maps.Marker({
+    position: {lat: 19.0270694, lng: 72.838101288},
+    map: map,
+    icon: smallMarker
   });
 }
 setTimeout(function(){

@@ -823,6 +823,8 @@ header {
 .box-imgholder {
   width: 395px;
   overflow: hidden;
+  @include transition(all 300ms linear);
+  &:hover img { @include transform(scale(1.1)); }
 }
 .blog-post {
   border: 1px solid #ccc;
@@ -913,6 +915,7 @@ header {
 }
 .popular-imgholder {
   height: 182px;
+  @include transition(all 300ms linear);
   img { width: 100%; }
 }
 .popular-post-desc {
