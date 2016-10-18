@@ -213,16 +213,70 @@ $(document).ready(function() {
             icon: imageMarker
         });
         var contentString = '<div class="hotel-map-view">' +
-            '<h4 id="firstHeading" class="hotel-name-map">Central Park Hotel</h4>' +
+            '<h4 id="firstHeading" class="hotel-name-map">Central Park Hotel London</h4>' +
             '<div id="bodyContent">' +
             '<p class="rating-map-view"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p>' +
             '<span class="hotel-price-map">INR 21,0999</span>'
-            '</div>' +
-            '</div>';
+        '</div>' +
+        '</div>';
 
         var infowindow = new google.maps.InfoWindow({
-            content: contentString
+            content: contentString,
+            maxWidth: 200,
+            pixelOffset: new google.maps.Size(110, 80)
         });
+
+        // map editing
+        google.maps.event.addListener(infowindow, 'domready', function() {
+
+            var iwOuter = $('.gm-style-iw');
+            var iwBackground = iwOuter.prev();
+
+            iwOuter.css({
+                'font-family': 'AvenirLTStd-Roman'
+            })
+
+            // Remove the background shadow DIV
+            iwBackground.children(':nth-child(2)').css({
+                'display': 'none'
+            });
+
+            // Remove the white background DIV
+            iwBackground.children(':nth-child(4)').css({
+                'display': 'none'
+            });
+
+            // Remove the background shadow DIV
+            iwBackground.children(':nth-child(2)').css({
+                'display': 'none'
+            });
+            // Moves the shadow of the arrow 76px to the left margin
+            iwBackground.children(':nth-child(1)').attr('style', function(i, s) {
+                return s + 'display: none !important;'
+            });
+
+            // Moves the arrow 76px to the left margin
+            iwBackground.children(':nth-child(3)').attr('style', function(i, s) {
+                return s + 'display: none !important;'
+            });
+            // Is this div that groups the close button elements.
+            var iwCloseBtn = iwOuter.next();
+
+            // Apply the desired effect to the close button
+            iwCloseBtn.css({
+                opacity: '0', // by default the close button has an opacity of 0.7
+            });
+
+            // The API automatically applies 0.7 opacity to the button after the mouseout event.
+            // This function reverses this event to the desired value.
+            iwCloseBtn.mouseout(function() {
+                $(this).css({
+                    opacity: '1'
+                });
+            });
+
+        });
+        // map editing end
         marker.addListener('mouseover', function() {
             infowindow.open(map, marker);
         });

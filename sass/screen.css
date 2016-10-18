@@ -8272,6 +8272,28 @@ header {
 #mapBooking {
   height: 100% !important; }
 
+.gm-style-iw {
+  width: 200px !important; }
+
+.hotel-map-view {
+  padding: 10px;
+  border: 2px solid #ff6759;
+  border-radius: 4px;
+  background-color: #fff; }
+  .hotel-map-view h4 {
+    margin: 0 0 5px;
+    color: #424242;
+    font-size: 14px; }
+  .hotel-map-view .rating-map-view {
+    margin-bottom: 0; }
+    .hotel-map-view .rating-map-view i {
+      margin: 0px 5px 0 0; }
+  .hotel-map-view .hotel-price-map {
+    margin-top: 5px;
+    display: inline-block;
+    color: #ff6759;
+    font-size: 13px; }
+
 @media screen and (max-width: 1200px) {
   .search {
     display: none; }

@@ -2323,6 +2323,30 @@ header {
 #mapBooking {
   height: 100% !important;
 }
+.gm-style-iw {
+  width: 200px !important;
+}
+.hotel-map-view {
+  padding: 10px;
+  border: 2px solid $brand-pink;
+  border-radius: 4px;
+  background-color: #fff;
+  h4 {
+    margin: 0 0 5px;
+    color: #424242;
+    font-size: 14px;
+  }
+  .rating-map-view {
+    margin-bottom: 0;
+    i { margin: 0px 5px 0 0; }
+  }
+  .hotel-price-map {
+    margin-top: 5px;
+    display: inline-block;
+    color: $brand-pink;
+    font-size: 13px;
+  }
+}
 // hotel inside end
 
 
