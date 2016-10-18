@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Travelibro - Hotel-List</title>
+  <link href="css/main.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="bower_components/bxslider-4/dist/jquery.bxslider.min.css">
+  <link href="sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+  <!-- google map api -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmKYAl3wbF1yKScxJ-OgiFMeM9oPnDizs&callback=initMap">
+    </script>
+    <script src="js/myscript.js"></script>
+  <!-- google map api end -->
+</head>
+<body>
+  <header class="bg-dark-blue">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-sm-5 col-xs-4">
+            <div class="header-left">
+              <div class="hamburger pointer inline-block">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+              <div class="search inline-block v-top">
+                <form action="">
+                  <input type="text" class="form-control" placeholder="Search people, destinations, itineraries, agents and tags">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2 col-xs-4">
+            <h1 class="text-center logo m-clear"><a href="">
+              <img src="img/travel-logo.png" alt="" class="img-responsive m-center hidden-sm hidden-xs" width="110">
+              <img src="img/mobile-logo.png" alt="" class="img-responsive m-center hidden-lg hidden-md ">
+            </a></h1>
+          </div>
+          <div class="col-md-5 col-sm-5 col-xs-4 user-header-detail">
+            <div class="user-detail text-right">
+              <ul class="list-inline">
+                <li>
+                  <a href="">
+                    <div class="user-img inline-block v-mid">
+                    <img src="img/profile.jpg" alt="" width="40" class="img-responsive">
+                  </div>
+                  <span class="color-white ml10 fz13">Activity</span>
+                </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa fa-bell"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa fa-cog"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="vacation-list-container windowHeight">
+      <div class="container-fluid">
+        <form>
+          <!-- vacation search bar -->
+          <div class="vacation-search-bar">
+            <!-- search and filter for desktop till 991 -->
+            <div class="search-detail-holder visible-lg visible-md hidden-sm ">
+                <div class="search-city-holder">
+                  <div class="input-holder relate">
+                    <input type="text" class="form-control" placeholder="Mumbai">
+                    <div class="dropdown-icon"><i class="fa fa-pencil"></i></div>
+                  </div>
+                </div>
+              <div class="date-holder">
+                <div class="checkin-checkout">
+                  <div class="check-in">
+                    <div class="input-holder relate">
+                      <input type="text" class="form-control datePicker" placeholder="Check In">
+                      <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                    </div>
+                  </div>
+                  <div class="check-out">
+                    <div class="input-holder relate">
+                      <input type="text" class="form-control datePicker" placeholder="Check Out">
+                      <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="stay-search-holder">
+                    <div class="stay-holder">
+                      <div class="input-holder relate">
+                        <input type="text" class="form-control bookHotel" placeholder="1 Room, 1 Adult, 1 Child">
+                        <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                        <div class="person-stay">
+                          <div class="close-person-stay bookHotel"><i class="fa fa-times "></i></div>
+                          <div class="row-flex">
+                            <div class="col-flex">
+                              <div class="form-group">
+                                <label for="rooms">Rooms</label>
+                                <div class="person-count">
+                                  <span><i class="fa fa-minus-circle minus"></i></span>
+                                  <input type="text" id="rooms" placeholder="00">
+                                  <span><i class="fa fa-plus-circle plus"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-flex">
+                              <div class="form-group">
+                                  <label for="adult">Adults</label>
+                                  <div class="person-count">
+                                    <span><i class="fa fa-minus-circle minus"></i></span>
+                                    <input type="text" id="adult" placeholder="00">
+                                    <span><i class="fa fa-plus-circle plus"></i></span>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-flex">
+                            <div class="col-flex">
+                              <div class="form-group">
+                                <label for="children">Children</label>
+                                <div class="person-count">
+                                  <span><i class="fa fa-minus-circle minus"></i></span>
+                                  <input type="text" id="children" placeholder="00">
+                                  <span><i class="fa fa-plus-circle plus"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-flex">
+                              <div class="form-group">
+                                <button class="btn btn-dark-blue apply avenir-medium">Apply</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search-holder">
+                      <button class="btn btn-pink full-width"><i class="fa fa-search mr5"></i>Search</button>
+                    </div>
+              </div>
+            </div>
+            <div class="filter-bar relate bg-white visible-lg visible-md hidden-sm ">
+              <div class="sec-hotel-result">
+                <div class="hotel-result">
+                  <span>Hotels Found : 7</span>
+                </div>
+              </div>
+              <div class="sort-by">
+                <div class="sort-by-category">
+                  <div class="sort-tag">
+                    <span>Sort By :</span>
+                  </div>
+                  <div class="popular">
+                    <span>Popularity <i class="fa fa-chevron-down ml5"></i></span>
+                  </div>
+                  <div class="guest-rating">
+                    <span>Guest Rating <i class="fa fa-chevron-down ml5"></i></span>
+                  </div>
+                  <div class="price">
+                        <span>Price <i class="fa fa-chevron-down ml5"></i></span>
+                    </div>
+                </div>
+              </div>
+              <div class="hotel-search-filter">
+                <div class="row">
+                  <div class="col-lg-10 col-md-8">
+                    <div class="input-holder relate search-hotel">
+                      <input type="text" class="form-control" placeholder="Search By Hotel Name">
+                      <div class="dropdown-icon"><i class="fa fa-search"></i></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                    <div class="text-right">
+                      <a class="btn btn-pink getfilter"><i class="fa fa-filter mr5"></i>Filter</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- filter bar main -->
+              <div class="filter-main-sec">
+                <div class="customize-by-filter">
+                  <div class="clearfix">
+                    <div class="pull-right">
+                      <span class="clear-all">Clear All</span>
+                    </div>
+                  </div>
+                  <div class="filter-first-bar">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="price-slider">
+                          <span class="price-label">Price</span>
+                          <div class="range-slider" id="rangeSlider">
+                          </div>
+                            <div id="minSlide"></div>
+                            <div id="maxSlide"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="start-rating-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate" data-toggle="collapse" data-target="#starRating">
+                              <span>Star Rating</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                            <div class="rating-list collapse" id="starRating">
+                              <ul>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="five-star">
+                                        <label for="five-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="four-star">
+                                        <label for="four-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>10</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="three-star">
+                                        <label for="three-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>250</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="two-star">
+                                        <label for="two-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="one-star">
+                                        <label for="one-star">
+                                          <span><i class="fa fa-star color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                          <span><i class="fa fa-star-o color-blue"></i></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-left">
+                                      <div class="custom-checkbox blue-checkbox">
+                                        <input type="checkbox" id="unknow">
+                                        <label for="unknow">
+                                          <span class="color-blue">Unknow</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="pull-right">
+                                      <div class="star-total-count">
+                                        <span>2511+</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="clearfix">
+                                    <div class="pull-right">
+                                      <span class="clear-star">Clear</span>
+                                      <button class="btn btn-pink">Apply</button>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="city-area-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>City Area</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="hotel-facility-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Hotel Facitilies</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-second-bar">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="currency-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Currency</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="room-facility-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Room Facitilies</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="guest-rating-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Guest Rating</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="hotel-chain-holder">
+                          <div class="dropdown-holder relate">
+                            <div class="drop-title relate">
+                              <span>Hotel Chain</span>
+                              <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- result bar bottom -->
+                <div class="result-bar-filter clearfix">
+                  <a class="btn btn-pink avenir-roman getfilter"><i class="fa fa-times mr5"> </i>Close</a>
+                  <div class="list-search-view">
+                    <span class="filter-search-result">5 Star<i class="fa fa-times ml5"></i></span>
+                  </div>
+                  <div class="pull-right">
+                    <button class="btn btn-pink">Apply</button>
+                  </div>
+                </div>
+                <!-- result bar bottom end-->
+              </div>
+              <!-- filter bar main end -->
+            </div>
+            <!-- search and filter for desktop till 991 end -->
+            <!-- search and filter for mobile -->
+            <div class="search-filter-bar hidden-lg hidden-md visible-sm visible-xs">
+              <div class="search-filter-main">
+                <div class="search-hotel-bar">
+                  <div class="search-hotel">
+                    <input type="text" class="form-control" placeholder="Search By Hotel Name">
+                  </div>
+                </div>
+                  <div class="list-filter-search">
+                    <ul class="list-inline">
+                      <li id="search-click" class="">
+                        <span class="list-icon search-by-field"><i class="fa fa-search color-white"></i></span>
+                      </li>
+                      <li id="filter-click" class="">
+                        <span class="list-icon filter-by-field"><i class="fa fa-filter color-white"></i></span>
+                      </li>
+                      <li id="map-click" class="">
+                        <span class="list-icon map-field"><i class="fa fa-map-marker color-white"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filter-search-map-main">
+                    <!-- search field mobile-->
+                    <div class="search-mobile">
+                      <div class="search-detail-holder">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="search-city-holder">
+                              <div class="input-holder relate">
+                                <input type="text" class="form-control" placeholder="Mumbai">
+                                <div class="dropdown-icon"><i class="fa fa-pencil"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="check-in">
+                              <div class="input-holder relate">
+                                <input type="text" class="form-control" placeholder="Check In">
+                                <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="check-out">
+                              <div class="input-holder relate">
+                                <input type="text" class="form-control" placeholder="Check Out">
+                                <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="stay-holder relate">
+                              <div class="input-holder relate">
+                                <input type="text" class="form-control bookHotel" placeholder="1 Room, 1 Adult, 1 Child">
+                                <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                              </div>
+                              <div class="person-stay">
+                                <div class="close-person-stay bookHotel"><i class="fa fa-times "></i></div>
+                                <div class="row-flex">
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <label for="rooms">Rooms</label>
+                                      <div class="person-count">
+                                        <span><i class="fa fa-minus-circle minus"></i></span>
+                                        <input type="text" id="rooms" placeholder="00">
+                                        <span><i class="fa fa-plus-circle plus"></i></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                        <label for="adult">Adults</label>
+                                        <div class="person-count">
+                                          <span><i class="fa fa-minus-circle minus"></i></span>
+                                          <input type="text" id="adult" placeholder="00">
+                                          <span><i class="fa fa-plus-circle plus"></i></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row-flex">
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <label for="children">Children</label>
+                                      <div class="person-count">
+                                        <span><i class="fa fa-minus-circle minus"></i></span>
+                                        <input type="text" id="children" placeholder="00">
+                                        <span><i class="fa fa-plus-circle plus"></i></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-flex">
+                                    <div class="form-group">
+                                      <button class="btn btn-dark-blue apply avenir-medium">Apply</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- result bar bottom -->
+                      <div class="result-bar-filter">
+                        <a class="btn btn-pink avenir-roman getfilter"><i class="fa fa-search mr5"> </i>Search</a>
+                      </div>
+                      <!-- result bar bottom end-->
+                    </div>
+                    <!-- search field mobile end-->
+                    <!-- filter field mobile -->
+                    <div class="filter-mobile">
+                      <div class="filter-main-sec">
+                        <div class="customize-by-filter">
+                          <div class="clearfix">
+                            <div class="pull-right">
+                              <span class="clear-all">Clear All</span>
+                            </div>
+                          </div>
+                          <div class="filter-first-bar">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="price-slider text-left">
+                                  <span class="price-label">Price</span>
+                                  <div class="range-slider" id="rangeSliderMob">
+                                  </div>
+                                    <div id="minMob"></div>
+                                    <div id="maxMob"></div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="start-rating-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate" data-toggle="collapse" data-target="#starRating">
+                                      <span>Star Rating</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="rating-list collapse" id="starRating">
+                                      <ul>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="five-star">
+                                                <label for="five-star">
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>2511+</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="four-star">
+                                                <label for="four-star">
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>10</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="three-star">
+                                                <label for="three-star">
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>250</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="two-star">
+                                                <label for="two-star">
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>2511+</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="one-star">
+                                                <label for="one-star">
+                                                  <span><i class="fa fa-star color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                  <span><i class="fa fa-star-o color-blue"></i></span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>2511+</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-left">
+                                              <div class="custom-checkbox blue-checkbox">
+                                                <input type="checkbox" id="unknow">
+                                                <label for="unknow">
+                                                  <span class="color-blue">Unknow</span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                            <div class="pull-right">
+                                              <div class="star-total-count">
+                                                <span>2511+</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="clearfix">
+                                            <div class="pull-right">
+                                              <span class="clear-star">Clear</span>
+                                              <button class="btn btn-pink">Apply</button>
+                                            </div>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="city-area-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>City Area</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="hotel-facility-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>Hotel Facitilies</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter-second-bar">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="currency-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>Currency</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="room-facility-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>Room Facitilies</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="guest-rating-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>Guest Rating</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="hotel-chain-holder">
+                                  <div class="dropdown-holder relate">
+                                    <div class="drop-title relate">
+                                      <span>Hotel Chain</span>
+                                      <span class="dropdown-icon"><i class="fa fa-chevron-down"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- result bar bottom -->
+                        <div class="result-bar-filter">
+                          <a class="btn btn-pink avenir-roman getfilter"><i class="fa fa-times mr5"> </i>Close</a>
+                          <div class="list-search-view">
+                            <span class="filter-search-result">5 Star<i class="fa fa-times ml5"></i></span>
+                          </div>
+                        </div>
+                        <!-- result bar bottom end-->
+                      </div>
+                    </div>
+                    <!-- filter field mobile end-->
+                  </div>
+              </div>
+              <div class="sort-category avenir-medium">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="sort-list">
+                      <div class="row">
+                          <div class="col-sm-4 col-xs-4">
+                            <div class="popular">
+                              <span>Popularity <i class="fa fa-chevron-down ml5"></i></span>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <div class="guest-rating">
+                              <span>Guest Rating <i class="fa fa-chevron-down ml5"></i></span>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 col-xs-3">
+                            <div class="price">
+                              <span>Price <i class="fa fa-chevron-down ml5"></i></span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="hotel-result">
+                      <span>Hotels Found : 7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- search and filter for mobile end-->
+          </div>
+          <!-- vacation search bar end-->
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

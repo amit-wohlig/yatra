@@ -1342,7 +1342,7 @@ header {
   button { height: 40px; }
   .col-flex { padding: 0px 5px; }
   .travel-text {
-    margin-right: 15px;
+    margin-right: 20%;
     color: #999ca2;
   }
   .dropdown-icon i  { color: #424242; }
@@ -2348,6 +2348,16 @@ header {
   }
 }
 // hotel inside end
+
+// vacation list
+.vacation-list-container {
+  padding-top: 5px;
+  background: url("../img/bookings/vacations.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+// vacation list end
 
 
 @import "mobile.scss"
