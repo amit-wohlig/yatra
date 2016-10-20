@@ -6054,17 +6054,17 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-light {
+.avenir-light, .vacation-card-list .hotel-descp p {
   font-family: "AvenirLTStd-Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-medium, .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .side-menu a, .person-stay label, .search-detail-holder input, .filter-bar, .clear-all, .accordion-hotel-detail .ui-widget, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a {
+.avenir-medium, .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .side-menu a, .person-stay label, .search-detail-holder input, .filter-bar, .clear-all, .accordion-hotel-detail .ui-widget, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a, .count-traveller-holder .travellers-counting .text-travel, .vacation-card-list .hotel-info-list li, .vacation-card-list .total-hotel-cost {
   font-family: "AvenirLTStd-Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-roman, .mouse-scrolldown, .share-comment-main .commenter-text, .likes-pop ul li a, .price-label, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default, .review-progress .review-name, .review-progress .review-value {
+.avenir-roman, .mouse-scrolldown, .share-comment-main .commenter-text, .likes-pop ul li a, .price-label, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default, .review-progress .review-name, .review-progress .review-value, .vacation-card-list .hotel-review {
   font-family: "AvenirLTStd-Roman";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -7674,13 +7674,13 @@ header {
   top: -15px;
   color: #a0a0a0; }
 
-.range-slider.ui-widget.ui-widget-content {
+.range-slider.ui-widget.ui-widget-content, .ui-widget.ui-widget-content.distance-range {
   height: 3px;
   border: none;
   position: relative;
   border-radius: 0;
   background-color: #a0a0a0; }
-  .range-slider.ui-widget.ui-widget-content:before {
+  .range-slider.ui-widget.ui-widget-content:before, .ui-widget.ui-widget-content.distance-range:before {
     content: '';
     width: 2px;
     height: 22px;
@@ -7688,7 +7688,7 @@ header {
     top: -9px;
     left: 0;
     background-color: #a0a0a0; }
-  .range-slider.ui-widget.ui-widget-content:after {
+  .range-slider.ui-widget.ui-widget-content:after, .ui-widget.ui-widget-content.distance-range:after {
     content: '';
     width: 2px;
     height: 22px;
@@ -7696,20 +7696,20 @@ header {
     top: -9px;
     right: 0;
     background-color: #a0a0a0; }
-.range-slider .ui-slider-range.ui-widget-header {
+.range-slider .ui-slider-range.ui-widget-header, .distance-range .ui-slider-range.ui-widget-header {
   background-color: #ff6759; }
-.range-slider .ui-slider-handle.ui-corner-all.ui-state-default {
+.range-slider .ui-slider-handle.ui-corner-all.ui-state-default, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default {
   border: 2px solid #ff6759;
   border-radius: 100%;
   background-color: #fff;
   top: -7px;
   color: #a0a0a0;
   cursor: pointer; }
-  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #minSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #minMob, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #minSlide, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #minSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #minMob, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #minMob, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
     min-width: 65px;
     font-size: 12px;
     letter-spacing: 1px; }
-  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #maxSlide, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
     top: -20px !important;
     left: -30px !important; }
 
@@ -8301,6 +8301,105 @@ header {
   background-attachment: fixed;
   overflow: hidden; }
 
+.count-traveller-holder {
+  width: 35%;
+  margin-left: -4px;
+  display: inline-block; }
+  .count-traveller-holder .count-travel {
+    width: 55%;
+    padding: 0 5px;
+    margin-left: -4px;
+    display: inline-block;
+    vertical-align: middle; }
+  .count-traveller-holder .travellers-counting {
+    padding: 0px 10px;
+    border-radius: 6px;
+    background-color: #fff; }
+    .count-traveller-holder .travellers-counting .text-travel {
+      margin-top: 10px;
+      display: inline-block;
+      color: #8a8a8a; }
+    .count-traveller-holder .travellers-counting input {
+      width: 60px; }
+  .count-traveller-holder .vac-searchbtn-holder {
+    width: 45%;
+    margin-left: -4px;
+    display: inline-block;
+    vertical-align: middle; }
+    .count-traveller-holder .vac-searchbtn-holder button {
+      height: 40px; }
+
+.vaction-hotel-result .hotel-result {
+  margin-top: 7px;
+  color: #8a8a8a; }
+
+.sort-vac-category {
+  margin-top: 7px; }
+  .sort-vac-category .sort-tag, .sort-vac-category .guest-rating, .sort-vac-category .price {
+    display: inline-block;
+    color: #424242; }
+  .sort-vac-category .sort-tag {
+    color: #8a8a8a; }
+  .sort-vac-category .guest-rating {
+    margin: 0px 40px; }
+  .sort-vac-category .price {
+    margin-right: 20px; }
+
+.vacation-overlay, .hotel-overlay {
+  background-image: url("../img/bookings/vacations.jpg"); }
+
+.distance-range #minDistance, .distance-range #maxDistance {
+  min-width: 65px;
+  font-size: 12px;
+  letter-spacing: 1px; }
+.distance-range #maxDistance {
+  top: -20px !important;
+  left: -30px !important; }
+
+.vacation-card-list .hotel-card-holder {
+  max-height: initial; }
+.vacation-card-list .vacation-hotel-chart {
+  padding: 10px 0px 5px; }
+.vacation-card-list .rate-by-star ul {
+  display: inline-block; }
+.vacation-card-list .hotel-review {
+  margin-left: 10px;
+  display: inline-block; }
+.vacation-card-list .hotel-descp {
+  margin-bottom: 20px; }
+  .vacation-card-list .hotel-descp p {
+    margin: 0;
+    font-style: italic;
+    text-align: left; }
+.vacation-card-list .hotel-info-list ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+.vacation-card-list .hotel-info-list li {
+  padding: 0px 10px;
+  border-right: 1px solid #fff;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 12px; }
+  .vacation-card-list .hotel-info-list li span {
+    font-size: 20px; }
+  .vacation-card-list .hotel-info-list li:last-child {
+    border-right: none; }
+.vacation-card-list .total-hotel-cost {
+  margin-top: 20px;
+  text-align: left; }
+  .vacation-card-list .total-hotel-cost .hotel-cost {
+    font-size: 22px; }
+
 @media screen and (max-width: 1200px) {
   .search {
     display: none; }
@@ -8530,7 +8629,7 @@ header {
   .result-bar-filter {
     text-align: left; }
 
-  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #min {
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #min, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #min {
     top: 18px !important;
     left: 0 !important; }
 
@@ -8550,7 +8649,7 @@ header {
     position: relative;
     z-index: 4; }
 
-  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #maxMob, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #maxMob {
     left: -45px !important; }
 
   .hotel-card-list {
@@ -8695,7 +8794,7 @@ header {
     border-left: 9px solid transparent;
     bottom: -1px; }
 
-  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #max {
+  .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #max, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #max {
     left: -45px !important; }
 
   .side-menu {

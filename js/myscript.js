@@ -189,6 +189,38 @@ $(document).ready(function() {
         of: $('#rangeSliderMob span:eq(1)'),
         offset: "0, 0"
     });
+    // distance slider
+    $("#distanceSlider").slider({
+        range: true,
+        min: 0,
+        max: 1000,
+        values: [100, 10000],
+        animate: 'slow',
+        create: function() {
+            $('#minDistance').appendTo($('#distanceSlider span').get(0));
+            $('#maxDistance').appendTo($('#distanceSlider span').get(1));
+        },
+        slide: function(event, ui) {
+            $(ui.handle).find("#minDistance").html(ui.value + 'm');
+            $(ui.handle).find("#maxDistance").html(ui.value + 'm');
+        }
+    });
+    // only initially needed
+    $('#minDistance').html('INR ' + $('#distanceSlider').slider('values', 0)).position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('#distanceSlider span:eq(0)'),
+        offset: "0, 0"
+    });
+
+    $('#maxDistance').html('INR ' + $('#distanceSlider').slider('values', 1)).position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('#distanceSlider span:eq(1)'),
+        offset: "0, 0"
+    });
+    $("#distanceSlider").draggable();
+    // distance slider
     // range slider end
 
     // google map api
