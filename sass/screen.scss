@@ -1684,7 +1684,7 @@ header {
 // range slider
 .price-label {
   position: relative;
-  top: -15px;
+  top: -20px;
   color: #a0a0a0;
   @extend .avenir-roman;
 }
@@ -2383,7 +2383,7 @@ header {
   }
   .vac-searchbtn-holder {
     width: 45%;
-    margin-left: -4px;
+    // margin-left: -4px;
     display: inline-block;
     vertical-align: middle;
     button { height: 40px; }
@@ -2407,7 +2407,7 @@ header {
   }
   .price { margin-right: 20px; }
 }
-.vacation-overlay {
+.blurry-vacation-overlay {
   background-image: url("../img/bookings/vacations.jpg");
 }
 .distance-range {

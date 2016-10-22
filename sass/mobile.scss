@@ -39,6 +39,12 @@
   .deal-list {
     .table > thead > tr > th { vertical-align: top; }
   }
+  // vacation
+  .vacation-card-list .hotel-info-list li:first-child { word-break: break-all; }
+  .count-traveller-holder {
+    width: 43%;
+  }
+  // vacation end
   // booking end
 }
 // from desktop 1200px to 991px end
@@ -115,11 +121,15 @@
   .sort-category {
     padding: 15px;
     background-color: #fff;
+    color: #8a8a8a;
   }
   .stay-holder {
     .col-flex { text-align: center; }
   }
-  .hotel-result { text-align: right; }
+  .hotel-result {
+    color: #8a8a8a;
+    text-align: right;
+  }
   .search-hotel-bar {
     width: 75%;
     display: inline-block;
@@ -248,6 +258,21 @@
     ul { margin-bottom: 20px; }
   }
   // booking end
+  // vacation
+  .vacation-view-section {
+    .row-flex { display: block; }
+    .col-flex { @include flex(auto); }
+  }
+  #vacation-search-click.view-caret {
+    &:after { opacity: 1; }
+  }
+  #vacation-filter-click.view-caret {
+    &:after { opacity: 1; }
+  }
+  #vacation-map-click.view-caret {
+    &:after { opacity: 1; }
+  }
+  // vacation end
 }
 // from 991px to 767px end
 // from 766px to 480px
@@ -446,6 +471,38 @@
     }
   }
   // booking end
+  // vacation
+  .vacation-list-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    .container-fluid { padding: 0; }
+  }
+  .count-travel {
+    padding: 0px 12px;
+    border-radius: 6px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 20px;
+    .text-travel {
+      margin-top: 10px;
+      display: inline-block;
+      color: #8a8a8a;
+    }
+    input { width: 60px; }
+  }
+  .distance-slider {
+     min-height: 70px;
+     margin-top: 20px;
+     #minDistanceMob, #maxDistanceMob {
+       min-width: 65px;
+       font-size: 12px;
+       letter-spacing: 1px;
+     }
+     #maxDistanceMob {
+       top: -22px !important;
+       left: -40px !important;
+     }
+   }
+  // vacation end
 }
 // from 766px to 480px end
 // from 480px to 370px

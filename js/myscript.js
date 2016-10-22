@@ -11,7 +11,6 @@ $(document).ready(function() {
 // facebook widget
 setTimeout(function() {
     // <div id="fb-root"></div>
-    console.log("facebook");
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -24,7 +23,6 @@ setTimeout(function() {
 // facebook widget end
 // twitter widget
 setTimeout(function() {
-    console.log("twitter");
     ! function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             p = /^http:/.test(d.location) ? 'http' : 'https';
@@ -78,7 +76,6 @@ $(document).ready(function() {
 // tabs
 $(document).ready(function() {
     $(function() {
-            console.log("tabs");
             $(".detail-tab").tabs();
         })
         // accordion
@@ -193,7 +190,7 @@ $(document).ready(function() {
     $("#distanceSlider").slider({
         range: true,
         min: 0,
-        max: 1000,
+        max: 12000,
         values: [100, 10000],
         animate: 'slow',
         create: function() {
@@ -201,19 +198,19 @@ $(document).ready(function() {
             $('#maxDistance').appendTo($('#distanceSlider span').get(1));
         },
         slide: function(event, ui) {
-            $(ui.handle).find("#minDistance").html(ui.value + 'm');
-            $(ui.handle).find("#maxDistance").html(ui.value + 'm');
+            $(ui.handle).find("#minDistance").html(ui.value + ' m');
+            $(ui.handle).find("#maxDistance").html(ui.value + ' m');
         }
     });
     // only initially needed
-    $('#minDistance').html('INR ' + $('#distanceSlider').slider('values', 0)).position({
+    $('#minDistance').html($('#distanceSlider').slider('values', 0) + ' m').position({
         my: 'center top',
         at: 'center bottom',
         of: $('#distanceSlider span:eq(0)'),
         offset: "0, 0"
     });
 
-    $('#maxDistance').html('INR ' + $('#distanceSlider').slider('values', 1)).position({
+    $('#maxDistance').html($('#distanceSlider').slider('values', 1) + ' m').position({
         my: 'center top',
         at: 'center bottom',
         of: $('#distanceSlider span:eq(1)'),
@@ -221,11 +218,116 @@ $(document).ready(function() {
     });
     $("#distanceSlider").draggable();
     // distance slider
+    // distance slider mobile
+    $("#distanceSliderMob").slider({
+        range: true,
+        min: 0,
+        max: 12000,
+        values: [100, 10000],
+        animate: 'slow',
+        create: function() {
+            $('#minDistanceMob').appendTo($('#distanceSliderMob span').get(0));
+            $('#maxDistanceMob').appendTo($('#distanceSliderMob span').get(1));
+        },
+        slide: function(event, ui) {
+            $(ui.handle).find("#minDistanceMob").html(ui.value + ' m');
+            $(ui.handle).find("#maxDistanceMob").html(ui.value + ' m');
+        }
+    });
+    // only initially needed
+    $('#minDistanceMob').html($('#distanceSliderMob').slider('values', 0) + ' m').position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('#distanceSliderMob span:eq(0)'),
+        offset: "0, 0"
+    });
+
+    $('#maxDistanceMob').html($('#distanceSliderMob').slider('values', 1) + ' m').position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('#distanceSliderMob span:eq(1)'),
+        offset: "0, 0"
+    });
+    // distance slider mobile end
     // range slider end
+
+    // search view, filter and map view
+    $("#search-click").click(function() {
+        $(".search-mobile").slideToggle();
+        $("#search-click").toggleClass("view-caret");
+        // hide div
+        $(".filter-main-sec").hide();
+        $("#mapBooking").hide();
+        // removing class
+        $("#filter-click").removeClass("view-caret");
+        $("#map-click").removeClass("view-caret");
+    });
+
+    $("#filter-click").click(function() {
+        $(".filter-main-sec").slideToggle();
+        $("#filter-click").toggleClass("view-caret");
+        // hide div
+        $(".search-mobile").hide();
+        $("#mapBooking").hide();
+        // removing class
+        $("#search-click").removeClass("view-caret");
+        $("#map-click").removeClass("view-caret");
+    });
+
+    $("#map-click").click(function() {
+        $("#mapBooking").slideToggle();
+        $("#map-click").toggleClass("view-caret");
+        // hide div
+        $(".search-mobile").hide();
+        $(".filter-main-sec").hide();
+        // removing class
+        $("#search-click").removeClass("view-caret");
+        $("#filter-click").removeClass("view-caret");
+        setTimeout(function() {
+            initMap();
+        }, 100);
+    });
+    // search view, filter and map view
+    // vacation search bar
+    $("#vacation-search-click").click(function() {
+        $(".search-mobile").slideToggle();
+        $("#vacation-search-click").toggleClass("view-caret");
+        // hide div
+        $(".filter-main-sec").hide();
+        $("#mapBooking").hide();
+        // removing class
+        $("#vacation-filter-click").removeClass("view-caret");
+        $("#vacation-map-click").removeClass("view-caret");
+    });
+
+    $("#vacation-filter-click").click(function() {
+        $(".filter-main-sec").slideToggle();
+        $("#vacation-filter-click").toggleClass("view-caret");
+        // hide div
+        $(".search-mobile").hide();
+        $("#mapBooking").hide();
+        // removing class
+        $("#vacation-search-click").removeClass("view-caret");
+        $("#vacation-map-click").removeClass("view-caret");
+    });
+
+    $("#vacation-map-click").click(function() {
+        $("#mapBooking").slideToggle();
+        $("#vacation-map-click").toggleClass("view-caret");
+        // hide div
+        $(".search-mobile").hide();
+        $(".filter-main-sec").hide();
+        // removing class
+        $("#vacation-search-click").removeClass("view-caret");
+        $("#vacation-filter-click").removeClass("view-caret");
+        setTimeout(function() {
+            initMap();
+        }, 100);
+    });
+    // vacation search bar end
 
     // google map api
     function initMap() {
-        console.log("mapBooking-check");
         var myLatLng = {
             lat: 18.9704296,
             lng: 72.8145482
@@ -346,43 +448,4 @@ $(document).ready(function() {
     }, 100);
 
     // google map api end\
-    // search view, filter and map view
-    $("#search-click").click(function() {
-        $(".search-mobile").slideToggle();
-        $("#search-click").toggleClass("view-caret");
-        // hide div
-        $(".filter-main-sec").hide();
-        $("#mapBooking").hide();
-        // removing class
-        $("#filter-click").removeClass("view-caret");
-        $("#map-click").removeClass("view-caret");
-    });
-
-    $("#filter-click").click(function() {
-        $(".filter-main-sec").slideToggle();
-        $("#filter-click").toggleClass("view-caret");
-        // hide div
-        $(".search-mobile").hide();
-        $("#mapBooking").hide();
-        // removing class
-        $("#search-click").removeClass("view-caret");
-        $("#map-click").removeClass("view-caret");
-    });
-
-    $("#map-click").click(function() {
-        $("#mapBooking").slideToggle();
-        $("#map-click").toggleClass("view-caret");
-        // hide div
-        $(".search-mobile").hide();
-        $(".filter-main-sec").hide();
-        // removing class
-        $("#search-click").removeClass("view-caret");
-        $("#filter-click").removeClass("view-caret");
-        setTimeout(function() {
-            initMap();
-        }, 100);
-    });
-    // search view, filter and map view
-    // like view
-    // like view end
 });
