@@ -7350,7 +7350,8 @@ header {
   .vacation-booking-form .col-flex, .hotel-booking-form .col-flex {
     padding: 0px 5px; }
   .vacation-booking-form .travel-text, .hotel-booking-form .travel-text {
-    margin-right: 20%;
+    margin-top: 3px;
+    display: inline-block;
     color: #999ca2; }
   .vacation-booking-form .dropdown-icon i, .hotel-booking-form .dropdown-icon i {
     color: #424242; }

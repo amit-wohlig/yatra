@@ -1342,7 +1342,9 @@ header {
   button { height: 40px; }
   .col-flex { padding: 0px 5px; }
   .travel-text {
-    margin-right: 20%;
+    margin-top: 3px;
+    display: inline-block;
+    // margin-right: 20%;
     color: #999ca2;
   }
   .dropdown-icon i  { color: #424242; }
