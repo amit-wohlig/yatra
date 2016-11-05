@@ -6064,7 +6064,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-roman, .mouse-scrolldown, .share-comment-main .commenter-text, .likes-pop ul li a, .price-label, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default, .review-progress .review-name, .review-progress .review-value, .vacation-card-list .hotel-review {
+.avenir-roman, .mouse-scrolldown, .share-comment-main .commenter-text, .likes-pop ul li a, .price-label, .range-slider .ui-slider-handle.ui-corner-all.ui-state-default, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default, .review-progress .review-name, .review-progress .review-value, .vacation-card-list .hotel-review, .tour-detail-descp {
   font-family: "AvenirLTStd-Roman";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -6320,32 +6320,32 @@ textarea {
     color: #f2675b;
     background-color: white; }
 
-.btn-pink, .hotel-card-holder:nth-child(odd) .btn-deal {
+.btn-pink, .hotel-card-holder:nth-child(odd) .btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal, .tour-card-container .col-md-6:nth-child(4n) .btn-deal, .tour-descp-pink .btn-book {
   color: white;
   background-color: #f2675b;
   border-color: #f2675b; }
-  .btn-pink:focus, .hotel-card-holder:nth-child(odd) .btn-deal:focus, .btn-pink.focus, .hotel-card-holder:nth-child(odd) .focus.btn-deal {
+  .btn-pink:focus, .hotel-card-holder:nth-child(odd) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:focus, .tour-descp-pink .btn-book:focus, .btn-pink.focus, .hotel-card-holder:nth-child(odd) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .focus.btn-deal, .tour-descp-pink .focus.btn-book {
     color: white;
     background-color: #ee3b2c;
     border-color: #be1d0f; }
-  .btn-pink:hover, .hotel-card-holder:nth-child(odd) .btn-deal:hover {
+  .btn-pink:hover, .hotel-card-holder:nth-child(odd) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:hover, .tour-descp-pink .btn-book:hover {
     color: white;
     background-color: #ee3b2c;
     border-color: #ee3222; }
-  .btn-pink:active, .hotel-card-holder:nth-child(odd) .btn-deal:active, .btn-pink.active, .hotel-card-holder:nth-child(odd) .active.btn-deal, .open > .btn-pink.dropdown-toggle, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal {
+  .btn-pink:active, .hotel-card-holder:nth-child(odd) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:active, .tour-descp-pink .btn-book:active, .btn-pink.active, .hotel-card-holder:nth-child(odd) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .active.btn-deal, .tour-descp-pink .active.btn-book, .open > .btn-pink.dropdown-toggle, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .open > .dropdown-toggle.btn-deal, .tour-descp-pink .open > .dropdown-toggle.btn-book {
     color: white;
     background-color: #ee3b2c;
     border-color: #ee3222; }
-    .btn-pink:active:hover, .hotel-card-holder:nth-child(odd) .btn-deal:active:hover, .btn-pink:active:focus, .hotel-card-holder:nth-child(odd) .btn-deal:active:focus, .btn-pink:active.focus, .hotel-card-holder:nth-child(odd) .btn-deal:active.focus, .btn-pink.active:hover, .hotel-card-holder:nth-child(odd) .active.btn-deal:hover, .btn-pink.active:focus, .hotel-card-holder:nth-child(odd) .active.btn-deal:focus, .btn-pink.active.focus, .hotel-card-holder:nth-child(odd) .active.focus.btn-deal, .open > .btn-pink.dropdown-toggle:hover, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal:hover, .open > .btn-pink.dropdown-toggle:focus, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal:focus, .open > .btn-pink.dropdown-toggle.focus, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.focus.btn-deal {
+    .btn-pink:active:hover, .hotel-card-holder:nth-child(odd) .btn-deal:active:hover, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:active:hover, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:active:hover, .tour-descp-pink .btn-book:active:hover, .btn-pink:active:focus, .hotel-card-holder:nth-child(odd) .btn-deal:active:focus, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:active:focus, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:active:focus, .tour-descp-pink .btn-book:active:focus, .btn-pink:active.focus, .hotel-card-holder:nth-child(odd) .btn-deal:active.focus, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:active.focus, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:active.focus, .tour-descp-pink .btn-book:active.focus, .btn-pink.active:hover, .hotel-card-holder:nth-child(odd) .active.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) .active.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) .active.btn-deal:hover, .tour-descp-pink .active.btn-book:hover, .btn-pink.active:focus, .hotel-card-holder:nth-child(odd) .active.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) .active.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) .active.btn-deal:focus, .tour-descp-pink .active.btn-book:focus, .btn-pink.active.focus, .hotel-card-holder:nth-child(odd) .active.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .active.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .active.focus.btn-deal, .tour-descp-pink .active.focus.btn-book, .open > .btn-pink.dropdown-toggle:hover, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) .open > .dropdown-toggle.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) .open > .dropdown-toggle.btn-deal:hover, .tour-descp-pink .open > .dropdown-toggle.btn-book:hover, .open > .btn-pink.dropdown-toggle:focus, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) .open > .dropdown-toggle.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) .open > .dropdown-toggle.btn-deal:focus, .tour-descp-pink .open > .dropdown-toggle.btn-book:focus, .open > .btn-pink.dropdown-toggle.focus, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .open > .dropdown-toggle.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .open > .dropdown-toggle.focus.btn-deal, .tour-descp-pink .open > .dropdown-toggle.focus.btn-book {
       color: white;
       background-color: #e42312;
       border-color: #be1d0f; }
-  .btn-pink:active, .hotel-card-holder:nth-child(odd) .btn-deal:active, .btn-pink.active, .hotel-card-holder:nth-child(odd) .active.btn-deal, .open > .btn-pink.dropdown-toggle, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal {
+  .btn-pink:active, .hotel-card-holder:nth-child(odd) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n) .btn-deal:active, .tour-descp-pink .btn-book:active, .btn-pink.active, .hotel-card-holder:nth-child(odd) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .active.btn-deal, .tour-descp-pink .active.btn-book, .open > .btn-pink.dropdown-toggle, .hotel-card-holder:nth-child(odd) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .open > .dropdown-toggle.btn-deal, .tour-descp-pink .open > .dropdown-toggle.btn-book {
     background-image: none; }
-  .btn-pink.disabled:hover, .hotel-card-holder:nth-child(odd) .disabled.btn-deal:hover, .btn-pink.disabled:focus, .hotel-card-holder:nth-child(odd) .disabled.btn-deal:focus, .btn-pink.disabled.focus, .hotel-card-holder:nth-child(odd) .disabled.focus.btn-deal, .btn-pink[disabled]:hover, .hotel-card-holder:nth-child(odd) [disabled].btn-deal:hover, .btn-pink[disabled]:focus, .hotel-card-holder:nth-child(odd) [disabled].btn-deal:focus, .btn-pink[disabled].focus, .hotel-card-holder:nth-child(odd) [disabled].focus.btn-deal, fieldset[disabled] .btn-pink:hover, fieldset[disabled] .hotel-card-holder:nth-child(odd) .btn-deal:hover, .hotel-card-holder:nth-child(odd) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .btn-pink:focus, fieldset[disabled] .hotel-card-holder:nth-child(odd) .btn-deal:focus, .hotel-card-holder:nth-child(odd) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .btn-pink.focus, fieldset[disabled] .hotel-card-holder:nth-child(odd) .focus.btn-deal, .hotel-card-holder:nth-child(odd) fieldset[disabled] .focus.btn-deal {
+  .btn-pink.disabled:hover, .hotel-card-holder:nth-child(odd) .disabled.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) .disabled.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) .disabled.btn-deal:hover, .tour-descp-pink .disabled.btn-book:hover, .btn-pink.disabled:focus, .hotel-card-holder:nth-child(odd) .disabled.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) .disabled.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) .disabled.btn-deal:focus, .tour-descp-pink .disabled.btn-book:focus, .btn-pink.disabled.focus, .hotel-card-holder:nth-child(odd) .disabled.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) .disabled.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) .disabled.focus.btn-deal, .tour-descp-pink .disabled.focus.btn-book, .btn-pink[disabled]:hover, .hotel-card-holder:nth-child(odd) [disabled].btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) [disabled].btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) [disabled].btn-deal:hover, .tour-descp-pink [disabled].btn-book:hover, .btn-pink[disabled]:focus, .hotel-card-holder:nth-child(odd) [disabled].btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) [disabled].btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) [disabled].btn-deal:focus, .tour-descp-pink [disabled].btn-book:focus, .btn-pink[disabled].focus, .hotel-card-holder:nth-child(odd) [disabled].focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) [disabled].focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) [disabled].focus.btn-deal, .tour-descp-pink [disabled].focus.btn-book, fieldset[disabled] .btn-pink:hover, fieldset[disabled] .hotel-card-holder:nth-child(odd) .btn-deal:hover, .hotel-card-holder:nth-child(odd) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+1) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-descp-pink .btn-book:hover, .tour-descp-pink fieldset[disabled] .btn-book:hover, fieldset[disabled] .btn-pink:focus, fieldset[disabled] .hotel-card-holder:nth-child(odd) .btn-deal:focus, .hotel-card-holder:nth-child(odd) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+1) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-descp-pink .btn-book:focus, .tour-descp-pink fieldset[disabled] .btn-book:focus, fieldset[disabled] .btn-pink.focus, fieldset[disabled] .hotel-card-holder:nth-child(odd) .focus.btn-deal, .hotel-card-holder:nth-child(odd) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+1) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+1) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-descp-pink .focus.btn-book, .tour-descp-pink fieldset[disabled] .focus.btn-book {
     background-color: #f2675b;
     border-color: #f2675b; }
-  .btn-pink .badge, .hotel-card-holder:nth-child(odd) .btn-deal .badge {
+  .btn-pink .badge, .hotel-card-holder:nth-child(odd) .btn-deal .badge, .tour-card-container .col-md-6:nth-child(4n+1) .btn-deal .badge, .tour-card-container .col-md-6:nth-child(4n) .btn-deal .badge, .tour-descp-pink .btn-book .badge {
     color: #f2675b;
     background-color: white; }
 
@@ -6585,32 +6585,32 @@ textarea {
     color: transparent;
     background-color: #2d3655; }
 
-.btn-cyan, .hotel-card-holder:nth-child(even) .btn-deal {
+.btn-cyan, .hotel-card-holder:nth-child(even) .btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal, .tour-descp-cyan .btn-book {
   color: white;
   background-color: #11d3cb;
   border-color: #11d3cb; }
-  .btn-cyan:focus, .hotel-card-holder:nth-child(even) .btn-deal:focus, .btn-cyan.focus, .hotel-card-holder:nth-child(even) .focus.btn-deal {
+  .btn-cyan:focus, .hotel-card-holder:nth-child(even) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:focus, .tour-descp-cyan .btn-book:focus, .btn-cyan.focus, .hotel-card-holder:nth-child(even) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .focus.btn-deal, .tour-descp-cyan .focus.btn-book {
     color: white;
     background-color: #0da49e;
     border-color: #075d59; }
-  .btn-cyan:hover, .hotel-card-holder:nth-child(even) .btn-deal:hover {
+  .btn-cyan:hover, .hotel-card-holder:nth-child(even) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:hover, .tour-descp-cyan .btn-book:hover {
     color: white;
     background-color: #0da49e;
     border-color: #0c9a95; }
-  .btn-cyan:active, .hotel-card-holder:nth-child(even) .btn-deal:active, .btn-cyan.active, .hotel-card-holder:nth-child(even) .active.btn-deal, .open > .btn-cyan.dropdown-toggle, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal {
+  .btn-cyan:active, .hotel-card-holder:nth-child(even) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:active, .tour-descp-cyan .btn-book:active, .btn-cyan.active, .hotel-card-holder:nth-child(even) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .active.btn-deal, .tour-descp-cyan .active.btn-book, .open > .btn-cyan.dropdown-toggle, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .open > .dropdown-toggle.btn-deal, .tour-descp-cyan .open > .dropdown-toggle.btn-book {
     color: white;
     background-color: #0da49e;
     border-color: #0c9a95; }
-    .btn-cyan:active:hover, .hotel-card-holder:nth-child(even) .btn-deal:active:hover, .btn-cyan:active:focus, .hotel-card-holder:nth-child(even) .btn-deal:active:focus, .btn-cyan:active.focus, .hotel-card-holder:nth-child(even) .btn-deal:active.focus, .btn-cyan.active:hover, .hotel-card-holder:nth-child(even) .active.btn-deal:hover, .btn-cyan.active:focus, .hotel-card-holder:nth-child(even) .active.btn-deal:focus, .btn-cyan.active.focus, .hotel-card-holder:nth-child(even) .active.focus.btn-deal, .open > .btn-cyan.dropdown-toggle:hover, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal:hover, .open > .btn-cyan.dropdown-toggle:focus, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal:focus, .open > .btn-cyan.dropdown-toggle.focus, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.focus.btn-deal {
+    .btn-cyan:active:hover, .hotel-card-holder:nth-child(even) .btn-deal:active:hover, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:active:hover, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:active:hover, .tour-descp-cyan .btn-book:active:hover, .btn-cyan:active:focus, .hotel-card-holder:nth-child(even) .btn-deal:active:focus, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:active:focus, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:active:focus, .tour-descp-cyan .btn-book:active:focus, .btn-cyan:active.focus, .hotel-card-holder:nth-child(even) .btn-deal:active.focus, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:active.focus, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:active.focus, .tour-descp-cyan .btn-book:active.focus, .btn-cyan.active:hover, .hotel-card-holder:nth-child(even) .active.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) .active.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) .active.btn-deal:hover, .tour-descp-cyan .active.btn-book:hover, .btn-cyan.active:focus, .hotel-card-holder:nth-child(even) .active.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) .active.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) .active.btn-deal:focus, .tour-descp-cyan .active.btn-book:focus, .btn-cyan.active.focus, .hotel-card-holder:nth-child(even) .active.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .active.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .active.focus.btn-deal, .tour-descp-cyan .active.focus.btn-book, .open > .btn-cyan.dropdown-toggle:hover, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) .open > .dropdown-toggle.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) .open > .dropdown-toggle.btn-deal:hover, .tour-descp-cyan .open > .dropdown-toggle.btn-book:hover, .open > .btn-cyan.dropdown-toggle:focus, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) .open > .dropdown-toggle.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) .open > .dropdown-toggle.btn-deal:focus, .tour-descp-cyan .open > .dropdown-toggle.btn-book:focus, .open > .btn-cyan.dropdown-toggle.focus, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .open > .dropdown-toggle.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .open > .dropdown-toggle.focus.btn-deal, .tour-descp-cyan .open > .dropdown-toggle.focus.btn-book {
       color: white;
       background-color: #0b837e;
       border-color: #075d59; }
-  .btn-cyan:active, .hotel-card-holder:nth-child(even) .btn-deal:active, .btn-cyan.active, .hotel-card-holder:nth-child(even) .active.btn-deal, .open > .btn-cyan.dropdown-toggle, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal {
+  .btn-cyan:active, .hotel-card-holder:nth-child(even) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:active, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:active, .tour-descp-cyan .btn-book:active, .btn-cyan.active, .hotel-card-holder:nth-child(even) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .active.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .active.btn-deal, .tour-descp-cyan .active.btn-book, .open > .btn-cyan.dropdown-toggle, .hotel-card-holder:nth-child(even) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .open > .dropdown-toggle.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .open > .dropdown-toggle.btn-deal, .tour-descp-cyan .open > .dropdown-toggle.btn-book {
     background-image: none; }
-  .btn-cyan.disabled:hover, .hotel-card-holder:nth-child(even) .disabled.btn-deal:hover, .btn-cyan.disabled:focus, .hotel-card-holder:nth-child(even) .disabled.btn-deal:focus, .btn-cyan.disabled.focus, .hotel-card-holder:nth-child(even) .disabled.focus.btn-deal, .btn-cyan[disabled]:hover, .hotel-card-holder:nth-child(even) [disabled].btn-deal:hover, .btn-cyan[disabled]:focus, .hotel-card-holder:nth-child(even) [disabled].btn-deal:focus, .btn-cyan[disabled].focus, .hotel-card-holder:nth-child(even) [disabled].focus.btn-deal, fieldset[disabled] .btn-cyan:hover, fieldset[disabled] .hotel-card-holder:nth-child(even) .btn-deal:hover, .hotel-card-holder:nth-child(even) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .btn-cyan:focus, fieldset[disabled] .hotel-card-holder:nth-child(even) .btn-deal:focus, .hotel-card-holder:nth-child(even) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .btn-cyan.focus, fieldset[disabled] .hotel-card-holder:nth-child(even) .focus.btn-deal, .hotel-card-holder:nth-child(even) fieldset[disabled] .focus.btn-deal {
+  .btn-cyan.disabled:hover, .hotel-card-holder:nth-child(even) .disabled.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) .disabled.btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) .disabled.btn-deal:hover, .tour-descp-cyan .disabled.btn-book:hover, .btn-cyan.disabled:focus, .hotel-card-holder:nth-child(even) .disabled.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) .disabled.btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) .disabled.btn-deal:focus, .tour-descp-cyan .disabled.btn-book:focus, .btn-cyan.disabled.focus, .hotel-card-holder:nth-child(even) .disabled.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) .disabled.focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) .disabled.focus.btn-deal, .tour-descp-cyan .disabled.focus.btn-book, .btn-cyan[disabled]:hover, .hotel-card-holder:nth-child(even) [disabled].btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) [disabled].btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) [disabled].btn-deal:hover, .tour-descp-cyan [disabled].btn-book:hover, .btn-cyan[disabled]:focus, .hotel-card-holder:nth-child(even) [disabled].btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) [disabled].btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) [disabled].btn-deal:focus, .tour-descp-cyan [disabled].btn-book:focus, .btn-cyan[disabled].focus, .hotel-card-holder:nth-child(even) [disabled].focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) [disabled].focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) [disabled].focus.btn-deal, .tour-descp-cyan [disabled].focus.btn-book, fieldset[disabled] .btn-cyan:hover, fieldset[disabled] .hotel-card-holder:nth-child(even) .btn-deal:hover, .hotel-card-holder:nth-child(even) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n+2) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:hover, .tour-card-container .col-md-6:nth-child(4n-1) fieldset[disabled] .btn-deal:hover, fieldset[disabled] .tour-descp-cyan .btn-book:hover, .tour-descp-cyan fieldset[disabled] .btn-book:hover, fieldset[disabled] .btn-cyan:focus, fieldset[disabled] .hotel-card-holder:nth-child(even) .btn-deal:focus, .hotel-card-holder:nth-child(even) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n+2) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal:focus, .tour-card-container .col-md-6:nth-child(4n-1) fieldset[disabled] .btn-deal:focus, fieldset[disabled] .tour-descp-cyan .btn-book:focus, .tour-descp-cyan fieldset[disabled] .btn-book:focus, fieldset[disabled] .btn-cyan.focus, fieldset[disabled] .hotel-card-holder:nth-child(even) .focus.btn-deal, .hotel-card-holder:nth-child(even) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n+2) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n+2) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-card-container .col-md-6:nth-child(4n-1) .focus.btn-deal, .tour-card-container .col-md-6:nth-child(4n-1) fieldset[disabled] .focus.btn-deal, fieldset[disabled] .tour-descp-cyan .focus.btn-book, .tour-descp-cyan fieldset[disabled] .focus.btn-book {
     background-color: #11d3cb;
     border-color: #11d3cb; }
-  .btn-cyan .badge, .hotel-card-holder:nth-child(even) .btn-deal .badge {
+  .btn-cyan .badge, .hotel-card-holder:nth-child(even) .btn-deal .badge, .tour-card-container .col-md-6:nth-child(4n+2) .btn-deal .badge, .tour-card-container .col-md-6:nth-child(4n-1) .btn-deal .badge, .tour-descp-cyan .btn-book .badge {
     color: #11d3cb;
     background-color: white; }
 
@@ -8150,18 +8150,18 @@ header {
   background-attachment: fixed;
   overflow: hidden; }
 
-.slider-hotel {
+.slider-hotel, .slider-tour {
   height: 290px;
   overflow: hidden;
   position: relative; }
-  .slider-hotel .carousel {
+  .slider-hotel .carousel, .slider-tour .carousel {
     height: 100%; }
-  .slider-hotel .carousel-inner > .item img {
+  .slider-hotel .carousel-inner > .item img, .slider-tour .carousel-inner > .item img {
     height: 100%; }
-  .slider-hotel .carousel-control.left, .slider-hotel .carousel-control.right {
+  .slider-hotel .carousel-control.left, .slider-tour .carousel-control.left, .slider-hotel .carousel-control.right, .slider-tour .carousel-control.right {
     background: none;
     opacity: 1; }
-    .slider-hotel .carousel-control.left span, .slider-hotel .carousel-control.right span {
+    .slider-hotel .carousel-control.left span, .slider-tour .carousel-control.left span, .slider-hotel .carousel-control.right span, .slider-tour .carousel-control.right span {
       position: absolute;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -8399,6 +8399,199 @@ header {
   text-align: left; }
   .vacation-card-list .total-hotel-cost .hotel-cost {
     font-size: 22px; }
+
+.tour-banner-holder {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bookings/tours.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.tour-container-list {
+  background: url("../img/bookings/tours.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; }
+
+.tour-search-bar {
+  padding: 10px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1; }
+
+.tour-search, .tour-type {
+  display: inline-block; }
+  .tour-search input, .tour-type input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(214, 208, 198, 0.6);
+    color: #424242;
+    font-family: "AvenirLTStd-Medium"; }
+    .tour-search input::-webkit-input-placeholder, .tour-type input::-webkit-input-placeholder {
+      color: #424242;
+      font-family: "AvenirLTStd-Medium"; }
+    .tour-search input::-moz-placeholder, .tour-type input::-moz-placeholder {
+      color: #424242;
+      font-family: "AvenirLTStd-Medium"; }
+    .tour-search input:-moz-placeholder, .tour-type input:-moz-placeholder {
+      color: #424242;
+      font-family: "AvenirLTStd-Medium"; }
+    .tour-search input:-ms-input-placeholder, .tour-type input:-ms-input-placeholder {
+      color: #424242;
+      font-family: "AvenirLTStd-Medium"; }
+
+.tour-search {
+  margin: 0 15px; }
+
+.tour-sort-by {
+  margin-top: 10px; }
+  .tour-sort-by .sort-tag, .tour-sort-by .popular, .tour-sort-by .rated, .tour-sort-by .price {
+    margin: 0px 20px;
+    display: inline-block;
+    font-family: "AvenirLTStd-Medium";
+    color: #424242; }
+  .tour-sort-by .sort-tag {
+    color: #a5a5a5; }
+
+.tour-card-holder {
+  position: relative;
+  margin-bottom: 10px; }
+
+.blurry-tour-overlay {
+  background-image: url("../img/bookings/tours.jpg"); }
+
+.slider-tour .carousel-inner > .item img {
+  height: auto; }
+
+.tour-information {
+  padding: 25px 25px 15px 15px;
+  color: #fff; }
+
+.tour-list-heading .tour-name {
+  margin: 0;
+  font-family: "AvenirLTStd-Medium";
+  font-size: 18px; }
+
+.tour-chart-main {
+  padding: 12px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff; }
+
+.tour-see-detail {
+  padding: 10px 0px 0px; }
+
+.tour-star-rate {
+  margin: 10px 0; }
+  .tour-star-rate ul {
+    display: inline-block; }
+  .tour-star-rate .tour-review {
+    margin-left: 5px;
+    display: inline-block; }
+
+.tour-cost {
+  font-size: 16px; }
+
+.tour-card-container {
+  overflow-y: auto; }
+  .tour-card-container .col-md-6:nth-child(odd) .tour-card-holder {
+    margin-right: 5px; }
+  .tour-card-container .col-md-6:nth-child(even) .tour-card-holder {
+    margin-left: 5px; }
+  .tour-card-container .col-md-6:nth-child(4n+1) .tour-star {
+    color: #ff6759; }
+  .tour-card-container .col-md-6:nth-child(4n+1) .tour-cost {
+    color: #ff6759; }
+  .tour-card-container .col-md-6:nth-child(4n) .tour-star {
+    color: #ff6759; }
+  .tour-card-container .col-md-6:nth-child(4n) .tour-cost {
+    color: #ff6759; }
+  .tour-card-container .col-md-6:nth-child(4n+2) .tour-star {
+    color: #11d3cb; }
+  .tour-card-container .col-md-6:nth-child(4n+2) .tour-cost {
+    color: #11d3cb; }
+  .tour-card-container .col-md-6:nth-child(4n-1) .tour-star {
+    color: #11d3cb; }
+  .tour-card-container .col-md-6:nth-child(4n-1) .tour-cost {
+    color: #11d3cb; }
+
+.tour-detail-section {
+  padding-top: 5px; }
+
+.tourdetail-slider {
+  position: relative; }
+  .tourdetail-slider .item img {
+    width: 100%; }
+  .tourdetail-slider .carousel-control.left, .tourdetail-slider .carousel-control.right {
+    background: none;
+    opacity: 1; }
+    .tourdetail-slider .carousel-control.left span, .tourdetail-slider .carousel-control.right span {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+.tour-plan-detail {
+  padding: 25px 40px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.travel-tour-type {
+  margin: 7px 0;
+  color: #a0a0a0;
+  font-size: 15px; }
+
+.tour-destination {
+  font-size: 16px;
+  color: #424242; }
+
+.tour-detail-review {
+  color: #424242; }
+
+.tour-detail-descp {
+  padding: 15px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #424242;
+  text-align: justify; }
+  .tour-detail-descp ::-webkit-scrollbar {
+    width: 2px; }
+  .tour-detail-descp .scroll-tour-descp {
+    max-height: 305px;
+    overflow-y: auto; }
+
+.tour-booking-info {
+  text-align: right; }
+
+.tour-booking-amount {
+  margin-bottom: 3px;
+  display: block; }
+
+.tour-from {
+  font-size: 12px;
+  color: #a0a0a0;
+  vertical-align: top; }
+
+.tourdetail-cost {
+  font-size: 16px;
+  vertical-align: top; }
+
+.tour-descp-pink .tour-star {
+  color: #ff6759; }
+.tour-descp-pink .tourdetail-cost {
+  color: #ff6759; }
+.tour-descp-pink .full-descp h4 {
+  color: #ff6759; }
+
+.tour-descp-cyan .tour-star {
+  color: #11d3cb; }
+.tour-descp-cyan .tourdetail-cost {
+  color: #11d3cb; }
+.tour-descp-cyan .full-descp h4 {
+  color: #11d3cb; }
 
 @media screen and (max-width: 1200px) {
   .search {
@@ -8811,7 +9004,7 @@ header {
   .review-progress .progess-last {
     width: 100%; }
 
-  .slider-hotel .carousel-inner > .item img {
+  .slider-hotel .carousel-inner > .item img, .slider-tour .carousel-inner > .item img {
     width: 100%;
     height: auto; }
 
@@ -9057,7 +9250,7 @@ header {
   .sort-list i {
     margin: 0; }
 
-  .slider-hotel {
+  .slider-hotel, .slider-tour {
     height: 200px; }
 
   .hotel-information {

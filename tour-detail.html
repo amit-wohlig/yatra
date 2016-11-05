@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Travelibro - Tour-Detail</title>
+<link href="css/main.css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="bower_components/bxslider-4/dist/jquery.bxslider.min.css">
+<link href="sass/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.tokeninput/1.6.0/styles/token-input.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.tokeninput/1.6.0/styles/token-input-facebook.css">
+<!--[if IE]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.tokeninput/1.6.0/jquery.tokeninput.js"></script>
+<script src="js/myscript.js"></script>
+<script src="js/toursdata.js"></script>
+</head>
+
+<body>
+    <header class="bg-dark-blue">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-4">
+                        <div class="header-left">
+                            <div class="hamburger pointer inline-block">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <div class="search inline-block v-top">
+                                <form action="">
+                                    <input type="text" class="form-control" placeholder="Search people, destinations, itineraries, agents and tags">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                      <h1 class="text-center logo m-clear">
+                        <a href="">
+                          <img src="img/travel-logo.png" alt="" class="img-responsive m-center hidden-sm hidden-xs" width="110">
+                          <img src="img/mobile-logo.png" alt="" class="img-responsive m-center hidden-lg hidden-md ">
+                        </a>
+                      </h1>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-4 user-header-detail">
+                        <div class="user-detail text-right">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="">
+                                        <div class="user-img inline-block v-mid">
+                                            <img src="img/profile.jpg" alt="" width="40" class="img-responsive">
+                                        </div>
+                                        <span class="color-white ml10 fz13">Activity</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-bell"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-cog"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- tour detail  -->
+        <div class="tour-container-list windowHeight">
+            <div class="container-fluid">
+                <div class="search-bar-field">
+                    <!-- search bar tour -->
+                    <form action="">
+                        <!-- tour filter -->
+                        <div class="tour-search-bar">
+                            <div class="tour-search-detail">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <div class="tour-search">
+                                            <div class="input-holder relate">
+                                                <input type="text" id="tourSearch" placeholder="London">
+                                                <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="tour-type">
+                                            <div class="input-holder relate">
+                                                <input type="text" id="tourType" placeholder="Tour Type">
+                                                <div class="dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="tour-sort-by">
+                                            <div class="sort-tag">
+                                                <span>Sort By :</span>
+                                            </div>
+                                            <div class="popular">
+                                                <span class="pointer">Popular <i class="fa fa-chevron-down ml5"></i></span>
+                                            </div>
+                                            <div class="rated">
+                                                <span class="pointer">Rated <i class="fa fa-chevron-down ml5"></i></span>
+                                            </div>
+                                            <div class="price">
+                                                <span class="pointer">Price <i class="fa fa-chevron-down ml5"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tour filter end -->
+                    </form>
+                    <!-- search bar tour end-->
+                    <div class="tour-view-section tour-detail-section">
+                        <div class="scroll-hotel-sec">
+                            <div class="blurry-overlay-whole blurry-tour-overlay"></div>
+                            <div class="tour-detailed-container">
+                                <!-- tour detail card -->
+                                <div class="row m-clear">
+                                    <div class="col-md-6 col-pad-zero">
+                                        <!-- tour slider of detailed page -->
+                                        <div class="tourdetail-slider">
+                                            <div class="carousel slide" data-ride="carousel" id="tour-slider">
+                                                <div class="carousel-inner" role="listbox">
+                                                    <div class="item active">
+                                                        <img src="img/bookings/tour-detail-slider.jpg" alt="" class="img-responsive">
+                                                    </div>
+                                                    <div class="item ">
+                                                        <img src="img/bookings/tour-detail-slider.jpg" alt="" class="img-responsive">
+                                                    </div>
+                                                </div>
+                                                <a class="left carousel-control" href="#tour-slider" role="button" data-slide="prev">
+                                                    <span class="fa fa-chevron-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#tour-slider" role="button" data-slide="next">
+                                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- tour slider of detailed page -->
+                                    </div>
+                                    <div class="col-md-6 col-pad-zero">
+                                        <div class="tour-plan-detail">
+                                            <div class="tour-heading">
+                                                <h3 class="m-clear avenir-medium color-blue">Warner Bros. Studio Tour London</h3>
+                                                <h4 class="travel-tour-type avenir-medium">Cultural &amp; Theme Tours</h4>
+                                            </div>
+                                            <div class="tour-more-detail clearfix">
+                                                <div class="pull-left">
+                                                    <div class="tour-star-rate">
+                                                        <ul class="list-inline">
+                                                            <li><a href=""><i class="fa fa-star tour-star color-pink"></i></a></li>
+                                                            <li><a href=""><i class="fa fa-star tour-star color-pink"></i></a></li>
+                                                            <li><a href=""><i class="fa fa-star tour-star color-pink"></i></a></li>
+                                                            <li><a href=""><i class="fa fa-star tour-star color-pink"></i></a></li>
+                                                            <li><a href=""><i class="fa fa-star-o tour-star color-pink"></i></a></li>
+                                                        </ul>
+                                                        <span class="tour-detail-review avenir-medium">1065 <span>Reviews</span></span>
+                                                    </div>
+                                                    <div class="tour-destination">
+                                                        <p class="avenir-medium"><span>London</span> | Duration : <span>7 hours</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <div class="tour-booking-info">
+                                                        <span class="tour-booking-amount"><span class="tour-from">From</span> <span class="tourdetail-cost color-pink avenir-medium">USD 74.28</span></span>
+                                                        <button class="btn btn-book btn-pink">BOOK NOW</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- tour detail description -->
+                                            <div class="tour-detail-descp">
+                                                <div class="scroll-tour-descp">
+                                                  <div class="descp-highlight">
+                                                      <p>Get a behind-the-scenes look at the Harry Potter™ film series with the Warner Bros. Studio Tour London. Enjoy round-trip transport from central London to the Harry Potter film studio to enter the magical
+                                                          world of Harry and his friends. You'll see how the movies were created as you tour the real movie sets, admire the costumes and props, and learn about the special effects and animatronics used to
+                                                          create the films' stunning visuals. Explore the Great Hall, pose next to the original ‘Hogwarts Express,’ set foot down Diagon Alley and more.</p>
+                                                  </div>
+                                                  <div class="full-descp">
+                                                      <h4 class="color-pink avenir-medium">Full Description</h4>
+                                                      <p>Board a double-decker bus in central London and drive 17 miles (27 km) northwest to the English borough of Hertfordshire. Arrive in the town of Watford, home to the Warner Bros. Studio Tour London, where
+                                                          you'll witness the legendary Harry Potter film series come to life. Set off independently to explore the real sets used in these iconic movies. Imagine walking side-by-side with Harry, Ron and Hermione
+                                                          as you explore the Great Hall, view Dumbledore's office and stroll down Diagon Alley, featuring the storefronts of Ollivanders wand shop, Flourish and Blotts, the Weasleys' Wizard Wheezes, Gringotts
+                                                          Wizarding Bank and Eeylops Owl Emporium. Admire the costumes and props used by Harry and his counterparts, and learn about the special effects and makeup that brought magical characters such as Dobby
+                                                          and the Death Eaters to life. Remember to bring your camera — there are exciting photo opportunities around every corner.</p>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <!-- tour detail description end-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tour detail card end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tour detail end -->
+    </main>
+</body>
+
+</html>

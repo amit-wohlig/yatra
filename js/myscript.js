@@ -7,6 +7,17 @@ $(document).ready(function() {
 
     //For the height of hotels
     $(".hotel-card-list").height($(window).height() - 170);
+    // For the height of Tours
+    $(".tour-card-container").height($(window).height()-119);
+    // For the height of Tours Detailed
+    $(".tour-detailed-container").height($(window).height()-119);
+
+    // tour detail descp scroll part
+    if($('.scroll-tour-descp').height() >= 305) {
+      $('.scroll-tour-descp').css('padding-right', '15px');
+    }
+    // tour detail descp scroll part end
+
 });
 // facebook widget
 setTimeout(function() {
@@ -107,7 +118,7 @@ $(document).ready(function() {
 
     // show filter
     $(".getfilter").click(function() {
-        $(".filter-main-sec").slideToggle(500);
+      $(".filter-main-sec").slideToggle(500);
     });
     // show filter end
     // show slider photo
@@ -447,5 +458,26 @@ $(document).ready(function() {
         initMap();
     }, 100);
 
-    // google map api end\
+    // google map api end
+
+
+    // tour search
+    $("#tourSearch").tokenInput([
+                {id: 7, name: "Ruby"},
+                {id: 11, name: "Python"},
+                {id: 13, name: "JavaScript"},
+                {id: 17, name: "ActionScript"},
+                {id: 19, name: "Scheme"},
+                {id: 23, name: "Lisp"},
+                {id: 29, name: "C#"},
+                {id: 31, name: "Fortran"},
+                {id: 37, name: "Visual Basic"},
+                {id: 41, name: "C"},
+                {id: 43, name: "C++"},
+                {id: 47, name: "Java"}
+            ],{
+              placeholder: "Json"
+            });
+    $("#tourType").tokenInput();
+    // tour search end
 });
