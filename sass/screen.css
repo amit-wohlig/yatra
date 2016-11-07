@@ -8880,7 +8880,24 @@ header {
     opacity: 1; }
 
   #vacation-map-click.view-caret:after {
-    opacity: 1; } }
+    opacity: 1; }
+
+  .tour-search {
+    margin: 0px 10px; }
+
+  .tour-sort-by .sort-tag, .tour-sort-by .popular, .tour-sort-by .rated, .tour-sort-by .price {
+    margin: 0px 12px; }
+
+  .tour-card-container .col-md-6:nth-child(odd) .tour-card-holder {
+    margin-right: 0; }
+  .tour-card-container .col-md-6:nth-child(even) .tour-card-holder {
+    margin-left: 0; }
+
+  .tour-detailed-container {
+    overflow-y: scroll; }
+
+  .tour-detail-descp .scroll-tour-descp {
+    max-height: initial; } }
 @media screen and (max-width: 767px) {
   .user-detail {
     margin-top: 10px; }
@@ -9108,7 +9125,38 @@ header {
       letter-spacing: 1px; }
     .distance-slider #maxDistanceMob {
       top: -22px !important;
-      left: -40px !important; } }
+      left: -40px !important; }
+
+  .tour-booking-sec .booking-title {
+    font-size: 42px; }
+
+  .tour-container-list {
+    overflow-y: auto; }
+    .tour-container-list .container-fluid {
+      padding: 0; }
+
+  .tour-search-bar {
+    padding: 0; }
+
+  .tour-search-detail .pull-left, .tour-search-detail .pull-right {
+    padding: 10px;
+    float: none !important; }
+  .tour-search-detail .pull-left {
+    border-bottom: 1px solid #424242; }
+
+  .tour-search {
+    margin: 0 10px 0 0; }
+
+  .tour-sort-by {
+    margin: 0; }
+    .tour-sort-by .sort-tag {
+      margin: 0px 12px 0px 0px; }
+
+  .slider-tour {
+    height: auto; }
+
+  .tour-plan-detail {
+    padding: 20px; } }
 @media screen and (max-width: 480px) {
   .hamburger {
     margin: 13px 0; }
@@ -9334,6 +9382,30 @@ header {
     width: 200px !important; }
 
   .photo-slide-imgholder {
-    height: 150px; } }
+    height: 150px; }
+
+  .tour-booking-sec .booking-title {
+    font-size: 32px; }
+
+  .tour-search, .tour-type {
+    display: block; }
+    .tour-search input, .tour-type input {
+      width: 100%; }
+
+  .tour-search {
+    margin: 0 0 10px; }
+
+  .tour-sort-by .sort-tag, .tour-sort-by .popular, .tour-sort-by .rated, .tour-sort-by .price {
+    margin: 0px 5px; }
+
+  .tour-more-detail .pull-left, .tour-more-detail .pull-right {
+    float: none !important; }
+
+  .tour-booking-info {
+    margin: 10px 0px 15px;
+    text-align: left; }
+
+  .slider-tour {
+    height: auto; } }
 
 /*# sourceMappingURL=screen.css.map */

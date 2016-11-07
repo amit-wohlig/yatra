@@ -16,6 +16,11 @@ $(document).ready(function() {
     if($('.scroll-tour-descp').height() >= 305) {
       $('.scroll-tour-descp').css('padding-right', '15px');
     }
+    $(window).resize(function(){
+      if($(window).width() <= 766){
+        $('.scroll-tour-descp').css('padding-right', '0');
+      }
+    })
     // tour detail descp scroll part end
 
 });

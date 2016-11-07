@@ -273,6 +273,24 @@
     &:after { opacity: 1; }
   }
   // vacation end
+  // tours
+  .tour-search { margin: 0px 10px; }
+  .tour-sort-by {
+    .sort-tag, .popular, .rated, .price {
+      margin: 0px 12px;
+    }
+  }
+  .tour-card-container {
+    .col-md-6:nth-child(odd) .tour-card-holder { margin-right: 0; }
+    .col-md-6:nth-child(even) .tour-card-holder { margin-left: 0; }
+  }
+  .tour-detailed-container {
+    overflow-y: scroll;
+  }
+  .tour-detail-descp .scroll-tour-descp {
+    max-height: initial;
+  }
+  // tours end
 }
 // from 991px to 767px end
 // from 766px to 480px
@@ -503,9 +521,39 @@
      }
    }
   // vacation end
+  // tours
+  .tour-booking-sec {
+    .booking-title { font-size: 42px; }
+  }
+  .tour-container-list {
+    overflow-y: auto;
+   .container-fluid { padding: 0; }
+  }
+  // tour search bar
+  .tour-search-bar { padding: 0; }
+  .tour-search-detail {
+    .pull-left, .pull-right {
+      padding: 10px;
+      float: none !important;
+    }
+    .pull-left { border-bottom: 1px solid #424242; }
+  }
+  .tour-search { margin: 0 10px 0 0; }
+  .tour-sort-by {
+    margin: 0;
+    .sort-tag { margin: 0px 12px 0px 0px; }
+  }
+  .slider-tour {
+    height: auto;
+  }
+  // tour search bar
+  .tour-plan-detail {
+    padding: 20px;
+  }
+  // tours end
 }
 // from 766px to 480px end
-// from 480px to 370px
+// from 480px to 320px
 @media screen and (max-width: 480px) {
   // header
   .hamburger {
@@ -735,6 +783,31 @@
   }
   .photo-slide-imgholder { height: 150px; }
   // booking end
+  // tours
+  .tour-booking-sec {
+    .booking-title { font-size: 32px; }
+  }
+  // tour search bar
+  .tour-search, .tour-type {
+    display: block;
+    input { width: 100%; }
+  }
+  .tour-search { margin: 0 0 10px; }
+  .tour-sort-by {
+    .sort-tag, .popular, .rated, .price { margin: 0px 5px; }
+  }
+  .tour-more-detail {
+    .pull-left, .pull-right {
+      float: none !important;
+    }
+  }
+  .tour-booking-info {
+    margin: 10px 0px 15px;
+    text-align: left;
+  }
+  // tour search bar end
+  .slider-tour { height: auto; }
+  // tours end
 }
 // from 480px to 320px end
 // Responsive end
