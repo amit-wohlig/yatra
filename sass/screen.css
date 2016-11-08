@@ -6059,7 +6059,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.avenir-medium, .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .side-menu a, .person-stay label, .search-detail-holder input, .filter-bar, .clear-all, .accordion-hotel-detail .ui-widget, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a, .count-traveller-holder .travellers-counting .text-travel, .vacation-card-list .hotel-info-list li, .vacation-card-list .total-hotel-cost {
+.avenir-medium, .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .homestay-booking .homestay-booking-form input.form-control, .side-menu a, .person-stay label, .search-detail-holder input, .filter-bar, .clear-all, .accordion-hotel-detail .ui-widget, .hotel-details.hotel-detail-tab .ui-tabs .ui-tabs-nav .ui-tabs-anchor, .amenities-holder .amenity-type, .hotel-information, .hotel-list-heading .hotel-name, .score-round-holder, .list-pagination .pagination li a, .count-traveller-holder .travellers-counting .text-travel, .vacation-card-list .hotel-info-list li, .vacation-card-list .total-hotel-cost {
   font-family: "AvenirLTStd-Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -7292,7 +7292,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.vacation-overlay, .hotel-overlay {
+.vacation-overlay, .hotel-overlay, .homestay-booking .homestay-overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -7314,46 +7314,46 @@ header {
   filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.3); }
 
-.vacation-booking-sec {
+.vacation-booking-sec, .homestay-booking .homestay-booking-sec {
   width: 550px;
   padding: 10px; }
 
-.vacation-booking-form, .hotel-booking-form {
+.vacation-booking-form, .hotel-booking-form, .homestay-booking .homestay-booking-form {
   padding: 20px 30px 30px;
   border: 1px solid #fff;
   position: relative; }
-  .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
+  .vacation-booking-form .booking-title, .hotel-booking-form .booking-title, .homestay-booking .homestay-booking-form .booking-title {
     margin: 10px 0;
     font-family: "AvenirLTStd-Heavy";
     font-size: 48px;
     font-weight: 700;
     text-align: center; }
-  .vacation-booking-form .booking-tag, .hotel-booking-form .booking-tag {
+  .vacation-booking-form .booking-tag, .hotel-booking-form .booking-tag, .homestay-booking .homestay-booking-form .booking-tag {
     margin: 5px 0px 15px;
     font-size: 17px; }
-  .vacation-booking-form input.form-control, .hotel-booking-form input.form-control {
+  .vacation-booking-form input.form-control, .hotel-booking-form input.form-control, .homestay-booking .homestay-booking-form input.form-control {
     height: 40px;
     border-radius: 6px;
     color: #424242; }
-    .vacation-booking-form input.form-control:focus, .hotel-booking-form input.form-control:focus {
+    .vacation-booking-form input.form-control:focus, .hotel-booking-form input.form-control:focus, .homestay-booking .homestay-booking-form input.form-control:focus {
       border-color: transparent; }
-    .vacation-booking-form input.form-control::-webkit-input-placeholder, .hotel-booking-form input.form-control::-webkit-input-placeholder {
+    .vacation-booking-form input.form-control::-webkit-input-placeholder, .hotel-booking-form input.form-control::-webkit-input-placeholder, .homestay-booking .homestay-booking-form input.form-control::-webkit-input-placeholder {
       color: #8a8a8a; }
-    .vacation-booking-form input.form-control::-moz-placeholder, .hotel-booking-form input.form-control::-moz-placeholder {
+    .vacation-booking-form input.form-control::-moz-placeholder, .hotel-booking-form input.form-control::-moz-placeholder, .homestay-booking .homestay-booking-form input.form-control::-moz-placeholder {
       color: #8a8a8a; }
-    .vacation-booking-form input.form-control:-moz-placeholder, .hotel-booking-form input.form-control:-moz-placeholder {
+    .vacation-booking-form input.form-control:-moz-placeholder, .hotel-booking-form input.form-control:-moz-placeholder, .homestay-booking .homestay-booking-form input.form-control:-moz-placeholder {
       color: #8a8a8a; }
-    .vacation-booking-form input.form-control:-ms-input-placeholder, .hotel-booking-form input.form-control:-ms-input-placeholder {
+    .vacation-booking-form input.form-control:-ms-input-placeholder, .hotel-booking-form input.form-control:-ms-input-placeholder, .homestay-booking .homestay-booking-form input.form-control:-ms-input-placeholder {
       color: #8a8a8a; }
-  .vacation-booking-form button, .hotel-booking-form button {
+  .vacation-booking-form button, .hotel-booking-form button, .homestay-booking .homestay-booking-form button {
     height: 40px; }
-  .vacation-booking-form .col-flex, .hotel-booking-form .col-flex {
+  .vacation-booking-form .col-flex, .hotel-booking-form .col-flex, .homestay-booking .homestay-booking-form .col-flex {
     padding: 0px 5px; }
-  .vacation-booking-form .travel-text, .hotel-booking-form .travel-text {
+  .vacation-booking-form .travel-text, .hotel-booking-form .travel-text, .homestay-booking .homestay-booking-form .travel-text {
     margin-top: 3px;
     display: inline-block;
     color: #999ca2; }
-  .vacation-booking-form .dropdown-icon i, .hotel-booking-form .dropdown-icon i {
+  .vacation-booking-form .dropdown-icon i, .hotel-booking-form .dropdown-icon i, .homestay-booking .homestay-booking-form .dropdown-icon i {
     color: #424242; }
 
 .dropdown-icon {
@@ -7366,7 +7366,7 @@ header {
   border-radius: 6px;
   background-color: #fff; }
   .travellers-count input {
-    width: 30px;
+    width: 35px;
     border: none;
     margin: 0 10px;
     color: #000;
@@ -8295,7 +8295,7 @@ header {
     color: #ff6759;
     font-size: 13px; }
 
-.vacation-list-container {
+.vacation-list-container, .homestay-list-container {
   padding-top: 5px;
   background: url("../img/bookings/vacations.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -8593,6 +8593,20 @@ header {
 .tour-descp-cyan .full-descp h4 {
   color: #11d3cb; }
 
+.homestay-booking .homestay-banner-holder {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bookings/homestay.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.homestay-list-container {
+  background: url("../img/bookings/homestay.jpg") no-repeat 50% 50%; }
+
+.blurry-homestay-overlay {
+  background-image: url("../img/bookings/homestay.jpg"); }
+
 @media screen and (max-width: 1200px) {
   .search {
     display: none; }
@@ -8862,9 +8876,9 @@ header {
   .amenities-holder ul {
     margin-bottom: 20px; }
 
-  .vacation-view-section .row-flex {
+  .vacation-view-section .row-flex, .homestay-view-section .row-flex {
     display: block; }
-  .vacation-view-section .col-flex {
+  .vacation-view-section .col-flex, .homestay-view-section .col-flex {
     -webkit-box-flex: auto;
     -moz-box-flex: auto;
     box-flex: auto;
@@ -9038,10 +9052,10 @@ header {
   .side-menu {
     display: none; }
 
-  .vacation-booking-sec {
+  .vacation-booking-sec, .homestay-booking .homestay-booking-sec {
     width: 450px; }
 
-  .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
+  .vacation-booking-form .booking-title, .hotel-booking-form .booking-title, .homestay-booking .homestay-booking-form .booking-title {
     font-size: 45px; }
 
   .traveller-flex {
@@ -9098,10 +9112,10 @@ header {
   .stay-holder .person-stay label {
     min-width: 60px; }
 
-  .vacation-list-container {
+  .vacation-list-container, .homestay-list-container {
     overflow-x: hidden;
     overflow-y: auto; }
-    .vacation-list-container .container-fluid {
+    .vacation-list-container .container-fluid, .homestay-list-container .container-fluid {
       padding: 0; }
 
   .count-travel {
@@ -9310,21 +9324,21 @@ header {
   .search-btn-holder {
     text-align: center; }
 
-  .vacation-booking-sec {
+  .vacation-booking-sec, .homestay-booking .homestay-booking-sec {
     width: 300px; }
-    .vacation-booking-sec button {
+    .vacation-booking-sec button, .homestay-booking .homestay-booking-sec button {
       width: auto;
       padding: 8px 34px; }
 
-  .vacation-booking-form, .hotel-booking-form {
+  .vacation-booking-form, .hotel-booking-form, .homestay-booking .homestay-booking-form {
     padding: 10px 10px 20px; }
-    .vacation-booking-form .booking-title, .hotel-booking-form .booking-title {
+    .vacation-booking-form .booking-title, .hotel-booking-form .booking-title, .homestay-booking .homestay-booking-form .booking-title {
       font-size: 40px; }
-    .vacation-booking-form .booking-tag, .hotel-booking-form .booking-tag {
+    .vacation-booking-form .booking-tag, .hotel-booking-form .booking-tag, .homestay-booking .homestay-booking-form .booking-tag {
       font-size: 16px; }
-    .vacation-booking-form .row-flex, .hotel-booking-form .row-flex {
+    .vacation-booking-form .row-flex, .hotel-booking-form .row-flex, .homestay-booking .homestay-booking-form .row-flex {
       display: block; }
-    .vacation-booking-form .col-flex, .hotel-booking-form .col-flex {
+    .vacation-booking-form .col-flex, .hotel-booking-form .col-flex, .homestay-booking .homestay-booking-form .col-flex {
       -webkit-box-flex: auto;
       -moz-box-flex: auto;
       box-flex: auto;
@@ -9332,7 +9346,7 @@ header {
       -moz-flex: auto;
       -ms-flex: auto;
       flex: auto; }
-    .vacation-booking-form .traveller-flex, .hotel-booking-form .traveller-flex {
+    .vacation-booking-form .traveller-flex, .hotel-booking-form .traveller-flex, .homestay-booking .homestay-booking-form .traveller-flex {
       -webkit-box-flex: auto;
       -moz-box-flex: auto;
       box-flex: auto;
@@ -9340,7 +9354,7 @@ header {
       -moz-flex: auto;
       -ms-flex: auto;
       flex: auto; }
-    .vacation-booking-form .travel-text, .hotel-booking-form .travel-text {
+    .vacation-booking-form .travel-text, .hotel-booking-form .travel-text, .homestay-booking .homestay-booking-form .travel-text {
       margin-right: 40px; }
 
   .hotel-booking-sec {

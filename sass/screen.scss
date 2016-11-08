@@ -1359,7 +1359,7 @@ header {
   border-radius: 6px;
   background-color: #fff;
   input {
-    width: 30px;
+    width: 35px;
     border: none;
     margin: 0 10px;
     color: #000;
@@ -2670,5 +2670,38 @@ header {
   .full-descp h4 { color: $brand-cyan; }
 }
 // tour detail end
+// homestay
+.homestay-booking {
+  .homestay-banner-holder {
+    width: 100%;
+   height: 100vh;
+   background-image: url(../img/bookings/homestay.jpg);
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+  .homestay-overlay {
+    @extend .vacation-overlay;
+  }
+  .homestay-booking-sec {
+    @extend .vacation-booking-sec;
+  }
+  .homestay-booking-form {
+    @extend .vacation-booking-form;
+  }
+}
+// homestay end
+// homestay listing
+.homestay-list-container {
+  @extend .vacation-list-container;
+  background: url("../img/bookings/homestay.jpg") no-repeat 50% 50%;
+}
+.homestay-view-section {
+  @extend .vacation-view-section;
+}
+.blurry-homestay-overlay {
+  background-image: url('../img/bookings/homestay.jpg');
+}
+// homestay listing end
 
 @import "mobile.scss"
