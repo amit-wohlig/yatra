@@ -8157,7 +8157,7 @@ header {
   .slider-hotel .carousel, .slider-tour .carousel {
     height: 100%; }
   .slider-hotel .carousel-inner > .item img, .slider-tour .carousel-inner > .item img {
-    height: 100%; }
+    width: 100%; }
   .slider-hotel .carousel-control.left, .slider-tour .carousel-control.left, .slider-hotel .carousel-control.right, .slider-tour .carousel-control.right {
     background: none;
     opacity: 1; }
@@ -8602,10 +8602,68 @@ header {
   background-size: cover; }
 
 .homestay-list-container {
-  background: url("../img/bookings/homestay.jpg") no-repeat 50% 50%; }
+  background: url("../img/bookings/homestay.jpg") no-repeat 50% 50%;
+  background-attachment: fixed;
+  background-size: cover; }
 
 .blurry-homestay-overlay {
   background-image: url("../img/bookings/homestay.jpg"); }
+
+.homestay-hotel-result .hotel-result {
+  margin-top: 7px; }
+
+.homestay-card-list .hotel-information {
+  padding: 25px 15px 15px 30px; }
+.homestay-card-list .rate-by-star ul {
+  display: inline-block; }
+.homestay-card-list .hotel-descp {
+  margin-bottom: 10px; }
+  .homestay-card-list .hotel-descp p {
+    margin: 0;
+    font-style: italic;
+    text-align: left; }
+.homestay-card-list .homestay-hotel-chart {
+  padding: 10px 0px 5px; }
+.homestay-card-list .hotel-card-holder {
+  max-height: initial; }
+  .homestay-card-list .hotel-card-holder:nth-child(odd) .room-owner-imgholder {
+    border-color: #ff6759; }
+  .homestay-card-list .hotel-card-holder:nth-child(odd) .homestay-hotel-distance, .homestay-card-list .hotel-card-holder:nth-child(odd) .homestay-hotel-cost {
+    border: 1px solid #ff6759; }
+  .homestay-card-list .hotel-card-holder:nth-child(even) .room-owner-imgholder {
+    border-color: #11d3cb; }
+  .homestay-card-list .hotel-card-holder:nth-child(even) .homestay-hotel-distance, .homestay-card-list .hotel-card-holder:nth-child(even) .homestay-hotel-cost {
+    border: 1px solid #11d3cb; }
+
+.homestay-owner-img {
+  position: absolute;
+  top: -15px;
+  left: -87px; }
+
+.room-owner-imgholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border-width: 3px;
+  border-style: solid;
+  box-shadow: 3px 3px 3px #212121;
+  overflow: hidden; }
+  .room-owner-imgholder img {
+    width: 100%; }
+
+.homestay-hotel-distance, .homestay-hotel-cost {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: left; }
+  .homestay-hotel-distance p, .homestay-hotel-cost p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+
+.homestay-distance, .homestay-price {
+  margin-right: 5px;
+  font-size: 18px; }
 
 @media screen and (max-width: 1200px) {
   .search {

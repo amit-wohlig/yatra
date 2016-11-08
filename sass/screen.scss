@@ -2197,7 +2197,8 @@ header {
     // position: relative;
     // height: 290px;
     img {
-      height: 100%;
+      width: 100%;
+      // height: 100%;
       // @include position(absolute, 50% null null 50% );
       // @include transform(translate(-50%,-50%));
     }
@@ -2695,12 +2696,74 @@ header {
 .homestay-list-container {
   @extend .vacation-list-container;
   background: url("../img/bookings/homestay.jpg") no-repeat 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .homestay-view-section {
   @extend .vacation-view-section;
 }
 .blurry-homestay-overlay {
   background-image: url('../img/bookings/homestay.jpg');
+}
+.homestay-hotel-result {
+  .hotel-result { margin-top: 7px; }
+}
+.homestay-card-list {
+  .hotel-information {
+    padding: 25px 15px 15px 30px;
+  }
+  .rate-by-star ul { display: inline-block; }
+  .hotel-descp {
+    margin-bottom: 10px;
+    p {
+      margin: 0;
+      font-style: italic;
+      text-align: left;
+    }
+  }
+  .homestay-hotel-chart {
+    padding: 10px 0px 5px;
+  }
+  .hotel-card-holder {
+    max-height: initial;
+    &:nth-child(odd){
+      .room-owner-imgholder { border-color: $brand-pink; }
+      .homestay-hotel-distance, .homestay-hotel-cost { border: 1px solid $brand-pink; }
+    }
+    &:nth-child(even) {
+      .room-owner-imgholder { border-color: $brand-cyan; }
+      .homestay-hotel-distance, .homestay-hotel-cost { border: 1px solid $brand-cyan; }
+    }
+  }
+}
+.homestay-owner-img {
+  position: absolute;
+  top: -15px;
+  left: -87px;
+}
+.room-owner-imgholder {
+  @include square(80px);
+  border-radius: 100%;
+  border-width: 3px;
+  border-style: solid;
+  box-shadow: 3px 3px 3px #212121;
+  overflow: hidden;
+  img { width: 100%; }
+}
+.homestay-hotel-distance , .homestay-hotel-cost {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: left;
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+.homestay-distance, .homestay-price {
+  margin-right: 5px;
+  font-size: 18px;
 }
 // homestay listing end
 
