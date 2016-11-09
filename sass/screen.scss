@@ -2000,7 +2000,8 @@ header {
 }
 .return-to-list {
   padding: 15px;
-  text-align: center;
+  // text-align: center;
+  text-align: left;
   a {
     color: #fff;
     font-size: 16px;
@@ -2740,6 +2741,7 @@ header {
   position: absolute;
   top: -15px;
   left: -87px;
+  z-index: 3;
 }
 .room-owner-imgholder {
   @include square(80px);
@@ -2765,6 +2767,7 @@ header {
   margin-right: 5px;
   font-size: 18px;
 }
+.homestay-hotel-result .hotel-result { color: #8a8a8a; }
 // homestay listing end
 
 @import "mobile.scss"

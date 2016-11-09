@@ -217,6 +217,17 @@
     top: 60px;
     z-index: 2;
   }
+  .price-slider, .distance-slider {
+    margin-bottom: 40px;
+  }
+  #minDistanceMob, #maxDistanceMob {
+    min-width: 100px;
+    letter-spacing: 1px;
+  }
+  #maxDistanceMob {
+    top: -22px !important;
+    left: -40px !important;
+  }
   .clear-all { margin-bottom: 20px; }
   .dropdown-holder {
     margin-bottom: 20px;
@@ -507,11 +518,11 @@
     }
     input { width: 60px; }
   }
+  .price-slider, .distance-slider { margin-bottom: 0; }
   .distance-slider {
      min-height: 70px;
      margin-top: 20px;
      #minDistanceMob, #maxDistanceMob {
-       min-width: 65px;
        font-size: 12px;
        letter-spacing: 1px;
      }
@@ -551,6 +562,16 @@
     padding: 20px;
   }
   // tours end
+  // homestay
+  .homestay-card-list .hotel-information {
+    padding: 30px 10px 15px;
+  }
+  .homestay-owner-img {
+    top: -80px;
+    right: 0;
+    left: auto;
+  }
+  // homestay end
 }
 // from 766px to 480px end
 // from 480px to 320px
@@ -808,6 +829,11 @@
   // tour search bar end
   .slider-tour { height: auto; }
   // tours end
+  // homestay
+  .room-owner-imgholder {
+    @include square(70px);
+  }
+  // homestay  end
 }
 // from 480px to 320px end
 // Responsive end

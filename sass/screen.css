@@ -7967,7 +7967,7 @@ header {
 
 .return-to-list {
   padding: 15px;
-  text-align: center; }
+  text-align: left; }
   .return-to-list a {
     color: #fff;
     font-size: 16px; }
@@ -8638,7 +8638,8 @@ header {
 .homestay-owner-img {
   position: absolute;
   top: -15px;
-  left: -87px; }
+  left: -87px;
+  z-index: 3; }
 
 .room-owner-imgholder {
   width: 80px;
@@ -8664,6 +8665,9 @@ header {
 .homestay-distance, .homestay-price {
   margin-right: 5px;
   font-size: 18px; }
+
+.homestay-hotel-result .hotel-result {
+  color: #8a8a8a; }
 
 @media screen and (max-width: 1200px) {
   .search {
@@ -8888,6 +8892,17 @@ header {
   .filter-main-sec {
     top: 60px;
     z-index: 2; }
+
+  .price-slider, .distance-slider {
+    margin-bottom: 40px; }
+
+  #minDistanceMob, #maxDistanceMob {
+    min-width: 100px;
+    letter-spacing: 1px; }
+
+  #maxDistanceMob {
+    top: -22px !important;
+    left: -40px !important; }
 
   .clear-all {
     margin-bottom: 20px; }
@@ -9188,11 +9203,13 @@ header {
     .count-travel input {
       width: 60px; }
 
+  .price-slider, .distance-slider {
+    margin-bottom: 0; }
+
   .distance-slider {
     min-height: 70px;
     margin-top: 20px; }
     .distance-slider #minDistanceMob, .distance-slider #maxDistanceMob {
-      min-width: 65px;
       font-size: 12px;
       letter-spacing: 1px; }
     .distance-slider #maxDistanceMob {
@@ -9228,7 +9245,15 @@ header {
     height: auto; }
 
   .tour-plan-detail {
-    padding: 20px; } }
+    padding: 20px; }
+
+  .homestay-card-list .hotel-information {
+    padding: 30px 10px 15px; }
+
+  .homestay-owner-img {
+    top: -80px;
+    right: 0;
+    left: auto; } }
 @media screen and (max-width: 480px) {
   .hamburger {
     margin: 13px 0; }
@@ -9478,6 +9503,10 @@ header {
     text-align: left; }
 
   .slider-tour {
-    height: auto; } }
+    height: auto; }
+
+  .room-owner-imgholder {
+    width: 70px;
+    height: 70px; } }
 
 /*# sourceMappingURL=screen.css.map */
