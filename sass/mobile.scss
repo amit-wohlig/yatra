@@ -109,6 +109,7 @@
   }
   // blog detail page end
   // booking
+  .side-menu { display: none; }
   .hotel-view-section {
     .row-flex { display: block; }
     .col-flex { @include flex(auto); }
@@ -439,7 +440,6 @@
     left: -45px !important;
   }
   // booking landing page
-  .side-menu { display: none; }
   .vacation-booking-sec { width: 450px; }
   .vacation-booking-form {
     .booking-title { font-size: 45px; }

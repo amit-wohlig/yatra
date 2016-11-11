@@ -8777,6 +8777,9 @@ header {
     margin: 30px 0;
     text-align: left; }
 
+  .side-menu {
+    display: none; }
+
   .hotel-view-section .row-flex {
     display: block; }
   .hotel-view-section .col-flex {
@@ -9121,9 +9124,6 @@ header {
 
   .range-slider .ui-slider-handle.ui-corner-all.ui-state-default #max, .distance-range .ui-slider-handle.ui-corner-all.ui-state-default #max {
     left: -45px !important; }
-
-  .side-menu {
-    display: none; }
 
   .vacation-booking-sec, .homestay-booking .homestay-booking-sec {
     width: 450px; }
