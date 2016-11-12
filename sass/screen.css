@@ -8952,6 +8952,18 @@ header {
   .amenities-holder ul {
     margin-bottom: 20px; }
 
+  .count-travel {
+    padding: 0px 12px;
+    border-radius: 6px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 20px; }
+    .count-travel .text-travel {
+      margin-top: 10px;
+      display: inline-block;
+      color: #8a8a8a; }
+    .count-travel input {
+      width: 60px; }
+
   .vacation-view-section .row-flex, .homestay-view-section .row-flex {
     display: block; }
   .vacation-view-section .col-flex, .homestay-view-section .col-flex {
@@ -9190,18 +9202,6 @@ header {
     overflow-y: auto; }
     .vacation-list-container .container-fluid, .homestay-list-container .container-fluid {
       padding: 0; }
-
-  .count-travel {
-    padding: 0px 12px;
-    border-radius: 6px;
-    border: 1px solid #ebebeb;
-    margin-bottom: 20px; }
-    .count-travel .text-travel {
-      margin-top: 10px;
-      display: inline-block;
-      color: #8a8a8a; }
-    .count-travel input {
-      width: 60px; }
 
   .price-slider, .distance-slider {
     margin-bottom: 0; }
